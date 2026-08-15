@@ -26,7 +26,6 @@
   "dependencies": {
     "@rbxts/bin": "^1.2.6",
     "@rbxts/flipper": "^2.0.1",
-    "@rbxts/hax": "github:richie0866/rbxts-hax",
     "@rbxts/make": "^1.0.6",
     "@rbxts/object-utils": "^1.0.4",
     "@rbxts/roact": "^1.4.0-ts.2",

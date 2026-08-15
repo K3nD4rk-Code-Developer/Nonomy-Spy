@@ -10715,6 +10715,8 @@ return {
 }
  end, _env("RemoteSpy.store"))() end)
 
+_instance("types", "Folder", "RemoteSpy.types", "RemoteSpy")
+
 _instance("util", "Folder", "RemoteSpy.util", "RemoteSpy")
 
 _module("applyUDim2", "ModuleScript", "RemoteSpy.util.applyUDim2", "RemoteSpy.util", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
@@ -14380,10 +14382,6 @@ end
 return isMotor end, _env("RemoteSpy.include.node_modules.flipper.src.isMotor"))() end)
 
 _instance("typings", "Folder", "RemoteSpy.include.node_modules.flipper.typings", "RemoteSpy.include.node_modules.flipper")
-
-_instance("hax", "Folder", "RemoteSpy.include.node_modules.hax", "RemoteSpy.include.node_modules")
-
-_instance("types", "Folder", "RemoteSpy.include.node_modules.hax.types", "RemoteSpy.include.node_modules.hax")
 
 _module("make", "ModuleScript", "RemoteSpy.include.node_modules.make", "RemoteSpy.include.node_modules", function () return setfenv(function() -- Compiled with roblox-ts v1.2.3
 --[[
