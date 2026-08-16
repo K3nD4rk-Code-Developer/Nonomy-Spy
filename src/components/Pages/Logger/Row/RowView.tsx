@@ -19,9 +19,9 @@ function RowView({ signal, selected, onHeightChange }: Props) {
 	const toggle = useCallback(() => {
 		// Print caller info for debugging
 		if (signal.caller) {
-			print(`[RemoteSpy] Caller: ${signal.caller.Name} (${signal.caller.ClassName})`);
+			print(`[Nonomy Spy] Caller: ${signal.caller.Name} (${signal.caller.ClassName})`);
 		} else {
-			print(`[RemoteSpy] Caller: nil`);
+			print(`[Nonomy Spy] Caller: nil`);
 		}
 		dispatch(toggleSignalSelected(signal.remoteId, signal.id));
 	}, []);

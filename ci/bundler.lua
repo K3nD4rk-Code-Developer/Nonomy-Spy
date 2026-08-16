@@ -1,4 +1,4 @@
-local MODEL_FILE = "ci/RemoteSpy.rbxm"
+local MODEL_FILE = "ci/NonomySpy.rbxm"
 local RUNTIME_FILE = "ci/runtime.lua"
 
 local bundleFile = ...

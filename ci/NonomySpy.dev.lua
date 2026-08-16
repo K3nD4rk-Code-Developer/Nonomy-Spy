@@ -103,9 +103,9 @@ local function _instance(name, className, path, parent)
 end
 
 
-_instance("RemoteSpy", "Folder", "RemoteSpy", nil)
+_instance("NonomySpy", "Folder", "NonomySpy", nil)
 
-_module("acrylic", "LocalScript", "RemoteSpy.acrylic", "RemoteSpy", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("acrylic", "LocalScript", "NonomySpy.acrylic", "NonomySpy", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.include.RuntimeLib)
 local Make = TS.import(script, TS.getModule(script, "@rbxts", "make"))
 local IS_ACRYLIC_ENABLED = TS.import(script, script.Parent, "constants").IS_ACRYLIC_ENABLED
@@ -160,9 +160,9 @@ if IS_ACRYLIC_ENABLED then
 		return active and disable()
 	end)
 end
- end, _env("RemoteSpy.acrylic"))() end)
+ end, _env("NonomySpy.acrylic"))() end)
 
-_module("app", "LocalScript", "RemoteSpy.app", "RemoteSpy", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("app", "LocalScript", "NonomySpy.app", "NonomySpy", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.include.RuntimeLib)
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
 local StoreProvider = TS.import(script, TS.getModule(script, "@rbxts", "roact-rodux-hooked").src).StoreProvider
@@ -194,11 +194,11 @@ changed(selectIsClosing, function(active)
 	end
 end)
 setGlobal(IS_LOADED, true)
- end, _env("RemoteSpy.app"))() end)
+ end, _env("NonomySpy.app"))() end)
 
-_instance("components", "Folder", "RemoteSpy.components", "RemoteSpy")
+_instance("components", "Folder", "NonomySpy.components", "NonomySpy")
 
-_module("Acrylic", "ModuleScript", "RemoteSpy.components.Acrylic", "RemoteSpy.components", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("Acrylic", "ModuleScript", "NonomySpy.components.Acrylic", "NonomySpy.components", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.include.RuntimeLib)
 local Acrylic = TS.import(script, script, "Acrylic").default
 local AcrylicPaint = TS.import(script, script, "AcrylicPaint").default
@@ -209,9 +209,9 @@ local default = {
 return {
 	default = default,
 }
- end, _env("RemoteSpy.components.Acrylic"))() end)
+ end, _env("NonomySpy.components.Acrylic"))() end)
 
-_module("Acrylic", "ModuleScript", "RemoteSpy.components.Acrylic.Acrylic", "RemoteSpy.components.Acrylic", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("Acrylic", "ModuleScript", "NonomySpy.components.Acrylic.Acrylic", "NonomySpy.components.Acrylic", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local AcrylicBlur = TS.import(script, script.Parent, "AcrylicBlur").default
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
@@ -228,9 +228,9 @@ end
 return {
 	default = Acrylic,
 }
- end, _env("RemoteSpy.components.Acrylic.Acrylic"))() end)
+ end, _env("NonomySpy.components.Acrylic.Acrylic"))() end)
 
-_module("AcrylicBlur", "ModuleScript", "RemoteSpy.components.Acrylic.AcrylicBlur", "RemoteSpy.components.Acrylic", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("AcrylicBlur", "ModuleScript", "NonomySpy.components.Acrylic.AcrylicBlur", "NonomySpy.components.Acrylic", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
 local Workspace = TS.import(script, TS.getModule(script, "@rbxts", "services")).Workspace
@@ -330,9 +330,9 @@ local default = withHooksPure(AcrylicBlur)
 return {
 	default = default,
 }
- end, _env("RemoteSpy.components.Acrylic.AcrylicBlur"))() end)
+ end, _env("NonomySpy.components.Acrylic.AcrylicBlur"))() end)
 
-_module("AcrylicPaint", "ModuleScript", "RemoteSpy.components.Acrylic.AcrylicPaint", "RemoteSpy.components.Acrylic", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("AcrylicPaint", "ModuleScript", "NonomySpy.components.Acrylic.AcrylicPaint", "NonomySpy.components.Acrylic", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local Container = TS.import(script, script.Parent.Parent, "Container").default
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
@@ -397,9 +397,9 @@ end
 return {
 	default = AcrylicPaint,
 }
- end, _env("RemoteSpy.components.Acrylic.AcrylicPaint"))() end)
+ end, _env("NonomySpy.components.Acrylic.AcrylicPaint"))() end)
 
-_module("create-acrylic", "ModuleScript", "RemoteSpy.components.Acrylic.create-acrylic", "RemoteSpy.components.Acrylic", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("create-acrylic", "ModuleScript", "NonomySpy.components.Acrylic.create-acrylic", "NonomySpy.components.Acrylic", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local Make = TS.import(script, TS.getModule(script, "@rbxts", "make"))
 local function createAcrylic()
@@ -422,9 +422,9 @@ end
 return {
 	createAcrylic = createAcrylic,
 }
- end, _env("RemoteSpy.components.Acrylic.create-acrylic"))() end)
+ end, _env("NonomySpy.components.Acrylic.create-acrylic"))() end)
 
-_module("utils", "ModuleScript", "RemoteSpy.components.Acrylic.utils", "RemoteSpy.components.Acrylic", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("utils", "ModuleScript", "NonomySpy.components.Acrylic.utils", "NonomySpy.components.Acrylic", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local Workspace = TS.import(script, TS.getModule(script, "@rbxts", "services")).Workspace
 local map = TS.import(script, script.Parent.Parent.Parent, "utils", "number-util").map
@@ -441,16 +441,16 @@ return {
 	viewportPointToWorld = viewportPointToWorld,
 	getOffset = getOffset,
 }
- end, _env("RemoteSpy.components.Acrylic.utils"))() end)
+ end, _env("NonomySpy.components.Acrylic.utils"))() end)
 
-_module("ActionBar", "ModuleScript", "RemoteSpy.components.ActionBar", "RemoteSpy.components", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("ActionBar", "ModuleScript", "NonomySpy.components.ActionBar", "NonomySpy.components", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.include.RuntimeLib)
 local exports = {}
 exports.default = TS.import(script, script, "ActionBar").default
 return exports
- end, _env("RemoteSpy.components.ActionBar"))() end)
+ end, _env("NonomySpy.components.ActionBar"))() end)
 
-_module("ActionBar", "ModuleScript", "RemoteSpy.components.ActionBar.ActionBar", "RemoteSpy.components.ActionBar", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("ActionBar", "ModuleScript", "NonomySpy.components.ActionBar.ActionBar", "NonomySpy.components.ActionBar", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local ActionBarEffects = TS.import(script, script.Parent, "ActionBarEffects").default
 local ActionButton = TS.import(script, script.Parent, "ActionButton").default
@@ -584,9 +584,9 @@ end
 return {
 	default = ActionBar,
 }
- end, _env("RemoteSpy.components.ActionBar.ActionBar"))() end)
+ end, _env("NonomySpy.components.ActionBar.ActionBar"))() end)
 
-_module("ActionBarEffects", "ModuleScript", "RemoteSpy.components.ActionBar.ActionBarEffects", "RemoteSpy.components.ActionBar", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("ActionBarEffects", "ModuleScript", "NonomySpy.components.ActionBar.ActionBarEffects", "NonomySpy.components.ActionBar", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
 local _tab_group = TS.import(script, script.Parent.Parent.Parent, "reducers", "tab-group")
@@ -1264,9 +1264,9 @@ local default = withHooksPure(ActionBarEffects)
 return {
 	default = default,
 }
- end, _env("RemoteSpy.components.ActionBar.ActionBarEffects"))() end)
+ end, _env("NonomySpy.components.ActionBar.ActionBarEffects"))() end)
 
-_module("ActionButton", "ModuleScript", "RemoteSpy.components.ActionBar.ActionButton", "RemoteSpy.components.ActionBar", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("ActionButton", "ModuleScript", "NonomySpy.components.ActionBar.ActionButton", "NonomySpy.components.ActionBar", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local Button = TS.import(script, script.Parent.Parent, "Button").default
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
@@ -1377,9 +1377,9 @@ local default = withHooksPure(ActionButton)
 return {
 	default = default,
 }
- end, _env("RemoteSpy.components.ActionBar.ActionButton"))() end)
+ end, _env("NonomySpy.components.ActionBar.ActionButton"))() end)
 
-_module("ActionLine", "ModuleScript", "RemoteSpy.components.ActionBar.ActionLine", "RemoteSpy.components.ActionBar", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("ActionLine", "ModuleScript", "NonomySpy.components.ActionBar.ActionLine", "NonomySpy.components.ActionBar", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local Container = TS.import(script, script.Parent.Parent, "Container").default
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
@@ -1401,9 +1401,9 @@ end
 return {
 	default = ActionLine,
 }
- end, _env("RemoteSpy.components.ActionBar.ActionLine"))() end)
+ end, _env("NonomySpy.components.ActionBar.ActionLine"))() end)
 
-_module("utils", "ModuleScript", "RemoteSpy.components.ActionBar.utils", "RemoteSpy.components.ActionBar", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("utils", "ModuleScript", "NonomySpy.components.ActionBar.utils", "NonomySpy.components.ActionBar", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local stringifySignalTraceback = TS.import(script, script.Parent.Parent.Parent, "reducers", "remote-log").stringifySignalTraceback
 local codifyTable = TS.import(script, script.Parent.Parent.Parent, "utils", "codify").codifyTable
@@ -1477,16 +1477,16 @@ return {
 	stringifyOutgoingSignal = stringifyOutgoingSignal,
 	codifyOutgoingSignal = codifyOutgoingSignal,
 }
- end, _env("RemoteSpy.components.ActionBar.utils"))() end)
+ end, _env("NonomySpy.components.ActionBar.utils"))() end)
 
-_module("App", "ModuleScript", "RemoteSpy.components.App", "RemoteSpy.components", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("App", "ModuleScript", "NonomySpy.components.App", "NonomySpy.components", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.include.RuntimeLib)
 local exports = {}
 exports.default = TS.import(script, script, "App").default
 return exports
- end, _env("RemoteSpy.components.App"))() end)
+ end, _env("NonomySpy.components.App"))() end)
 
-_module("App", "ModuleScript", "RemoteSpy.components.App.App", "RemoteSpy.components.App", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("App", "ModuleScript", "NonomySpy.components.App.App", "NonomySpy.components.App", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local KeybindListener = TS.import(script, script.Parent.Parent, "KeybindListener").default
 local MainWindow = TS.import(script, script.Parent.Parent, "MainWindow").default
@@ -1502,9 +1502,9 @@ end
 return {
 	default = App,
 }
- end, _env("RemoteSpy.components.App.App"))() end)
+ end, _env("NonomySpy.components.App.App"))() end)
 
-_module("App.story", "ModuleScript", "RemoteSpy.components.App.App.story", "RemoteSpy.components.App", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("App.story", "ModuleScript", "NonomySpy.components.App.App.story", "NonomySpy.components.App", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local App = TS.import(script, script.Parent, "App").default
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
@@ -1582,9 +1582,9 @@ return function(target)
 		Roact.unmount(handle)
 	end
 end
- end, _env("RemoteSpy.components.App.App.story"))() end)
+ end, _env("NonomySpy.components.App.App.story"))() end)
 
-_module("Button", "ModuleScript", "RemoteSpy.components.Button", "RemoteSpy.components", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("Button", "ModuleScript", "NonomySpy.components.Button", "NonomySpy.components", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.include.RuntimeLib)
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
 local function Button(props)
@@ -1634,9 +1634,9 @@ end
 return {
 	default = Button,
 }
- end, _env("RemoteSpy.components.Button"))() end)
+ end, _env("NonomySpy.components.Button"))() end)
 
-_module("Container", "ModuleScript", "RemoteSpy.components.Container", "RemoteSpy.components", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("Container", "ModuleScript", "NonomySpy.components.Container", "NonomySpy.components", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.include.RuntimeLib)
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
 local function Container(_param)
@@ -1673,16 +1673,16 @@ end
 return {
 	default = Container,
 }
- end, _env("RemoteSpy.components.Container"))() end)
+ end, _env("NonomySpy.components.Container"))() end)
 
-_module("KeybindListener", "ModuleScript", "RemoteSpy.components.KeybindListener", "RemoteSpy.components", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("KeybindListener", "ModuleScript", "NonomySpy.components.KeybindListener", "NonomySpy.components", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.include.RuntimeLib)
 local exports = {}
 exports.default = TS.import(script, script, "KeybindListener").default
 return exports
- end, _env("RemoteSpy.components.KeybindListener"))() end)
+ end, _env("NonomySpy.components.KeybindListener"))() end)
 
-_module("KeybindListener", "ModuleScript", "RemoteSpy.components.KeybindListener.KeybindListener", "RemoteSpy.components.KeybindListener", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("KeybindListener", "ModuleScript", "NonomySpy.components.KeybindListener.KeybindListener", "NonomySpy.components.KeybindListener", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local UserInputService = TS.import(script, TS.getModule(script, "@rbxts", "services")).UserInputService
 local _use_root_store = TS.import(script, script.Parent.Parent.Parent, "hooks", "use-root-store")
@@ -1715,16 +1715,16 @@ local default = withHooksPure(KeybindListener)
 return {
 	default = default,
 }
- end, _env("RemoteSpy.components.KeybindListener.KeybindListener"))() end)
+ end, _env("NonomySpy.components.KeybindListener.KeybindListener"))() end)
 
-_module("MainWindow", "ModuleScript", "RemoteSpy.components.MainWindow", "RemoteSpy.components", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("MainWindow", "ModuleScript", "NonomySpy.components.MainWindow", "NonomySpy.components", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.include.RuntimeLib)
 local exports = {}
 exports.default = TS.import(script, script, "MainWindow").default
 return exports
- end, _env("RemoteSpy.components.MainWindow"))() end)
+ end, _env("NonomySpy.components.MainWindow"))() end)
 
-_module("MainWindow", "ModuleScript", "RemoteSpy.components.MainWindow.MainWindow", "RemoteSpy.components.MainWindow", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("MainWindow", "ModuleScript", "NonomySpy.components.MainWindow.MainWindow", "NonomySpy.components.MainWindow", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local Acrylic = TS.import(script, script.Parent.Parent, "Acrylic").default
 local ActionBar = TS.import(script, script.Parent.Parent, "ActionBar").default
@@ -1760,7 +1760,7 @@ local function MainWindow()
 				onClose = function()
 					return dispatch(activateAction("close"))
 				end,
-				caption = '<font color="#FFFFFF">Wavified Spy</font>    <font color="#B2B2B2">' .. ("1.0.0 Alpha" .. "</font>"),
+				caption = '<font color="#FFFFFF">Nonomy Spy</font>    <font color="#B2B2B2">' .. ("1.0.0 Alpha" .. "</font>"),
 				captionTransparency = 0.1,
 				icon = "rbxassetid://133291240952158",
 			}),
@@ -1774,9 +1774,9 @@ local default = withHooksPure(MainWindow)
 return {
 	default = default,
 }
- end, _env("RemoteSpy.components.MainWindow.MainWindow"))() end)
+ end, _env("NonomySpy.components.MainWindow.MainWindow"))() end)
 
-_module("MainWindow.story", "ModuleScript", "RemoteSpy.components.MainWindow.MainWindow.story", "RemoteSpy.components.MainWindow", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("MainWindow.story", "ModuleScript", "NonomySpy.components.MainWindow.MainWindow.story", "NonomySpy.components.MainWindow", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local MainWindow = TS.import(script, script.Parent, "MainWindow").default
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
@@ -1792,23 +1792,23 @@ return function(target)
 		Roact.unmount(handle)
 	end
 end
- end, _env("RemoteSpy.components.MainWindow.MainWindow.story"))() end)
+ end, _env("NonomySpy.components.MainWindow.MainWindow.story"))() end)
 
-_module("Pages", "ModuleScript", "RemoteSpy.components.Pages", "RemoteSpy.components", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("Pages", "ModuleScript", "NonomySpy.components.Pages", "NonomySpy.components", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.include.RuntimeLib)
 local exports = {}
 exports.default = TS.import(script, script, "Pages").default
 return exports
- end, _env("RemoteSpy.components.Pages"))() end)
+ end, _env("NonomySpy.components.Pages"))() end)
 
-_module("Home", "ModuleScript", "RemoteSpy.components.Pages.Home", "RemoteSpy.components.Pages", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("Home", "ModuleScript", "NonomySpy.components.Pages.Home", "NonomySpy.components.Pages", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local exports = {}
 exports.default = TS.import(script, script, "Home").default
 return exports
- end, _env("RemoteSpy.components.Pages.Home"))() end)
+ end, _env("NonomySpy.components.Pages.Home"))() end)
 
-_module("Home", "ModuleScript", "RemoteSpy.components.Pages.Home.Home", "RemoteSpy.components.Pages.Home", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("Home", "ModuleScript", "NonomySpy.components.Pages.Home.Home", "NonomySpy.components.Pages.Home", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.Parent.include.RuntimeLib)
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
 local Row = TS.import(script, script.Parent, "Row").default
@@ -1918,9 +1918,9 @@ local default = withHooksPure(Home)
 return {
 	default = default,
 }
- end, _env("RemoteSpy.components.Pages.Home.Home"))() end)
+ end, _env("NonomySpy.components.Pages.Home.Home"))() end)
 
-_module("Row", "ModuleScript", "RemoteSpy.components.Pages.Home.Row", "RemoteSpy.components.Pages.Home", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("Row", "ModuleScript", "NonomySpy.components.Pages.Home.Row", "NonomySpy.components.Pages.Home", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.Parent.include.RuntimeLib)
 local Button = TS.import(script, script.Parent.Parent.Parent, "Button").default
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
@@ -2159,16 +2159,16 @@ local default = withHooksPure(Row)
 return {
 	default = default,
 }
- end, _env("RemoteSpy.components.Pages.Home.Row"))() end)
+ end, _env("NonomySpy.components.Pages.Home.Row"))() end)
 
-_module("Inspection", "ModuleScript", "RemoteSpy.components.Pages.Inspection", "RemoteSpy.components.Pages", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("Inspection", "ModuleScript", "NonomySpy.components.Pages.Inspection", "NonomySpy.components.Pages", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local exports = {}
 exports.default = TS.import(script, script, "Inspection").default
 return exports
- end, _env("RemoteSpy.components.Pages.Inspection"))() end)
+ end, _env("NonomySpy.components.Pages.Inspection"))() end)
 
-_module("Inspection", "ModuleScript", "RemoteSpy.components.Pages.Inspection.Inspection", "RemoteSpy.components.Pages.Inspection", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("Inspection", "ModuleScript", "NonomySpy.components.Pages.Inspection.Inspection", "NonomySpy.components.Pages.Inspection", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.Parent.include.RuntimeLib)
 local Button = TS.import(script, script.Parent.Parent.Parent, "Button").default
 local Container = TS.import(script, script.Parent.Parent.Parent, "Container").default
@@ -3049,16 +3049,16 @@ local default = withHooksPure(Inspection)
 return {
 	default = default,
 }
- end, _env("RemoteSpy.components.Pages.Inspection.Inspection"))() end)
+ end, _env("NonomySpy.components.Pages.Inspection.Inspection"))() end)
 
-_module("Logger", "ModuleScript", "RemoteSpy.components.Pages.Logger", "RemoteSpy.components.Pages", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("Logger", "ModuleScript", "NonomySpy.components.Pages.Logger", "NonomySpy.components.Pages", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local exports = {}
 exports.default = TS.import(script, script, "Logger").default
 return exports
- end, _env("RemoteSpy.components.Pages.Logger"))() end)
+ end, _env("NonomySpy.components.Pages.Logger"))() end)
 
-_module("Header", "ModuleScript", "RemoteSpy.components.Pages.Logger.Header", "RemoteSpy.components.Pages.Logger", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("Header", "ModuleScript", "NonomySpy.components.Pages.Logger.Header", "NonomySpy.components.Pages.Logger", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.Parent.include.RuntimeLib)
 local Button = TS.import(script, script.Parent.Parent.Parent, "Button").default
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
@@ -3205,9 +3205,9 @@ local default = withHooksPure(Header)
 return {
 	default = default,
 }
- end, _env("RemoteSpy.components.Pages.Logger.Header"))() end)
+ end, _env("NonomySpy.components.Pages.Logger.Header"))() end)
 
-_module("Logger", "ModuleScript", "RemoteSpy.components.Pages.Logger.Logger", "RemoteSpy.components.Pages.Logger", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("Logger", "ModuleScript", "NonomySpy.components.Pages.Logger.Logger", "NonomySpy.components.Pages.Logger", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.Parent.include.RuntimeLib)
 local Container = TS.import(script, script.Parent.Parent.Parent, "Container").default
 local Header = TS.import(script, script.Parent, "Header").default
@@ -3311,16 +3311,16 @@ local default = withHooksPure(Logger)
 return {
 	default = default,
 }
- end, _env("RemoteSpy.components.Pages.Logger.Logger"))() end)
+ end, _env("NonomySpy.components.Pages.Logger.Logger"))() end)
 
-_module("Row", "ModuleScript", "RemoteSpy.components.Pages.Logger.Row", "RemoteSpy.components.Pages.Logger", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("Row", "ModuleScript", "NonomySpy.components.Pages.Logger.Row", "NonomySpy.components.Pages.Logger", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.Parent.include.RuntimeLib)
 local exports = {}
 exports.default = TS.import(script, script, "Row").default
 return exports
- end, _env("RemoteSpy.components.Pages.Logger.Row"))() end)
+ end, _env("NonomySpy.components.Pages.Logger.Row"))() end)
 
-_module("Row", "ModuleScript", "RemoteSpy.components.Pages.Logger.Row.Row", "RemoteSpy.components.Pages.Logger.Row", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("Row", "ModuleScript", "NonomySpy.components.Pages.Logger.Row.Row", "NonomySpy.components.Pages.Logger.Row", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.Parent.Parent.include.RuntimeLib)
 local Container = TS.import(script, script.Parent.Parent.Parent.Parent, "Container").default
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
@@ -3364,9 +3364,9 @@ local default = withHooksPure(Row)
 return {
 	default = default,
 }
- end, _env("RemoteSpy.components.Pages.Logger.Row.Row"))() end)
+ end, _env("NonomySpy.components.Pages.Logger.Row.Row"))() end)
 
-_module("RowBody", "ModuleScript", "RemoteSpy.components.Pages.Logger.Row.RowBody", "RemoteSpy.components.Pages.Logger.Row", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("RowBody", "ModuleScript", "NonomySpy.components.Pages.Logger.Row.RowBody", "NonomySpy.components.Pages.Logger.Row", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.Parent.Parent.include.RuntimeLib)
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
 local RowCaption = TS.import(script, script.Parent, "RowCaption").default
@@ -3596,9 +3596,9 @@ local default = withHooksPure(RowBody)
 return {
 	default = default,
 }
- end, _env("RemoteSpy.components.Pages.Logger.Row.RowBody"))() end)
+ end, _env("NonomySpy.components.Pages.Logger.Row.RowBody"))() end)
 
-_module("RowCaption", "ModuleScript", "RemoteSpy.components.Pages.Logger.Row.RowCaption", "RemoteSpy.components.Pages.Logger.Row", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("RowCaption", "ModuleScript", "NonomySpy.components.Pages.Logger.Row.RowCaption", "NonomySpy.components.Pages.Logger.Row", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.Parent.Parent.include.RuntimeLib)
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
 local function RowCaption(_param)
@@ -3644,9 +3644,9 @@ end
 return {
 	default = RowCaption,
 }
- end, _env("RemoteSpy.components.Pages.Logger.Row.RowCaption"))() end)
+ end, _env("NonomySpy.components.Pages.Logger.Row.RowCaption"))() end)
 
-_module("RowDoubleCaption", "ModuleScript", "RemoteSpy.components.Pages.Logger.Row.RowDoubleCaption", "RemoteSpy.components.Pages.Logger.Row", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("RowDoubleCaption", "ModuleScript", "NonomySpy.components.Pages.Logger.Row.RowDoubleCaption", "NonomySpy.components.Pages.Logger.Row", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.Parent.Parent.include.RuntimeLib)
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
 local function RowDoubleCaption(_param)
@@ -3706,9 +3706,9 @@ end
 return {
 	default = RowDoubleCaption,
 }
- end, _env("RemoteSpy.components.Pages.Logger.Row.RowDoubleCaption"))() end)
+ end, _env("NonomySpy.components.Pages.Logger.Row.RowDoubleCaption"))() end)
 
-_module("RowHeader", "ModuleScript", "RemoteSpy.components.Pages.Logger.Row.RowHeader", "RemoteSpy.components.Pages.Logger.Row", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("RowHeader", "ModuleScript", "NonomySpy.components.Pages.Logger.Row.RowHeader", "NonomySpy.components.Pages.Logger.Row", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.Parent.Parent.include.RuntimeLib)
 local Button = TS.import(script, script.Parent.Parent.Parent.Parent, "Button").default
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
@@ -3847,9 +3847,9 @@ local default = withHooksPure(RowHeader)
 return {
 	default = default,
 }
- end, _env("RemoteSpy.components.Pages.Logger.Row.RowHeader"))() end)
+ end, _env("NonomySpy.components.Pages.Logger.Row.RowHeader"))() end)
 
-_module("RowLine", "ModuleScript", "RemoteSpy.components.Pages.Logger.Row.RowLine", "RemoteSpy.components.Pages.Logger.Row", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("RowLine", "ModuleScript", "NonomySpy.components.Pages.Logger.Row.RowLine", "NonomySpy.components.Pages.Logger.Row", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.Parent.Parent.include.RuntimeLib)
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
 local function RowLine()
@@ -3863,9 +3863,9 @@ end
 return {
 	default = RowLine,
 }
- end, _env("RemoteSpy.components.Pages.Logger.Row.RowLine"))() end)
+ end, _env("NonomySpy.components.Pages.Logger.Row.RowLine"))() end)
 
-_module("RowView", "ModuleScript", "RemoteSpy.components.Pages.Logger.Row.RowView", "RemoteSpy.components.Pages.Logger.Row", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("RowView", "ModuleScript", "NonomySpy.components.Pages.Logger.Row.RowView", "NonomySpy.components.Pages.Logger.Row", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.Parent.Parent.include.RuntimeLib)
 local Container = TS.import(script, script.Parent.Parent.Parent.Parent, "Container").default
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
@@ -3885,9 +3885,9 @@ local function RowView(_param)
 	local contentHeight, setContentHeight = useBinding(0)
 	local toggle = useCallback(function()
 		if signal.caller then
-			print("[RemoteSpy] Caller: " .. (signal.caller.Name .. (" (" .. (signal.caller.ClassName .. ")"))))
+			print("[Nonomy Spy] Caller: " .. (signal.caller.Name .. (" (" .. (signal.caller.ClassName .. ")"))))
 		else
-			print("[RemoteSpy] Caller: nil")
+			print("[Nonomy Spy] Caller: nil")
 		end
 		dispatch(toggleSignalSelected(signal.remoteId, signal.id))
 	end, {})
@@ -3933,9 +3933,9 @@ local default = withHooksPure(RowView)
 return {
 	default = default,
 }
- end, _env("RemoteSpy.components.Pages.Logger.Row.RowView"))() end)
+ end, _env("NonomySpy.components.Pages.Logger.Row.RowView"))() end)
 
-_module("Page", "ModuleScript", "RemoteSpy.components.Pages.Page", "RemoteSpy.components.Pages", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("Page", "ModuleScript", "NonomySpy.components.Pages.Page", "NonomySpy.components.Pages", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local Container = TS.import(script, script.Parent.Parent, "Container").default
 local Home = TS.import(script, script.Parent, "Home").default
@@ -4007,9 +4007,9 @@ local default = withHooksPure(Page)
 return {
 	default = default,
 }
- end, _env("RemoteSpy.components.Pages.Page"))() end)
+ end, _env("NonomySpy.components.Pages.Page"))() end)
 
-_module("Pages", "ModuleScript", "RemoteSpy.components.Pages.Pages", "RemoteSpy.components.Pages", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("Pages", "ModuleScript", "NonomySpy.components.Pages.Pages", "NonomySpy.components.Pages", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local Page = TS.import(script, script.Parent, "Page").default
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
@@ -4046,16 +4046,16 @@ local default = withHooksPure(Pages)
 return {
 	default = default,
 }
- end, _env("RemoteSpy.components.Pages.Pages"))() end)
+ end, _env("NonomySpy.components.Pages.Pages"))() end)
 
-_module("Script", "ModuleScript", "RemoteSpy.components.Pages.Script", "RemoteSpy.components.Pages", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("Script", "ModuleScript", "NonomySpy.components.Pages.Script", "NonomySpy.components.Pages", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local exports = {}
 exports.default = TS.import(script, script, "Script").default
 return exports
- end, _env("RemoteSpy.components.Pages.Script"))() end)
+ end, _env("NonomySpy.components.Pages.Script"))() end)
 
-_module("Script", "ModuleScript", "RemoteSpy.components.Pages.Script.Script", "RemoteSpy.components.Pages.Script", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("Script", "ModuleScript", "NonomySpy.components.Pages.Script.Script", "NonomySpy.components.Pages.Script", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.Parent.include.RuntimeLib)
 local Container = TS.import(script, script.Parent.Parent.Parent, "Container").default
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
@@ -4143,16 +4143,16 @@ local default = withHooksPure(Script)
 return {
 	default = default,
 }
- end, _env("RemoteSpy.components.Pages.Script.Script"))() end)
+ end, _env("NonomySpy.components.Pages.Script.Script"))() end)
 
-_module("Settings", "ModuleScript", "RemoteSpy.components.Pages.Settings", "RemoteSpy.components.Pages", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("Settings", "ModuleScript", "NonomySpy.components.Pages.Settings", "NonomySpy.components.Pages", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local exports = {}
 exports.default = TS.import(script, script, "Settings").default
 return exports
- end, _env("RemoteSpy.components.Pages.Settings"))() end)
+ end, _env("NonomySpy.components.Pages.Settings"))() end)
 
-_module("Settings", "ModuleScript", "RemoteSpy.components.Pages.Settings.Settings", "RemoteSpy.components.Pages.Settings", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("Settings", "ModuleScript", "NonomySpy.components.Pages.Settings.Settings", "NonomySpy.components.Pages.Settings", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.Parent.include.RuntimeLib)
 local Button = TS.import(script, script.Parent.Parent.Parent, "Button").default
 local Container = TS.import(script, script.Parent.Parent.Parent, "Container").default
@@ -4974,9 +4974,9 @@ local default = withHooksPure(Settings)
 return {
 	default = default,
 }
- end, _env("RemoteSpy.components.Pages.Settings.Settings"))() end)
+ end, _env("NonomySpy.components.Pages.Settings.Settings"))() end)
 
-_module("Root", "ModuleScript", "RemoteSpy.components.Root", "RemoteSpy.components", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("Root", "ModuleScript", "NonomySpy.components.Root", "NonomySpy.components", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.include.RuntimeLib)
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
 local DISPLAY_ORDER = TS.import(script, script.Parent.Parent, "constants").DISPLAY_ORDER
@@ -5042,9 +5042,9 @@ end
 return {
 	default = Root,
 }
- end, _env("RemoteSpy.components.Root"))() end)
+ end, _env("NonomySpy.components.Root"))() end)
 
-_module("Selection", "ModuleScript", "RemoteSpy.components.Selection", "RemoteSpy.components", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("Selection", "ModuleScript", "NonomySpy.components.Selection", "NonomySpy.components", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.include.RuntimeLib)
 local Container = TS.import(script, script.Parent, "Container").default
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
@@ -5132,16 +5132,16 @@ local default = withHooksPure(Selection)
 return {
 	default = default,
 }
- end, _env("RemoteSpy.components.Selection"))() end)
+ end, _env("NonomySpy.components.Selection"))() end)
 
-_module("SettingsPersistence", "ModuleScript", "RemoteSpy.components.SettingsPersistence", "RemoteSpy.components", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("SettingsPersistence", "ModuleScript", "NonomySpy.components.SettingsPersistence", "NonomySpy.components", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.include.RuntimeLib)
 local exports = {}
 exports.default = TS.import(script, script, "SettingsPersistence").default
 return exports
- end, _env("RemoteSpy.components.SettingsPersistence"))() end)
+ end, _env("NonomySpy.components.SettingsPersistence"))() end)
 
-_module("SettingsPersistence", "ModuleScript", "RemoteSpy.components.SettingsPersistence.SettingsPersistence", "RemoteSpy.components.SettingsPersistence", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("SettingsPersistence", "ModuleScript", "NonomySpy.components.SettingsPersistence.SettingsPersistence", "NonomySpy.components.SettingsPersistence", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
 local _roact_hooked = TS.import(script, TS.getModule(script, "@rbxts", "roact-hooked").src)
@@ -5217,9 +5217,9 @@ local default = withHooksPure(SettingsPersistence)
 return {
 	default = default,
 }
- end, _env("RemoteSpy.components.SettingsPersistence.SettingsPersistence"))() end)
+ end, _env("NonomySpy.components.SettingsPersistence.SettingsPersistence"))() end)
 
-_module("SidePanel", "ModuleScript", "RemoteSpy.components.SidePanel", "RemoteSpy.components", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("SidePanel", "ModuleScript", "NonomySpy.components.SidePanel", "NonomySpy.components", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.include.RuntimeLib)
 local exports = {}
 exports.default = TS.import(script, script, "SidePanel").default
@@ -5227,16 +5227,16 @@ for _k, _v in pairs(TS.import(script, script, "use-side-panel-context") or {}) d
 	exports[_k] = _v
 end
 return exports
- end, _env("RemoteSpy.components.SidePanel"))() end)
+ end, _env("NonomySpy.components.SidePanel"))() end)
 
-_module("FunctionTree", "ModuleScript", "RemoteSpy.components.SidePanel.FunctionTree", "RemoteSpy.components.SidePanel", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("FunctionTree", "ModuleScript", "NonomySpy.components.SidePanel.FunctionTree", "NonomySpy.components.SidePanel", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local exports = {}
 exports.default = TS.import(script, script, "FunctionTree").default
 return exports
- end, _env("RemoteSpy.components.SidePanel.FunctionTree"))() end)
+ end, _env("NonomySpy.components.SidePanel.FunctionTree"))() end)
 
-_module("FunctionTree", "ModuleScript", "RemoteSpy.components.SidePanel.FunctionTree.FunctionTree", "RemoteSpy.components.SidePanel.FunctionTree", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("FunctionTree", "ModuleScript", "NonomySpy.components.SidePanel.FunctionTree.FunctionTree", "NonomySpy.components.SidePanel.FunctionTree", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.Parent.include.RuntimeLib)
 local Container = TS.import(script, script.Parent.Parent.Parent, "Container").default
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
@@ -5444,16 +5444,16 @@ local default = withHooksPure(FunctionTree)
 return {
 	default = default,
 }
- end, _env("RemoteSpy.components.SidePanel.FunctionTree.FunctionTree"))() end)
+ end, _env("NonomySpy.components.SidePanel.FunctionTree.FunctionTree"))() end)
 
-_module("InspectionConstants", "ModuleScript", "RemoteSpy.components.SidePanel.InspectionConstants", "RemoteSpy.components.SidePanel", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("InspectionConstants", "ModuleScript", "NonomySpy.components.SidePanel.InspectionConstants", "NonomySpy.components.SidePanel", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local exports = {}
 exports.default = TS.import(script, script, "InspectionConstants").default
 return exports
- end, _env("RemoteSpy.components.SidePanel.InspectionConstants"))() end)
+ end, _env("NonomySpy.components.SidePanel.InspectionConstants"))() end)
 
-_module("InspectionConstants", "ModuleScript", "RemoteSpy.components.SidePanel.InspectionConstants.InspectionConstants", "RemoteSpy.components.SidePanel.InspectionConstants", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("InspectionConstants", "ModuleScript", "NonomySpy.components.SidePanel.InspectionConstants.InspectionConstants", "NonomySpy.components.SidePanel.InspectionConstants", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.Parent.include.RuntimeLib)
 local Container = TS.import(script, script.Parent.Parent.Parent, "Container").default
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
@@ -5702,16 +5702,16 @@ local default = withHooksPure(InspectionConstants)
 return {
 	default = default,
 }
- end, _env("RemoteSpy.components.SidePanel.InspectionConstants.InspectionConstants"))() end)
+ end, _env("NonomySpy.components.SidePanel.InspectionConstants.InspectionConstants"))() end)
 
-_module("InspectionMetadata", "ModuleScript", "RemoteSpy.components.SidePanel.InspectionMetadata", "RemoteSpy.components.SidePanel", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("InspectionMetadata", "ModuleScript", "NonomySpy.components.SidePanel.InspectionMetadata", "NonomySpy.components.SidePanel", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local exports = {}
 exports.default = TS.import(script, script, "InspectionMetadata").default
 return exports
- end, _env("RemoteSpy.components.SidePanel.InspectionMetadata"))() end)
+ end, _env("NonomySpy.components.SidePanel.InspectionMetadata"))() end)
 
-_module("InspectionMetadata", "ModuleScript", "RemoteSpy.components.SidePanel.InspectionMetadata.InspectionMetadata", "RemoteSpy.components.SidePanel.InspectionMetadata", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("InspectionMetadata", "ModuleScript", "NonomySpy.components.SidePanel.InspectionMetadata.InspectionMetadata", "NonomySpy.components.SidePanel.InspectionMetadata", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.Parent.include.RuntimeLib)
 local Container = TS.import(script, script.Parent.Parent.Parent, "Container").default
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
@@ -6023,16 +6023,16 @@ local default = withHooksPure(InspectionMetadata)
 return {
 	default = default,
 }
- end, _env("RemoteSpy.components.SidePanel.InspectionMetadata.InspectionMetadata"))() end)
+ end, _env("NonomySpy.components.SidePanel.InspectionMetadata.InspectionMetadata"))() end)
 
-_module("InspectionUpvalues", "ModuleScript", "RemoteSpy.components.SidePanel.InspectionUpvalues", "RemoteSpy.components.SidePanel", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("InspectionUpvalues", "ModuleScript", "NonomySpy.components.SidePanel.InspectionUpvalues", "NonomySpy.components.SidePanel", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local exports = {}
 exports.default = TS.import(script, script, "InspectionUpvalues").default
 return exports
- end, _env("RemoteSpy.components.SidePanel.InspectionUpvalues"))() end)
+ end, _env("NonomySpy.components.SidePanel.InspectionUpvalues"))() end)
 
-_module("InspectionUpvalues", "ModuleScript", "RemoteSpy.components.SidePanel.InspectionUpvalues.InspectionUpvalues", "RemoteSpy.components.SidePanel.InspectionUpvalues", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("InspectionUpvalues", "ModuleScript", "NonomySpy.components.SidePanel.InspectionUpvalues.InspectionUpvalues", "NonomySpy.components.SidePanel.InspectionUpvalues", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.Parent.include.RuntimeLib)
 local Container = TS.import(script, script.Parent.Parent.Parent, "Container").default
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
@@ -6204,16 +6204,16 @@ local default = withHooksPure(InspectionUpvalues)
 return {
 	default = default,
 }
- end, _env("RemoteSpy.components.SidePanel.InspectionUpvalues.InspectionUpvalues"))() end)
+ end, _env("NonomySpy.components.SidePanel.InspectionUpvalues.InspectionUpvalues"))() end)
 
-_module("Peek", "ModuleScript", "RemoteSpy.components.SidePanel.Peek", "RemoteSpy.components.SidePanel", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("Peek", "ModuleScript", "NonomySpy.components.SidePanel.Peek", "NonomySpy.components.SidePanel", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local exports = {}
 exports.default = TS.import(script, script, "Peek").default
 return exports
- end, _env("RemoteSpy.components.SidePanel.Peek"))() end)
+ end, _env("NonomySpy.components.SidePanel.Peek"))() end)
 
-_module("Peek", "ModuleScript", "RemoteSpy.components.SidePanel.Peek.Peek", "RemoteSpy.components.SidePanel.Peek", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("Peek", "ModuleScript", "NonomySpy.components.SidePanel.Peek.Peek", "NonomySpy.components.SidePanel.Peek", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.Parent.include.RuntimeLib)
 local Container = TS.import(script, script.Parent.Parent.Parent, "Container").default
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
@@ -6326,9 +6326,9 @@ local default = withHooksPure(Peek)
 return {
 	default = default,
 }
- end, _env("RemoteSpy.components.SidePanel.Peek.Peek"))() end)
+ end, _env("NonomySpy.components.SidePanel.Peek.Peek"))() end)
 
-_module("SidePanel", "ModuleScript", "RemoteSpy.components.SidePanel.SidePanel", "RemoteSpy.components.SidePanel", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("SidePanel", "ModuleScript", "NonomySpy.components.SidePanel.SidePanel", "NonomySpy.components.SidePanel", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local Container = TS.import(script, script.Parent.Parent, "Container").default
 local FunctionTree = TS.import(script, script.Parent, "FunctionTree").default
@@ -6461,16 +6461,16 @@ local default = withHooksPure(SidePanel)
 return {
 	default = default,
 }
- end, _env("RemoteSpy.components.SidePanel.SidePanel"))() end)
+ end, _env("NonomySpy.components.SidePanel.SidePanel"))() end)
 
-_module("Traceback", "ModuleScript", "RemoteSpy.components.SidePanel.Traceback", "RemoteSpy.components.SidePanel", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("Traceback", "ModuleScript", "NonomySpy.components.SidePanel.Traceback", "NonomySpy.components.SidePanel", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local exports = {}
 exports.default = TS.import(script, script, "Traceback").default
 return exports
- end, _env("RemoteSpy.components.SidePanel.Traceback"))() end)
+ end, _env("NonomySpy.components.SidePanel.Traceback"))() end)
 
-_module("Traceback", "ModuleScript", "RemoteSpy.components.SidePanel.Traceback.Traceback", "RemoteSpy.components.SidePanel.Traceback", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("Traceback", "ModuleScript", "NonomySpy.components.SidePanel.Traceback.Traceback", "NonomySpy.components.SidePanel.Traceback", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.Parent.include.RuntimeLib)
 local Container = TS.import(script, script.Parent.Parent.Parent, "Container").default
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
@@ -6696,11 +6696,11 @@ local default = withHooksPure(Traceback)
 return {
 	default = default,
 }
- end, _env("RemoteSpy.components.SidePanel.Traceback.Traceback"))() end)
+ end, _env("NonomySpy.components.SidePanel.Traceback.Traceback"))() end)
 
-_instance("components", "Folder", "RemoteSpy.components.SidePanel.components", "RemoteSpy.components.SidePanel")
+_instance("components", "Folder", "NonomySpy.components.SidePanel.components", "NonomySpy.components.SidePanel")
 
-_module("TitleBar", "ModuleScript", "RemoteSpy.components.SidePanel.components.TitleBar", "RemoteSpy.components.SidePanel.components", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("TitleBar", "ModuleScript", "NonomySpy.components.SidePanel.components.TitleBar", "NonomySpy.components.SidePanel.components", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.Parent.include.RuntimeLib)
 local Button = TS.import(script, script.Parent.Parent.Parent, "Button").default
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
@@ -6779,9 +6779,9 @@ local default = withHooksPure(TitleBar)
 return {
 	default = default,
 }
- end, _env("RemoteSpy.components.SidePanel.components.TitleBar"))() end)
+ end, _env("NonomySpy.components.SidePanel.components.TitleBar"))() end)
 
-_module("use-side-panel-context", "ModuleScript", "RemoteSpy.components.SidePanel.use-side-panel-context", "RemoteSpy.components.SidePanel", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("use-side-panel-context", "ModuleScript", "NonomySpy.components.SidePanel.use-side-panel-context", "NonomySpy.components.SidePanel", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
 local useContext = TS.import(script, TS.getModule(script, "@rbxts", "roact-hooked").src).useContext
@@ -6793,16 +6793,16 @@ return {
 	useSidePanelContext = useSidePanelContext,
 	SidePanelContext = SidePanelContext,
 }
- end, _env("RemoteSpy.components.SidePanel.use-side-panel-context"))() end)
+ end, _env("NonomySpy.components.SidePanel.use-side-panel-context"))() end)
 
-_module("Tabs", "ModuleScript", "RemoteSpy.components.Tabs", "RemoteSpy.components", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("Tabs", "ModuleScript", "NonomySpy.components.Tabs", "NonomySpy.components", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.include.RuntimeLib)
 local exports = {}
 exports.default = TS.import(script, script, "Tabs").default
 return exports
- end, _env("RemoteSpy.components.Tabs"))() end)
+ end, _env("NonomySpy.components.Tabs"))() end)
 
-_module("Tab", "ModuleScript", "RemoteSpy.components.Tabs.Tab", "RemoteSpy.components.Tabs", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("Tab", "ModuleScript", "NonomySpy.components.Tabs.Tab", "NonomySpy.components.Tabs", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local Button = TS.import(script, script.Parent.Parent, "Button").default
 local Container = TS.import(script, script.Parent.Parent, "Container").default
@@ -7014,9 +7014,9 @@ local default = withHooksPure(Tab)
 return {
 	default = default,
 }
- end, _env("RemoteSpy.components.Tabs.Tab"))() end)
+ end, _env("NonomySpy.components.Tabs.Tab"))() end)
 
-_module("Tabs", "ModuleScript", "RemoteSpy.components.Tabs.Tabs", "RemoteSpy.components.Tabs", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("Tabs", "ModuleScript", "NonomySpy.components.Tabs.Tabs", "NonomySpy.components.Tabs", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
 local Tab = TS.import(script, script.Parent, "Tab").default
@@ -7079,9 +7079,9 @@ local default = withHooksPure(Tabs)
 return {
 	default = default,
 }
- end, _env("RemoteSpy.components.Tabs.Tabs"))() end)
+ end, _env("NonomySpy.components.Tabs.Tabs"))() end)
 
-_module("constants", "ModuleScript", "RemoteSpy.components.Tabs.constants", "RemoteSpy.components.Tabs", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("constants", "ModuleScript", "NonomySpy.components.Tabs.constants", "NonomySpy.components.Tabs", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local TabType = TS.import(script, script.Parent.Parent.Parent, "reducers", "tab-group").TabType
 local tabIcons = {
@@ -7097,9 +7097,9 @@ local tabIcons = {
 return {
 	tabIcons = tabIcons,
 }
- end, _env("RemoteSpy.components.Tabs.constants"))() end)
+ end, _env("NonomySpy.components.Tabs.constants"))() end)
 
-_module("use-draggable-tab", "ModuleScript", "RemoteSpy.components.Tabs.use-draggable-tab", "RemoteSpy.components.Tabs", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("use-draggable-tab", "ModuleScript", "NonomySpy.components.Tabs.use-draggable-tab", "NonomySpy.components.Tabs", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local _services = TS.import(script, TS.getModule(script, "@rbxts", "services"))
 local RunService = _services.RunService
@@ -7172,9 +7172,9 @@ end
 return {
 	useDraggableTab = useDraggableTab,
 }
- end, _env("RemoteSpy.components.Tabs.use-draggable-tab"))() end)
+ end, _env("NonomySpy.components.Tabs.use-draggable-tab"))() end)
 
-_module("Window", "ModuleScript", "RemoteSpy.components.Window", "RemoteSpy.components", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("Window", "ModuleScript", "NonomySpy.components.Window", "NonomySpy.components", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.include.RuntimeLib)
 local Window = TS.import(script, script, "Window").default
 local WindowBackground = TS.import(script, script, "WindowBackground").default
@@ -7191,9 +7191,9 @@ local default = {
 return {
 	default = default,
 }
- end, _env("RemoteSpy.components.Window"))() end)
+ end, _env("NonomySpy.components.Window"))() end)
 
-_module("Window", "ModuleScript", "RemoteSpy.components.Window.Window", "RemoteSpy.components.Window", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("Window", "ModuleScript", "NonomySpy.components.Window.Window", "NonomySpy.components.Window", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
 local WindowContext = TS.import(script, script.Parent, "use-window-context").WindowContext
@@ -7277,9 +7277,9 @@ local default = withHooksPure(Window)
 return {
 	default = default,
 }
- end, _env("RemoteSpy.components.Window.Window"))() end)
+ end, _env("NonomySpy.components.Window.Window"))() end)
 
-_module("Window.story", "ModuleScript", "RemoteSpy.components.Window.Window.story", "RemoteSpy.components.Window", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("Window.story", "ModuleScript", "NonomySpy.components.Window.Window.story", "NonomySpy.components.Window", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
 local Root = TS.import(script, script.Parent.Parent, "Root").default
@@ -7305,9 +7305,9 @@ return function(target)
 		Roact.unmount(handle)
 	end
 end
- end, _env("RemoteSpy.components.Window.Window.story"))() end)
+ end, _env("NonomySpy.components.Window.Window.story"))() end)
 
-_module("WindowBackground", "ModuleScript", "RemoteSpy.components.Window.WindowBackground", "RemoteSpy.components.Window", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("WindowBackground", "ModuleScript", "NonomySpy.components.Window.WindowBackground", "NonomySpy.components.Window", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local Container = TS.import(script, script.Parent.Parent, "Container").default
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
@@ -7358,9 +7358,9 @@ end
 return {
 	default = WindowBackground,
 }
- end, _env("RemoteSpy.components.Window.WindowBackground"))() end)
+ end, _env("NonomySpy.components.Window.WindowBackground"))() end)
 
-_module("WindowDropShadow", "ModuleScript", "RemoteSpy.components.Window.WindowDropShadow", "RemoteSpy.components.Window", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("WindowDropShadow", "ModuleScript", "NonomySpy.components.Window.WindowDropShadow", "NonomySpy.components.Window", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
 local WindowAssets = TS.import(script, script.Parent, "assets").WindowAssets
@@ -7379,9 +7379,9 @@ end
 return {
 	default = WindowDropShadow,
 }
- end, _env("RemoteSpy.components.Window.WindowDropShadow"))() end)
+ end, _env("NonomySpy.components.Window.WindowDropShadow"))() end)
 
-_module("WindowResize", "ModuleScript", "RemoteSpy.components.Window.WindowResize", "RemoteSpy.components.Window", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("WindowResize", "ModuleScript", "NonomySpy.components.Window.WindowResize", "NonomySpy.components.Window", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local Button = TS.import(script, script.Parent.Parent, "Button").default
 local Container = TS.import(script, script.Parent.Parent, "Container").default
@@ -7542,9 +7542,9 @@ local default = withHooksPure(WindowResize)
 return {
 	default = default,
 }
- end, _env("RemoteSpy.components.Window.WindowResize"))() end)
+ end, _env("NonomySpy.components.Window.WindowResize"))() end)
 
-_module("WindowTitleBar", "ModuleScript", "RemoteSpy.components.Window.WindowTitleBar", "RemoteSpy.components.Window", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("WindowTitleBar", "ModuleScript", "NonomySpy.components.Window.WindowTitleBar", "NonomySpy.components.Window", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local Button = TS.import(script, script.Parent.Parent, "Button").default
 local Container = TS.import(script, script.Parent.Parent, "Container").default
@@ -7858,9 +7858,9 @@ local default = withHooksPure(WindowTitleBar)
 return {
 	default = default,
 }
- end, _env("RemoteSpy.components.Window.WindowTitleBar"))() end)
+ end, _env("NonomySpy.components.Window.WindowTitleBar"))() end)
 
-_module("assets", "ModuleScript", "RemoteSpy.components.Window.assets", "RemoteSpy.components.Window", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("assets", "ModuleScript", "NonomySpy.components.Window.assets", "NonomySpy.components.Window", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local WindowAssets
 do
 	local _inverse = {}
@@ -7885,9 +7885,9 @@ end
 return {
 	WindowAssets = WindowAssets,
 }
- end, _env("RemoteSpy.components.Window.assets"))() end)
+ end, _env("NonomySpy.components.Window.assets"))() end)
 
-_module("use-window-context", "ModuleScript", "RemoteSpy.components.Window.use-window-context", "RemoteSpy.components.Window", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("use-window-context", "ModuleScript", "NonomySpy.components.Window.use-window-context", "NonomySpy.components.Window", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
 local useContext = TS.import(script, TS.getModule(script, "@rbxts", "roact-hooked").src).useContext
@@ -7899,13 +7899,13 @@ return {
 	useWindowContext = useWindowContext,
 	WindowContext = WindowContext,
 }
- end, _env("RemoteSpy.components.Window.use-window-context"))() end)
+ end, _env("NonomySpy.components.Window.use-window-context"))() end)
 
-_module("constants", "ModuleScript", "RemoteSpy.constants", "RemoteSpy", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("constants", "ModuleScript", "NonomySpy.constants", "NonomySpy", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local DISPLAY_ORDER = 6
 local SIDE_PANEL_WIDTH = 280
 local TOPBAR_OFFSET = (game:GetService("GuiService"):GetGuiInset())
-local IS_LOADED = "__REMOTESPY_IS_LOADED__"
+local IS_LOADED = "__NONOMYSPY_IS_LOADED__"
 local IS_ELEVATED = loadstring ~= nil
 local HAS_FILE_ACCESS = readfile ~= nil
 local IS_ACRYLIC_ENABLED = true
@@ -7918,11 +7918,11 @@ return {
 	HAS_FILE_ACCESS = HAS_FILE_ACCESS,
 	IS_ACRYLIC_ENABLED = IS_ACRYLIC_ENABLED,
 }
- end, _env("RemoteSpy.constants"))() end)
+ end, _env("NonomySpy.constants"))() end)
 
-_instance("hooks", "Folder", "RemoteSpy.hooks", "RemoteSpy")
+_instance("hooks", "Folder", "NonomySpy.hooks", "NonomySpy")
 
-_module("use-action-effect", "ModuleScript", "RemoteSpy.hooks.use-action-effect", "RemoteSpy.hooks", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("use-action-effect", "ModuleScript", "NonomySpy.hooks.use-action-effect", "NonomySpy.hooks", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.include.RuntimeLib)
 local _action_bar = TS.import(script, script.Parent.Parent, "reducers", "action-bar")
 local deactivateAction = _action_bar.deactivateAction
@@ -7946,9 +7946,9 @@ end
 return {
 	useActionEffect = useActionEffect,
 }
- end, _env("RemoteSpy.hooks.use-action-effect"))() end)
+ end, _env("NonomySpy.hooks.use-action-effect"))() end)
 
-_module("use-root-store", "ModuleScript", "RemoteSpy.hooks.use-root-store", "RemoteSpy.hooks", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("use-root-store", "ModuleScript", "NonomySpy.hooks.use-root-store", "NonomySpy.hooks", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.include.RuntimeLib)
 local _roact_rodux_hooked = TS.import(script, TS.getModule(script, "@rbxts", "roact-rodux-hooked").src)
 local useDispatch = _roact_rodux_hooked.useDispatch
@@ -7962,9 +7962,9 @@ return {
 	useRootDispatch = useRootDispatch,
 	useRootStore = useRootStore,
 }
- end, _env("RemoteSpy.hooks.use-root-store"))() end)
+ end, _env("NonomySpy.hooks.use-root-store"))() end)
 
-_module("receiver", "LocalScript", "RemoteSpy.receiver", "RemoteSpy", function () return setfenv(function() local TS = require(script.Parent.include.RuntimeLib)
+_module("receiver", "LocalScript", "NonomySpy.receiver", "NonomySpy", function () return setfenv(function() local TS = require(script.Parent.include.RuntimeLib)
 local logger = TS.import(script, script.Parent, "reducers", "remote-log")
 local store = TS.import(script, script.Parent, "store")
 local getFunctionScript = TS.import(script, script.Parent, "utils", "function-util").getFunctionScript
@@ -8237,7 +8237,7 @@ local function generateActorHookCode(channelId)
 	return [[
 		local channelId = ]] .. channelId .. [[
 
-		local commChannel = game:GetService("ReplicatedStorage"):FindFirstChild("__WAVIFIED_ACTOR_COMM_" .. channelId)
+		local commChannel = game:GetService("ReplicatedStorage"):FindFirstChild("__NONOMY_ACTOR_COMM_" .. channelId)
 		if not commChannel then return end
 
 		local refs = {}
@@ -8310,7 +8310,7 @@ local function initActorHooks()
 
 	-- Create communication channel in ReplicatedStorage
 	actorCommChannel = Instance.new("BindableEvent")
-	actorCommChannel.Name = "__WAVIFIED_ACTOR_COMM_" .. channelId
+	actorCommChannel.Name = "__NONOMY_ACTOR_COMM_" .. channelId
 	actorCommChannel.Parent = game:GetService("ReplicatedStorage")
 
 	-- Listen for actor hook data
@@ -8385,11 +8385,11 @@ end
 task.defer(function()
 	local success = initActorHooks()
 	if success then
-		print("[Wavified-Spy] Actor hooks initialized successfully")
+		print("[Nonomy-Spy] Actor hooks initialized successfully")
 	end
-end) end, _env("RemoteSpy.receiver"))() end)
+end) end, _env("NonomySpy.receiver"))() end)
 
-_module("reducers", "ModuleScript", "RemoteSpy.reducers", "RemoteSpy", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("reducers", "ModuleScript", "NonomySpy.reducers", "NonomySpy", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.include.RuntimeLib)
 local Rodux = TS.import(script, TS.getModule(script, "@rbxts", "rodux").src)
 local actionBarReducer = TS.import(script, script, "action-bar").default
@@ -8409,9 +8409,9 @@ local default = Rodux.combineReducers({
 return {
 	default = default,
 }
- end, _env("RemoteSpy.reducers"))() end)
+ end, _env("NonomySpy.reducers"))() end)
 
-_module("action-bar", "ModuleScript", "RemoteSpy.reducers.action-bar", "RemoteSpy.reducers", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("action-bar", "ModuleScript", "NonomySpy.reducers.action-bar", "NonomySpy.reducers", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.include.RuntimeLib)
 local exports = {}
 for _k, _v in pairs(TS.import(script, script, "actions") or {}) do
@@ -8425,9 +8425,9 @@ for _k, _v in pairs(TS.import(script, script, "selectors") or {}) do
 	exports[_k] = _v
 end
 return exports
- end, _env("RemoteSpy.reducers.action-bar"))() end)
+ end, _env("NonomySpy.reducers.action-bar"))() end)
 
-_module("actions", "ModuleScript", "RemoteSpy.reducers.action-bar.actions", "RemoteSpy.reducers.action-bar", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("actions", "ModuleScript", "NonomySpy.reducers.action-bar.actions", "NonomySpy.reducers.action-bar", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local function setActionEnabled(id, enabled)
 	return {
 		type = "SET_ACTION_ENABLED",
@@ -8460,13 +8460,13 @@ return {
 	deactivateAction = deactivateAction,
 	setActionCaption = setActionCaption,
 }
- end, _env("RemoteSpy.reducers.action-bar.actions"))() end)
+ end, _env("NonomySpy.reducers.action-bar.actions"))() end)
 
-_module("model", "ModuleScript", "RemoteSpy.reducers.action-bar.model", "RemoteSpy.reducers.action-bar", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("model", "ModuleScript", "NonomySpy.reducers.action-bar.model", "NonomySpy.reducers.action-bar", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 return nil
- end, _env("RemoteSpy.reducers.action-bar.model"))() end)
+ end, _env("NonomySpy.reducers.action-bar.model"))() end)
 
-_module("reducer", "ModuleScript", "RemoteSpy.reducers.action-bar.reducer", "RemoteSpy.reducers.action-bar", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("reducer", "ModuleScript", "NonomySpy.reducers.action-bar.reducer", "NonomySpy.reducers.action-bar", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local initialState = {
 	actions = {
 		close = {
@@ -8638,9 +8638,9 @@ end
 return {
 	default = actionBarReducer,
 }
- end, _env("RemoteSpy.reducers.action-bar.reducer"))() end)
+ end, _env("NonomySpy.reducers.action-bar.reducer"))() end)
 
-_module("selectors", "ModuleScript", "RemoteSpy.reducers.action-bar.selectors", "RemoteSpy.reducers.action-bar", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("selectors", "ModuleScript", "NonomySpy.reducers.action-bar.selectors", "NonomySpy.reducers.action-bar", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local selectActionBarState = function(state)
 	return state.actionBar.actions
 end
@@ -8663,9 +8663,9 @@ return {
 	selectActionIsActive = selectActionIsActive,
 	selectActionIsDisabled = selectActionIsDisabled,
 }
- end, _env("RemoteSpy.reducers.action-bar.selectors"))() end)
+ end, _env("NonomySpy.reducers.action-bar.selectors"))() end)
 
-_module("remote-log", "ModuleScript", "RemoteSpy.reducers.remote-log", "RemoteSpy.reducers", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("remote-log", "ModuleScript", "NonomySpy.reducers.remote-log", "NonomySpy.reducers", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.include.RuntimeLib)
 local exports = {}
 for _k, _v in pairs(TS.import(script, script, "actions") or {}) do
@@ -8682,9 +8682,9 @@ for _k, _v in pairs(TS.import(script, script, "selectors") or {}) do
 	exports[_k] = _v
 end
 return exports
- end, _env("RemoteSpy.reducers.remote-log"))() end)
+ end, _env("NonomySpy.reducers.remote-log"))() end)
 
-_module("actions", "ModuleScript", "RemoteSpy.reducers.remote-log.actions", "RemoteSpy.reducers.remote-log", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("actions", "ModuleScript", "NonomySpy.reducers.remote-log.actions", "NonomySpy.reducers.remote-log", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local function pushRemoteLog(log)
 	return {
 		type = "PUSH_REMOTE_LOG",
@@ -8858,9 +8858,9 @@ return {
 	loadSettings = loadSettings,
 	setInspectionResultSelected = setInspectionResultSelected,
 }
- end, _env("RemoteSpy.reducers.remote-log.actions"))() end)
+ end, _env("NonomySpy.reducers.remote-log.actions"))() end)
 
-_module("model", "ModuleScript", "RemoteSpy.reducers.remote-log.model", "RemoteSpy.reducers.remote-log", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("model", "ModuleScript", "NonomySpy.reducers.remote-log.model", "NonomySpy.reducers.remote-log", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local PathNotation
 do
 	local _inverse = {}
@@ -8877,9 +8877,9 @@ end
 return {
 	PathNotation = PathNotation,
 }
- end, _env("RemoteSpy.reducers.remote-log.model"))() end)
+ end, _env("NonomySpy.reducers.remote-log.model"))() end)
 
-_module("reducer", "ModuleScript", "RemoteSpy.reducers.remote-log.reducer", "RemoteSpy.reducers.remote-log", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("reducer", "ModuleScript", "NonomySpy.reducers.remote-log.reducer", "NonomySpy.reducers.remote-log", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local PathNotation = TS.import(script, script.Parent, "model").PathNotation
 local initialState = {
@@ -9412,9 +9412,9 @@ end
 return {
 	default = remoteLogReducer,
 }
- end, _env("RemoteSpy.reducers.remote-log.reducer"))() end)
+ end, _env("NonomySpy.reducers.remote-log.reducer"))() end)
 
-_module("selectors", "ModuleScript", "RemoteSpy.reducers.remote-log.selectors", "RemoteSpy.reducers.remote-log", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("selectors", "ModuleScript", "NonomySpy.reducers.remote-log.selectors", "NonomySpy.reducers.remote-log", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local createSelector = TS.import(script, TS.getModule(script, "@rbxts", "roselect").src).createSelector
 local selectRemoteLogs = function(state)
@@ -9698,9 +9698,9 @@ return {
 	makeSelectRemoteLogSignals = makeSelectRemoteLogSignals,
 	selectSignalSelected = selectSignalSelected,
 }
- end, _env("RemoteSpy.reducers.remote-log.selectors"))() end)
+ end, _env("NonomySpy.reducers.remote-log.selectors"))() end)
 
-_module("utils", "ModuleScript", "RemoteSpy.reducers.remote-log.utils", "RemoteSpy.reducers.remote-log", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("utils", "ModuleScript", "NonomySpy.reducers.remote-log.utils", "NonomySpy.reducers.remote-log", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local TabType = TS.import(script, script.Parent.Parent, "tab-group").TabType
 local _instance_util = TS.import(script, script.Parent.Parent.Parent, "utils", "instance-util")
@@ -9801,9 +9801,9 @@ return {
 	createIncomingSignal = createIncomingSignal,
 	stringifySignalTraceback = stringifySignalTraceback,
 }
- end, _env("RemoteSpy.reducers.remote-log.utils"))() end)
+ end, _env("NonomySpy.reducers.remote-log.utils"))() end)
 
-_module("script", "ModuleScript", "RemoteSpy.reducers.script", "RemoteSpy.reducers", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("script", "ModuleScript", "NonomySpy.reducers.script", "NonomySpy.reducers", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.include.RuntimeLib)
 local exports = {}
 for _k, _v in pairs(TS.import(script, script, "model") or {}) do
@@ -9817,9 +9817,9 @@ for _k, _v in pairs(TS.import(script, script, "selectors") or {}) do
 end
 exports.scriptReducer = TS.import(script, script, "reducer").default
 return exports
- end, _env("RemoteSpy.reducers.script"))() end)
+ end, _env("NonomySpy.reducers.script"))() end)
 
-_module("actions", "ModuleScript", "RemoteSpy.reducers.script.actions", "RemoteSpy.reducers.script", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("actions", "ModuleScript", "NonomySpy.reducers.script.actions", "NonomySpy.reducers.script", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local function setScript(id, scriptData)
 	return {
 		type = "SET_SCRIPT",
@@ -9845,13 +9845,13 @@ return {
 	updateScriptContent = updateScriptContent,
 	removeScript = removeScript,
 }
- end, _env("RemoteSpy.reducers.script.actions"))() end)
+ end, _env("NonomySpy.reducers.script.actions"))() end)
 
-_module("model", "ModuleScript", "RemoteSpy.reducers.script.model", "RemoteSpy.reducers.script", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("model", "ModuleScript", "NonomySpy.reducers.script.model", "NonomySpy.reducers.script", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 return nil
- end, _env("RemoteSpy.reducers.script.model"))() end)
+ end, _env("NonomySpy.reducers.script.model"))() end)
 
-_module("reducer", "ModuleScript", "RemoteSpy.reducers.script.reducer", "RemoteSpy.reducers.script", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("reducer", "ModuleScript", "NonomySpy.reducers.script.reducer", "NonomySpy.reducers.script", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local initialState = {
 	scripts = {},
 }
@@ -9919,9 +9919,9 @@ end
 return {
 	default = scriptReducer,
 }
- end, _env("RemoteSpy.reducers.script.reducer"))() end)
+ end, _env("NonomySpy.reducers.script.reducer"))() end)
 
-_module("selectors", "ModuleScript", "RemoteSpy.reducers.script.selectors", "RemoteSpy.reducers.script", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("selectors", "ModuleScript", "NonomySpy.reducers.script.selectors", "NonomySpy.reducers.script", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local selectScriptState = function(state)
 	return state.script
 end
@@ -9940,9 +9940,9 @@ return {
 	selectScript = selectScript,
 	selectScriptContent = selectScriptContent,
 }
- end, _env("RemoteSpy.reducers.script.selectors"))() end)
+ end, _env("NonomySpy.reducers.script.selectors"))() end)
 
-_module("tab-group", "ModuleScript", "RemoteSpy.reducers.tab-group", "RemoteSpy.reducers", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("tab-group", "ModuleScript", "NonomySpy.reducers.tab-group", "NonomySpy.reducers", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.include.RuntimeLib)
 local exports = {}
 for _k, _v in pairs(TS.import(script, script, "actions") or {}) do
@@ -9959,9 +9959,9 @@ for _k, _v in pairs(TS.import(script, script, "utils") or {}) do
 	exports[_k] = _v
 end
 return exports
- end, _env("RemoteSpy.reducers.tab-group"))() end)
+ end, _env("NonomySpy.reducers.tab-group"))() end)
 
-_module("actions", "ModuleScript", "RemoteSpy.reducers.tab-group.actions", "RemoteSpy.reducers.tab-group", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("actions", "ModuleScript", "NonomySpy.reducers.tab-group.actions", "NonomySpy.reducers.tab-group", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local function pushTab(tab)
 	return {
 		type = "PUSH_TAB",
@@ -9993,9 +9993,9 @@ return {
 	moveTab = moveTab,
 	setActiveTab = setActiveTab,
 }
- end, _env("RemoteSpy.reducers.tab-group.actions"))() end)
+ end, _env("NonomySpy.reducers.tab-group.actions"))() end)
 
-_module("model", "ModuleScript", "RemoteSpy.reducers.tab-group.model", "RemoteSpy.reducers.tab-group", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("model", "ModuleScript", "NonomySpy.reducers.tab-group.model", "NonomySpy.reducers.tab-group", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TabType
 do
 	local _inverse = {}
@@ -10022,9 +10022,9 @@ end
 return {
 	TabType = TabType,
 }
- end, _env("RemoteSpy.reducers.tab-group.model"))() end)
+ end, _env("NonomySpy.reducers.tab-group.model"))() end)
 
-_module("reducer", "ModuleScript", "RemoteSpy.reducers.tab-group.reducer", "RemoteSpy.reducers.tab-group", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("reducer", "ModuleScript", "NonomySpy.reducers.tab-group.reducer", "NonomySpy.reducers.tab-group", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local TabType = TS.import(script, script.Parent, "model").TabType
 local createTabColumn = TS.import(script, script.Parent, "utils").createTabColumn
@@ -10145,9 +10145,9 @@ end
 return {
 	default = tabGroupReducer,
 }
- end, _env("RemoteSpy.reducers.tab-group.reducer"))() end)
+ end, _env("NonomySpy.reducers.tab-group.reducer"))() end)
 
-_module("selectors", "ModuleScript", "RemoteSpy.reducers.tab-group.selectors", "RemoteSpy.reducers.tab-group", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("selectors", "ModuleScript", "NonomySpy.reducers.tab-group.selectors", "NonomySpy.reducers.tab-group", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local createSelector = TS.import(script, TS.getModule(script, "@rbxts", "roselect").src).createSelector
 local getTabOffset = TS.import(script, script.Parent, "utils").getTabOffset
@@ -10267,9 +10267,9 @@ return {
 	makeSelectTabsBefore = makeSelectTabsBefore,
 	makeSelectTabOffset = makeSelectTabOffset,
 }
- end, _env("RemoteSpy.reducers.tab-group.selectors"))() end)
+ end, _env("NonomySpy.reducers.tab-group.selectors"))() end)
 
-_module("utils", "ModuleScript", "RemoteSpy.reducers.tab-group.utils", "RemoteSpy.reducers.tab-group", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("utils", "ModuleScript", "NonomySpy.reducers.tab-group.utils", "NonomySpy.reducers.tab-group", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local TextService = TS.import(script, TS.getModule(script, "@rbxts", "services")).TextService
 local MAX_TAB_CAPTION_WIDTH = 150
@@ -10312,9 +10312,9 @@ return {
 	getTabOffset = getTabOffset,
 	MAX_TAB_CAPTION_WIDTH = MAX_TAB_CAPTION_WIDTH,
 }
- end, _env("RemoteSpy.reducers.tab-group.utils"))() end)
+ end, _env("NonomySpy.reducers.tab-group.utils"))() end)
 
-_module("traceback", "ModuleScript", "RemoteSpy.reducers.traceback", "RemoteSpy.reducers", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("traceback", "ModuleScript", "NonomySpy.reducers.traceback", "NonomySpy.reducers", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.include.RuntimeLib)
 local exports = {}
 for _k, _v in pairs(TS.import(script, script, "actions") or {}) do
@@ -10328,9 +10328,9 @@ for _k, _v in pairs(TS.import(script, script, "selectors") or {}) do
 end
 exports.default = TS.import(script, script, "reducer").default
 return exports
- end, _env("RemoteSpy.reducers.traceback"))() end)
+ end, _env("NonomySpy.reducers.traceback"))() end)
 
-_module("actions", "ModuleScript", "RemoteSpy.reducers.traceback.actions", "RemoteSpy.reducers.traceback", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("actions", "ModuleScript", "NonomySpy.reducers.traceback.actions", "NonomySpy.reducers.traceback", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local function setTracebackCallStack(callStack)
 	return {
 		type = "SET_TRACEBACK_CALL_STACK",
@@ -10346,13 +10346,13 @@ return {
 	setTracebackCallStack = setTracebackCallStack,
 	clearTraceback = clearTraceback,
 }
- end, _env("RemoteSpy.reducers.traceback.actions"))() end)
+ end, _env("NonomySpy.reducers.traceback.actions"))() end)
 
-_module("model", "ModuleScript", "RemoteSpy.reducers.traceback.model", "RemoteSpy.reducers.traceback", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("model", "ModuleScript", "NonomySpy.reducers.traceback.model", "NonomySpy.reducers.traceback", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 return nil
- end, _env("RemoteSpy.reducers.traceback.model"))() end)
+ end, _env("NonomySpy.reducers.traceback.model"))() end)
 
-_module("reducer", "ModuleScript", "RemoteSpy.reducers.traceback.reducer", "RemoteSpy.reducers.traceback", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("reducer", "ModuleScript", "NonomySpy.reducers.traceback.reducer", "NonomySpy.reducers.traceback", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local initialState = {
 	callStack = {},
 }
@@ -10384,9 +10384,9 @@ end
 return {
 	default = tracebackReducer,
 }
- end, _env("RemoteSpy.reducers.traceback.reducer"))() end)
+ end, _env("NonomySpy.reducers.traceback.reducer"))() end)
 
-_module("selectors", "ModuleScript", "RemoteSpy.reducers.traceback.selectors", "RemoteSpy.reducers.traceback", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("selectors", "ModuleScript", "NonomySpy.reducers.traceback.selectors", "NonomySpy.reducers.traceback", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local createSelector = TS.import(script, TS.getModule(script, "@rbxts", "roselect").src).createSelector
 local _function_util = TS.import(script, script.Parent.Parent.Parent, "utils", "function-util")
@@ -10424,9 +10424,9 @@ return {
 	selectTracebackCallStack = selectTracebackCallStack,
 	selectTracebackByString = selectTracebackByString,
 }
- end, _env("RemoteSpy.reducers.traceback.selectors"))() end)
+ end, _env("NonomySpy.reducers.traceback.selectors"))() end)
 
-_module("ui", "ModuleScript", "RemoteSpy.reducers.ui", "RemoteSpy.reducers", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("ui", "ModuleScript", "NonomySpy.reducers.ui", "NonomySpy.reducers", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.include.RuntimeLib)
 local exports = {}
 exports.default = TS.import(script, script, "reducer").default
@@ -10440,9 +10440,9 @@ for _k, _v in pairs(TS.import(script, script, "selectors") or {}) do
 	exports[_k] = _v
 end
 return exports
- end, _env("RemoteSpy.reducers.ui"))() end)
+ end, _env("NonomySpy.reducers.ui"))() end)
 
-_module("actions", "ModuleScript", "RemoteSpy.reducers.ui.actions", "RemoteSpy.reducers.ui", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("actions", "ModuleScript", "NonomySpy.reducers.ui.actions", "NonomySpy.reducers.ui", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local function toggleUIVisibility()
 	return {
 		type = "TOGGLE_UI_VISIBILITY",
@@ -10472,13 +10472,13 @@ return {
 	setToggleKey = setToggleKey,
 	loadToggleKey = loadToggleKey,
 }
- end, _env("RemoteSpy.reducers.ui.actions"))() end)
+ end, _env("NonomySpy.reducers.ui.actions"))() end)
 
-_module("model", "ModuleScript", "RemoteSpy.reducers.ui.model", "RemoteSpy.reducers.ui", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("model", "ModuleScript", "NonomySpy.reducers.ui.model", "NonomySpy.reducers.ui", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 return nil
- end, _env("RemoteSpy.reducers.ui.model"))() end)
+ end, _env("NonomySpy.reducers.ui.model"))() end)
 
-_module("reducer", "ModuleScript", "RemoteSpy.reducers.ui.reducer", "RemoteSpy.reducers.ui", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("reducer", "ModuleScript", "NonomySpy.reducers.ui.reducer", "NonomySpy.reducers.ui", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local initialState = {
 	visible = true,
 	toggleKey = Enum.KeyCode.RightControl,
@@ -10544,9 +10544,9 @@ end
 return {
 	default = uiReducer,
 }
- end, _env("RemoteSpy.reducers.ui.reducer"))() end)
+ end, _env("NonomySpy.reducers.ui.reducer"))() end)
 
-_module("selectors", "ModuleScript", "RemoteSpy.reducers.ui.selectors", "RemoteSpy.reducers.ui", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("selectors", "ModuleScript", "NonomySpy.reducers.ui.selectors", "NonomySpy.reducers.ui", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local selectUIVisible = function(state)
 	return state.ui.visible
 end
@@ -10557,9 +10557,9 @@ return {
 	selectUIVisible = selectUIVisible,
 	selectToggleKey = selectToggleKey,
 }
- end, _env("RemoteSpy.reducers.ui.selectors"))() end)
+ end, _env("NonomySpy.reducers.ui.selectors"))() end)
 
-_module("store", "ModuleScript", "RemoteSpy.store", "RemoteSpy", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("store", "ModuleScript", "NonomySpy.store", "NonomySpy", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.include.RuntimeLib)
 local Rodux = TS.import(script, TS.getModule(script, "@rbxts", "rodux").src)
 local rootReducer = TS.import(script, script.Parent, "reducers").default
@@ -10713,22 +10713,22 @@ return {
 	get = get,
 	changed = changed,
 }
- end, _env("RemoteSpy.store"))() end)
+ end, _env("NonomySpy.store"))() end)
 
-_instance("types", "Folder", "RemoteSpy.types", "RemoteSpy")
+_instance("types", "Folder", "NonomySpy.types", "NonomySpy")
 
-_instance("util", "Folder", "RemoteSpy.util", "RemoteSpy")
+_instance("util", "Folder", "NonomySpy.util", "NonomySpy")
 
-_module("applyUDim2", "ModuleScript", "RemoteSpy.util.applyUDim2", "RemoteSpy.util", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("applyUDim2", "ModuleScript", "NonomySpy.util.applyUDim2", "NonomySpy.util", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local function applyUDim2(v2, udim2)
 	return Vector2.new(v2.X * udim2.X.Scale + udim2.X.Offset, v2.Y * udim2.Y.Scale + udim2.Y.Offset)
 end
 return {
 	default = applyUDim2,
 }
- end, _env("RemoteSpy.util.applyUDim2"))() end)
+ end, _env("NonomySpy.util.applyUDim2"))() end)
 
-_module("number-util", "ModuleScript", "RemoteSpy.util.number-util", "RemoteSpy.util", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("number-util", "ModuleScript", "NonomySpy.util.number-util", "NonomySpy.util", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local function map(n, min0, max0, min1, max1)
 	return min1 + ((n - min0) * (max1 - min1)) / (max0 - min0)
 end
@@ -10758,9 +10758,9 @@ return {
 	lerp = lerp,
 	multiply = multiply,
 }
- end, _env("RemoteSpy.util.number-util"))() end)
+ end, _env("NonomySpy.util.number-util"))() end)
 
-_module("withCollection", "ModuleScript", "RemoteSpy.util.withCollection", "RemoteSpy.util", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("withCollection", "ModuleScript", "NonomySpy.util.withCollection", "NonomySpy.util", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local function withCollection(component, collection)
 	for k, v in pairs(collection) do
 		component[k] = v
@@ -10770,11 +10770,11 @@ end
 return {
 	default = withCollection,
 }
- end, _env("RemoteSpy.util.withCollection"))() end)
+ end, _env("NonomySpy.util.withCollection"))() end)
 
-_instance("utils", "Folder", "RemoteSpy.utils", "RemoteSpy")
+_instance("utils", "Folder", "NonomySpy.utils", "NonomySpy")
 
-_module("codify", "ModuleScript", "RemoteSpy.utils.codify", "RemoteSpy.utils", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("codify", "ModuleScript", "NonomySpy.utils.codify", "NonomySpy.utils", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.include.RuntimeLib)
 local _instance_util = TS.import(script, script.Parent, "instance-util")
 local getInstancePath = _instance_util.getInstancePath
@@ -11029,18 +11029,18 @@ return {
 	codifyTable = codifyTable,
 	codifyTableFlat = codifyTableFlat,
 }
- end, _env("RemoteSpy.utils.codify"))() end)
+ end, _env("NonomySpy.utils.codify"))() end)
 
-_module("format-escapes", "ModuleScript", "RemoteSpy.utils.format-escapes", "RemoteSpy.utils", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("format-escapes", "ModuleScript", "NonomySpy.utils.format-escapes", "NonomySpy.utils", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local function formatEscapes(str)
 	return (string.gsub(str, "[\n\r\t]+", " "))
 end
 return {
 	formatEscapes = formatEscapes,
 }
- end, _env("RemoteSpy.utils.format-escapes"))() end)
+ end, _env("NonomySpy.utils.format-escapes"))() end)
 
-_module("function-util", "ModuleScript", "RemoteSpy.utils.function-util", "RemoteSpy.utils", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("function-util", "ModuleScript", "NonomySpy.utils.function-util", "NonomySpy.utils", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local function describeFunction(fn)
 	if debug.getinfo then
 		local info = debug.getinfo(fn)
@@ -11099,9 +11099,9 @@ return {
 	getFunctionScript = getFunctionScript,
 	stringifyFunctionSignature = stringifyFunctionSignature,
 }
- end, _env("RemoteSpy.utils.function-util"))() end)
+ end, _env("NonomySpy.utils.function-util"))() end)
 
-_module("gen-script", "ModuleScript", "RemoteSpy.utils.gen-script", "RemoteSpy.utils", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("gen-script", "ModuleScript", "NonomySpy.utils.gen-script", "NonomySpy.utils", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.include.RuntimeLib)
 local codifyTable = TS.import(script, script.Parent, "codify").codifyTable
 local getInstancePath = TS.import(script, script.Parent, "instance-util").getInstancePath
@@ -11147,9 +11147,9 @@ end
 return {
 	genScript = genScript,
 }
- end, _env("RemoteSpy.utils.gen-script"))() end)
+ end, _env("NonomySpy.utils.gen-script"))() end)
 
-_module("global-util", "ModuleScript", "RemoteSpy.utils.global-util", "RemoteSpy.utils", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("global-util", "ModuleScript", "NonomySpy.utils.global-util", "NonomySpy.utils", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local globals = if getgenv then getgenv() else {}
 local function getGlobals()
 	return globals
@@ -11169,9 +11169,9 @@ return {
 	getGlobal = getGlobal,
 	hasGlobal = hasGlobal,
 }
- end, _env("RemoteSpy.utils.global-util"))() end)
+ end, _env("NonomySpy.utils.global-util"))() end)
 
-_module("instance-util", "ModuleScript", "RemoteSpy.utils.instance-util", "RemoteSpy.utils", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("instance-util", "ModuleScript", "NonomySpy.utils.instance-util", "NonomySpy.utils", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local idsByObject = {}
 local objectsById = {}
 local nextId = 0
@@ -11243,9 +11243,9 @@ return {
 	getInstanceFromId = getInstanceFromId,
 	getInstancePath = getInstancePath,
 }
- end, _env("RemoteSpy.utils.instance-util"))() end)
+ end, _env("NonomySpy.utils.instance-util"))() end)
 
-_module("notify", "ModuleScript", "RemoteSpy.utils.notify", "RemoteSpy.utils", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("notify", "ModuleScript", "NonomySpy.utils.notify", "NonomySpy.utils", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local function notify(message, lifetime, isError)
 	if lifetime == nil then
 		lifetime = 3
@@ -11259,7 +11259,7 @@ local function notify(message, lifetime, isError)
 	end
 	local StarterGui = game:GetService("StarterGui")
 	StarterGui:SetCore("SendNotification", {
-		Title = if isError then "Error" else "Wavified Spy",
+		Title = if isError then "Error" else "Nonomy Spy",
 		Text = message,
 		Duration = lifetime,
 	})
@@ -11267,9 +11267,9 @@ end
 return {
 	notify = notify,
 }
- end, _env("RemoteSpy.utils.notify"))() end)
+ end, _env("NonomySpy.utils.notify"))() end)
 
-_module("number-util", "ModuleScript", "RemoteSpy.utils.number-util", "RemoteSpy.utils", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("number-util", "ModuleScript", "NonomySpy.utils.number-util", "NonomySpy.utils", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local function map(n, min0, max0, min1, max1)
 	return min1 + ((n - min0) * (max1 - min1)) / (max0 - min0)
 end
@@ -11299,9 +11299,9 @@ return {
 	lerp = lerp,
 	multiply = multiply,
 }
- end, _env("RemoteSpy.utils.number-util"))() end)
+ end, _env("NonomySpy.utils.number-util"))() end)
 
-_module("script-tab-util", "ModuleScript", "RemoteSpy.utils.script-tab-util", "RemoteSpy.utils", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("script-tab-util", "ModuleScript", "NonomySpy.utils.script-tab-util", "NonomySpy.utils", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.include.RuntimeLib)
 local TabType = TS.import(script, script.Parent.Parent, "reducers", "tab-group").TabType
 local function generateUniqueScriptName(baseName, existingTabs)
@@ -11347,11 +11347,11 @@ end
 return {
 	generateUniqueScriptName = generateUniqueScriptName,
 }
- end, _env("RemoteSpy.utils.script-tab-util"))() end)
+ end, _env("NonomySpy.utils.script-tab-util"))() end)
 
-_module("settings-persistence", "ModuleScript", "RemoteSpy.utils.settings-persistence", "RemoteSpy.utils", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("settings-persistence", "ModuleScript", "NonomySpy.utils.settings-persistence", "NonomySpy.utils", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.include.RuntimeLib)
-local SETTINGS_FILE = "wavified_spy_settings.json"
+local SETTINGS_FILE = "nonomy_spy_settings.json"
 local function saveSettings(settings)
 	if not writefile then
 		return nil
@@ -11382,9 +11382,9 @@ return {
 	saveSettings = saveSettings,
 	loadSettings = loadSettings,
 }
- end, _env("RemoteSpy.utils.settings-persistence"))() end)
+ end, _env("NonomySpy.utils.settings-persistence"))() end)
 
-_module("syntax-highlight", "ModuleScript", "RemoteSpy.utils.syntax-highlight", "RemoteSpy.utils", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("syntax-highlight", "ModuleScript", "NonomySpy.utils.syntax-highlight", "NonomySpy.utils", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local KEYWORDS = { "and", "break", "do", "else", "elseif", "end", "false", "for", "function", "if", "in", "local", "nil", "not", "or", "repeat", "return", "then", "true", "until", "while" }
 local BUILTIN_FUNCTIONS = { "print", "warn", "error", "assert", "type", "typeof", "pcall", "xpcall", "ipairs", "pairs", "next", "select", "tonumber", "tostring", "getmetatable", "setmetatable", "rawget", "rawset", "rawequal", "unpack", "task", "wait", "spawn", "delay", "game", "workspace", "FireServer", "InvokeServer", "FindFirstChild", "WaitForChild" }
 local COLORS = {
@@ -11547,11 +11547,11 @@ end
 return {
 	highlightLua = highlightLua,
 }
- end, _env("RemoteSpy.utils.syntax-highlight"))() end)
+ end, _env("NonomySpy.utils.syntax-highlight"))() end)
 
-_instance("include", "Folder", "RemoteSpy.include", "RemoteSpy")
+_instance("include", "Folder", "NonomySpy.include", "NonomySpy")
 
-_module("Promise", "ModuleScript", "RemoteSpy.include.Promise", "RemoteSpy.include", function () return setfenv(function() --[[
+_module("Promise", "ModuleScript", "NonomySpy.include.Promise", "NonomySpy.include", function () return setfenv(function() --[[
 	An implementation of Promises similar to Promise/A+.
 ]]
 
@@ -13599,9 +13599,9 @@ function Promise.onUnhandledRejection(callback)
 end
 
 return Promise
- end, _env("RemoteSpy.include.Promise"))() end)
+ end, _env("NonomySpy.include.Promise"))() end)
 
-_module("RuntimeLib", "ModuleScript", "RemoteSpy.include.RuntimeLib", "RemoteSpy.include", function () return setfenv(function() local Promise = require(script.Parent.Promise)
+_module("RuntimeLib", "ModuleScript", "NonomySpy.include.RuntimeLib", "NonomySpy.include", function () return setfenv(function() local Promise = require(script.Parent.Promise)
 
 local RunService = game:GetService("RunService")
 local ReplicatedFirst = game:GetService("ReplicatedFirst")
@@ -13830,13 +13830,13 @@ function TS.generator(callback)
 end
 
 return TS
- end, _env("RemoteSpy.include.RuntimeLib"))() end)
+ end, _env("NonomySpy.include.RuntimeLib"))() end)
 
-_instance("node_modules", "Folder", "RemoteSpy.include.node_modules", "RemoteSpy.include")
+_instance("node_modules", "Folder", "NonomySpy.include.node_modules", "NonomySpy.include")
 
-_instance("bin", "Folder", "RemoteSpy.include.node_modules.bin", "RemoteSpy.include.node_modules")
+_instance("bin", "Folder", "NonomySpy.include.node_modules.bin", "NonomySpy.include.node_modules")
 
-_module("out", "ModuleScript", "RemoteSpy.include.node_modules.bin.out", "RemoteSpy.include.node_modules.bin", function () return setfenv(function() -- Compiled with roblox-ts v1.2.7
+_module("out", "ModuleScript", "NonomySpy.include.node_modules.bin.out", "NonomySpy.include.node_modules.bin", function () return setfenv(function() -- Compiled with roblox-ts v1.2.7
 --[[
 	*
 	* Tracks connections, instances, functions, and objects to be later destroyed.
@@ -13890,15 +13890,15 @@ end
 return {
 	Bin = Bin,
 }
- end, _env("RemoteSpy.include.node_modules.bin.out"))() end)
+ end, _env("NonomySpy.include.node_modules.bin.out"))() end)
 
-_instance("compiler-types", "Folder", "RemoteSpy.include.node_modules.compiler-types", "RemoteSpy.include.node_modules")
+_instance("compiler-types", "Folder", "NonomySpy.include.node_modules.compiler-types", "NonomySpy.include.node_modules")
 
-_instance("types", "Folder", "RemoteSpy.include.node_modules.compiler-types.types", "RemoteSpy.include.node_modules.compiler-types")
+_instance("types", "Folder", "NonomySpy.include.node_modules.compiler-types.types", "NonomySpy.include.node_modules.compiler-types")
 
-_instance("flipper", "Folder", "RemoteSpy.include.node_modules.flipper", "RemoteSpy.include.node_modules")
+_instance("flipper", "Folder", "NonomySpy.include.node_modules.flipper", "NonomySpy.include.node_modules")
 
-_module("src", "ModuleScript", "RemoteSpy.include.node_modules.flipper.src", "RemoteSpy.include.node_modules.flipper", function () return setfenv(function() local Flipper = {
+_module("src", "ModuleScript", "NonomySpy.include.node_modules.flipper.src", "NonomySpy.include.node_modules.flipper", function () return setfenv(function() local Flipper = {
 	SingleMotor = require(script.SingleMotor),
 	GroupMotor = require(script.GroupMotor),
 
@@ -13909,9 +13909,9 @@ _module("src", "ModuleScript", "RemoteSpy.include.node_modules.flipper.src", "Re
 	isMotor = require(script.isMotor),
 }
 
-return Flipper end, _env("RemoteSpy.include.node_modules.flipper.src"))() end)
+return Flipper end, _env("NonomySpy.include.node_modules.flipper.src"))() end)
 
-_module("BaseMotor", "ModuleScript", "RemoteSpy.include.node_modules.flipper.src.BaseMotor", "RemoteSpy.include.node_modules.flipper.src", function () return setfenv(function() local RunService = game:GetService("RunService")
+_module("BaseMotor", "ModuleScript", "NonomySpy.include.node_modules.flipper.src.BaseMotor", "NonomySpy.include.node_modules.flipper.src", function () return setfenv(function() local RunService = game:GetService("RunService")
 
 local Signal = require(script.Parent.Signal)
 
@@ -13966,9 +13966,9 @@ function BaseMotor:__tostring()
 end
 
 return BaseMotor
- end, _env("RemoteSpy.include.node_modules.flipper.src.BaseMotor"))() end)
+ end, _env("NonomySpy.include.node_modules.flipper.src.BaseMotor"))() end)
 
-_module("GroupMotor", "ModuleScript", "RemoteSpy.include.node_modules.flipper.src.GroupMotor", "RemoteSpy.include.node_modules.flipper.src", function () return setfenv(function() local BaseMotor = require(script.Parent.BaseMotor)
+_module("GroupMotor", "ModuleScript", "NonomySpy.include.node_modules.flipper.src.GroupMotor", "NonomySpy.include.node_modules.flipper.src", function () return setfenv(function() local BaseMotor = require(script.Parent.BaseMotor)
 local SingleMotor = require(script.Parent.SingleMotor)
 
 local isMotor = require(script.Parent.isMotor)
@@ -14075,9 +14075,9 @@ function GroupMotor:__tostring()
 end
 
 return GroupMotor
- end, _env("RemoteSpy.include.node_modules.flipper.src.GroupMotor"))() end)
+ end, _env("NonomySpy.include.node_modules.flipper.src.GroupMotor"))() end)
 
-_module("Instant", "ModuleScript", "RemoteSpy.include.node_modules.flipper.src.Instant", "RemoteSpy.include.node_modules.flipper.src", function () return setfenv(function() local Instant = {}
+_module("Instant", "ModuleScript", "NonomySpy.include.node_modules.flipper.src.Instant", "NonomySpy.include.node_modules.flipper.src", function () return setfenv(function() local Instant = {}
 Instant.__index = Instant
 
 function Instant.new(targetValue)
@@ -14093,9 +14093,9 @@ function Instant:step()
 	}
 end
 
-return Instant end, _env("RemoteSpy.include.node_modules.flipper.src.Instant"))() end)
+return Instant end, _env("NonomySpy.include.node_modules.flipper.src.Instant"))() end)
 
-_module("Linear", "ModuleScript", "RemoteSpy.include.node_modules.flipper.src.Linear", "RemoteSpy.include.node_modules.flipper.src", function () return setfenv(function() local Linear = {}
+_module("Linear", "ModuleScript", "NonomySpy.include.node_modules.flipper.src.Linear", "NonomySpy.include.node_modules.flipper.src", function () return setfenv(function() local Linear = {}
 Linear.__index = Linear
 
 function Linear.new(targetValue, options)
@@ -14130,9 +14130,9 @@ function Linear:step(state, dt)
 	}
 end
 
-return Linear end, _env("RemoteSpy.include.node_modules.flipper.src.Linear"))() end)
+return Linear end, _env("NonomySpy.include.node_modules.flipper.src.Linear"))() end)
 
-_module("Signal", "ModuleScript", "RemoteSpy.include.node_modules.flipper.src.Signal", "RemoteSpy.include.node_modules.flipper.src", function () return setfenv(function() local Connection = {}
+_module("Signal", "ModuleScript", "NonomySpy.include.node_modules.flipper.src.Signal", "NonomySpy.include.node_modules.flipper.src", function () return setfenv(function() local Connection = {}
 Connection.__index = Connection
 
 function Connection.new(signal, handler)
@@ -14189,9 +14189,9 @@ function Signal:wait()
 	return coroutine.yield()
 end
 
-return Signal end, _env("RemoteSpy.include.node_modules.flipper.src.Signal"))() end)
+return Signal end, _env("NonomySpy.include.node_modules.flipper.src.Signal"))() end)
 
-_module("SingleMotor", "ModuleScript", "RemoteSpy.include.node_modules.flipper.src.SingleMotor", "RemoteSpy.include.node_modules.flipper.src", function () return setfenv(function() local BaseMotor = require(script.Parent.BaseMotor)
+_module("SingleMotor", "ModuleScript", "NonomySpy.include.node_modules.flipper.src.SingleMotor", "NonomySpy.include.node_modules.flipper.src", function () return setfenv(function() local BaseMotor = require(script.Parent.BaseMotor)
 
 local SingleMotor = setmetatable({}, BaseMotor)
 SingleMotor.__index = SingleMotor
@@ -14258,9 +14258,9 @@ function SingleMotor:__tostring()
 end
 
 return SingleMotor
- end, _env("RemoteSpy.include.node_modules.flipper.src.SingleMotor"))() end)
+ end, _env("NonomySpy.include.node_modules.flipper.src.SingleMotor"))() end)
 
-_module("Spring", "ModuleScript", "RemoteSpy.include.node_modules.flipper.src.Spring", "RemoteSpy.include.node_modules.flipper.src", function () return setfenv(function() local VELOCITY_THRESHOLD = 0.001
+_module("Spring", "ModuleScript", "NonomySpy.include.node_modules.flipper.src.Spring", "NonomySpy.include.node_modules.flipper.src", function () return setfenv(function() local VELOCITY_THRESHOLD = 0.001
 local POSITION_THRESHOLD = 0.001
 
 local EPS = 0.0001
@@ -14367,9 +14367,9 @@ function Spring:step(state, dt)
 	}
 end
 
-return Spring end, _env("RemoteSpy.include.node_modules.flipper.src.Spring"))() end)
+return Spring end, _env("NonomySpy.include.node_modules.flipper.src.Spring"))() end)
 
-_module("isMotor", "ModuleScript", "RemoteSpy.include.node_modules.flipper.src.isMotor", "RemoteSpy.include.node_modules.flipper.src", function () return setfenv(function() local function isMotor(value)
+_module("isMotor", "ModuleScript", "NonomySpy.include.node_modules.flipper.src.isMotor", "NonomySpy.include.node_modules.flipper.src", function () return setfenv(function() local function isMotor(value)
 	local motorType = tostring(value):match("^Motor%((.+)%)$")
 
 	if motorType then
@@ -14379,11 +14379,11 @@ _module("isMotor", "ModuleScript", "RemoteSpy.include.node_modules.flipper.src.i
 	end
 end
 
-return isMotor end, _env("RemoteSpy.include.node_modules.flipper.src.isMotor"))() end)
+return isMotor end, _env("NonomySpy.include.node_modules.flipper.src.isMotor"))() end)
 
-_instance("typings", "Folder", "RemoteSpy.include.node_modules.flipper.typings", "RemoteSpy.include.node_modules.flipper")
+_instance("typings", "Folder", "NonomySpy.include.node_modules.flipper.typings", "NonomySpy.include.node_modules.flipper")
 
-_module("make", "ModuleScript", "RemoteSpy.include.node_modules.make", "RemoteSpy.include.node_modules", function () return setfenv(function() -- Compiled with roblox-ts v1.2.3
+_module("make", "ModuleScript", "NonomySpy.include.node_modules.make", "NonomySpy.include.node_modules", function () return setfenv(function() -- Compiled with roblox-ts v1.2.3
 --[[
 	*
 	* Returns a table wherein an object's writable properties can be specified,
@@ -14425,17 +14425,17 @@ local function Make(className, settings)
 	return instance
 end
 return Make
- end, _env("RemoteSpy.include.node_modules.make"))() end)
+ end, _env("NonomySpy.include.node_modules.make"))() end)
 
-_instance("node_modules", "Folder", "RemoteSpy.include.node_modules.make.node_modules", "RemoteSpy.include.node_modules.make")
+_instance("node_modules", "Folder", "NonomySpy.include.node_modules.make.node_modules", "NonomySpy.include.node_modules.make")
 
-_instance("@rbxts", "Folder", "RemoteSpy.include.node_modules.make.node_modules.@rbxts", "RemoteSpy.include.node_modules.make.node_modules")
+_instance("@rbxts", "Folder", "NonomySpy.include.node_modules.make.node_modules.@rbxts", "NonomySpy.include.node_modules.make.node_modules")
 
-_instance("compiler-types", "Folder", "RemoteSpy.include.node_modules.make.node_modules.@rbxts.compiler-types", "RemoteSpy.include.node_modules.make.node_modules.@rbxts")
+_instance("compiler-types", "Folder", "NonomySpy.include.node_modules.make.node_modules.@rbxts.compiler-types", "NonomySpy.include.node_modules.make.node_modules.@rbxts")
 
-_instance("types", "Folder", "RemoteSpy.include.node_modules.make.node_modules.@rbxts.compiler-types.types", "RemoteSpy.include.node_modules.make.node_modules.@rbxts.compiler-types")
+_instance("types", "Folder", "NonomySpy.include.node_modules.make.node_modules.@rbxts.compiler-types.types", "NonomySpy.include.node_modules.make.node_modules.@rbxts.compiler-types")
 
-_module("object-utils", "ModuleScript", "RemoteSpy.include.node_modules.object-utils", "RemoteSpy.include.node_modules", function () return setfenv(function() local HttpService = game:GetService("HttpService")
+_module("object-utils", "ModuleScript", "NonomySpy.include.node_modules.object-utils", "NonomySpy.include.node_modules", function () return setfenv(function() local HttpService = game:GetService("HttpService")
 
 local Object = {}
 
@@ -14553,11 +14553,11 @@ function Object.fromEntries(entries)
 end
 
 return Object
- end, _env("RemoteSpy.include.node_modules.object-utils"))() end)
+ end, _env("NonomySpy.include.node_modules.object-utils"))() end)
 
-_instance("roact", "Folder", "RemoteSpy.include.node_modules.roact", "RemoteSpy.include.node_modules")
+_instance("roact", "Folder", "NonomySpy.include.node_modules.roact", "NonomySpy.include.node_modules")
 
-_module("src", "ModuleScript", "RemoteSpy.include.node_modules.roact.src", "RemoteSpy.include.node_modules.roact", function () return setfenv(function() --[[
+_module("src", "ModuleScript", "NonomySpy.include.node_modules.roact.src", "NonomySpy.include.node_modules.roact", function () return setfenv(function() --[[
 	Packages up the internals of Roact and exposes a public API for it.
 ]]
 
@@ -14605,9 +14605,9 @@ local Roact = strict {
 	},
 }
 
-return Roact end, _env("RemoteSpy.include.node_modules.roact.src"))() end)
+return Roact end, _env("NonomySpy.include.node_modules.roact.src"))() end)
 
-_module("Binding", "ModuleScript", "RemoteSpy.include.node_modules.roact.src.Binding", "RemoteSpy.include.node_modules.roact.src", function () return setfenv(function() local createSignal = require(script.Parent.createSignal)
+_module("Binding", "ModuleScript", "NonomySpy.include.node_modules.roact.src.Binding", "NonomySpy.include.node_modules.roact.src", function () return setfenv(function() local createSignal = require(script.Parent.createSignal)
 local Symbol = require(script.Parent.Symbol)
 local Type = require(script.Parent.Type)
 
@@ -14763,9 +14763,9 @@ function BindingInternalApi.join(upstreamBindings)
 	}, BindingPublicMeta)
 end
 
-return BindingInternalApi end, _env("RemoteSpy.include.node_modules.roact.src.Binding"))() end)
+return BindingInternalApi end, _env("NonomySpy.include.node_modules.roact.src.Binding"))() end)
 
-_module("Component", "ModuleScript", "RemoteSpy.include.node_modules.roact.src.Component", "RemoteSpy.include.node_modules.roact.src", function () return setfenv(function() local assign = require(script.Parent.assign)
+_module("Component", "ModuleScript", "NonomySpy.include.node_modules.roact.src.Component", "NonomySpy.include.node_modules.roact.src", function () return setfenv(function() local assign = require(script.Parent.assign)
 local ComponentLifecyclePhase = require(script.Parent.ComponentLifecyclePhase)
 local Type = require(script.Parent.Type)
 local Symbol = require(script.Parent.Symbol)
@@ -15285,9 +15285,9 @@ function Component:__resolveUpdate(incomingProps, incomingState)
 	return true
 end
 
-return Component end, _env("RemoteSpy.include.node_modules.roact.src.Component"))() end)
+return Component end, _env("NonomySpy.include.node_modules.roact.src.Component"))() end)
 
-_module("ComponentLifecyclePhase", "ModuleScript", "RemoteSpy.include.node_modules.roact.src.ComponentLifecyclePhase", "RemoteSpy.include.node_modules.roact.src", function () return setfenv(function() local Symbol = require(script.Parent.Symbol)
+_module("ComponentLifecyclePhase", "ModuleScript", "NonomySpy.include.node_modules.roact.src.ComponentLifecyclePhase", "NonomySpy.include.node_modules.roact.src", function () return setfenv(function() local Symbol = require(script.Parent.Symbol)
 local strict = require(script.Parent.strict)
 
 local ComponentLifecyclePhase = strict({
@@ -15305,9 +15305,9 @@ local ComponentLifecyclePhase = strict({
 	Idle = Symbol.named("idle"),
 }, "ComponentLifecyclePhase")
 
-return ComponentLifecyclePhase end, _env("RemoteSpy.include.node_modules.roact.src.ComponentLifecyclePhase"))() end)
+return ComponentLifecyclePhase end, _env("NonomySpy.include.node_modules.roact.src.ComponentLifecyclePhase"))() end)
 
-_module("Config", "ModuleScript", "RemoteSpy.include.node_modules.roact.src.Config", "RemoteSpy.include.node_modules.roact.src", function () return setfenv(function() --[[
+_module("Config", "ModuleScript", "NonomySpy.include.node_modules.roact.src.Config", "NonomySpy.include.node_modules.roact.src", function () return setfenv(function() --[[
 	Exposes an interface to set global configuration values for Roact.
 
 	Configuration can only occur once, and should only be done by an application
@@ -15433,9 +15433,9 @@ function Config:scoped(configValues, callback)
 	assert(success, result)
 end
 
-return Config end, _env("RemoteSpy.include.node_modules.roact.src.Config"))() end)
+return Config end, _env("NonomySpy.include.node_modules.roact.src.Config"))() end)
 
-_module("ElementKind", "ModuleScript", "RemoteSpy.include.node_modules.roact.src.ElementKind", "RemoteSpy.include.node_modules.roact.src", function () return setfenv(function() --[[
+_module("ElementKind", "ModuleScript", "NonomySpy.include.node_modules.roact.src.ElementKind", "NonomySpy.include.node_modules.roact.src", function () return setfenv(function() --[[
 	Contains markers for annotating the type of an element.
 
 	Use `ElementKind` as a key, and values from it as the value.
@@ -15485,9 +15485,9 @@ getmetatable(ElementKind).__index = ElementKindInternal
 
 strict(ElementKindInternal, "ElementKind")
 
-return ElementKind end, _env("RemoteSpy.include.node_modules.roact.src.ElementKind"))() end)
+return ElementKind end, _env("NonomySpy.include.node_modules.roact.src.ElementKind"))() end)
 
-_module("ElementUtils", "ModuleScript", "RemoteSpy.include.node_modules.roact.src.ElementUtils", "RemoteSpy.include.node_modules.roact.src", function () return setfenv(function() local Type = require(script.Parent.Type)
+_module("ElementUtils", "ModuleScript", "NonomySpy.include.node_modules.roact.src.ElementUtils", "NonomySpy.include.node_modules.roact.src", function () return setfenv(function() local Type = require(script.Parent.Type)
 local Symbol = require(script.Parent.Symbol)
 
 local function noop()
@@ -15585,17 +15585,17 @@ function ElementUtils.getElementByKey(elements, hostKey)
 	error("Invalid elements")
 end
 
-return ElementUtils end, _env("RemoteSpy.include.node_modules.roact.src.ElementUtils"))() end)
+return ElementUtils end, _env("NonomySpy.include.node_modules.roact.src.ElementUtils"))() end)
 
-_module("GlobalConfig", "ModuleScript", "RemoteSpy.include.node_modules.roact.src.GlobalConfig", "RemoteSpy.include.node_modules.roact.src", function () return setfenv(function() --[[
+_module("GlobalConfig", "ModuleScript", "NonomySpy.include.node_modules.roact.src.GlobalConfig", "NonomySpy.include.node_modules.roact.src", function () return setfenv(function() --[[
 	Exposes a single instance of a configuration as Roact's GlobalConfig.
 ]]
 
 local Config = require(script.Parent.Config)
 
-return Config.new() end, _env("RemoteSpy.include.node_modules.roact.src.GlobalConfig"))() end)
+return Config.new() end, _env("NonomySpy.include.node_modules.roact.src.GlobalConfig"))() end)
 
-_module("Logging", "ModuleScript", "RemoteSpy.include.node_modules.roact.src.Logging", "RemoteSpy.include.node_modules.roact.src", function () return setfenv(function() --[[
+_module("Logging", "ModuleScript", "NonomySpy.include.node_modules.roact.src.Logging", "NonomySpy.include.node_modules.roact.src", function () return setfenv(function() --[[
 	Centralized place to handle logging. Lets us:
 	- Unit test log output via `Logging.capture`
 	- Disable verbose log messages when not debugging Roact
@@ -15753,17 +15753,17 @@ function Logging.warnOnce(messageTemplate, ...)
 	Logging.warn(messageTemplate, ...)
 end
 
-return Logging end, _env("RemoteSpy.include.node_modules.roact.src.Logging"))() end)
+return Logging end, _env("NonomySpy.include.node_modules.roact.src.Logging"))() end)
 
-_module("None", "ModuleScript", "RemoteSpy.include.node_modules.roact.src.None", "RemoteSpy.include.node_modules.roact.src", function () return setfenv(function() local Symbol = require(script.Parent.Symbol)
+_module("None", "ModuleScript", "NonomySpy.include.node_modules.roact.src.None", "NonomySpy.include.node_modules.roact.src", function () return setfenv(function() local Symbol = require(script.Parent.Symbol)
 
 -- Marker used to specify that the value is nothing, because nil cannot be
 -- stored in tables.
 local None = Symbol.named("None")
 
-return None end, _env("RemoteSpy.include.node_modules.roact.src.None"))() end)
+return None end, _env("NonomySpy.include.node_modules.roact.src.None"))() end)
 
-_module("NoopRenderer", "ModuleScript", "RemoteSpy.include.node_modules.roact.src.NoopRenderer", "RemoteSpy.include.node_modules.roact.src", function () return setfenv(function() --[[
+_module("NoopRenderer", "ModuleScript", "NonomySpy.include.node_modules.roact.src.NoopRenderer", "NonomySpy.include.node_modules.roact.src", function () return setfenv(function() --[[
 	Reference renderer intended for use in tests as well as for documenting the
 	minimum required interface for a Roact renderer.
 ]]
@@ -15786,17 +15786,17 @@ function NoopRenderer.updateHostNode(reconciler, node, newElement)
 	return node
 end
 
-return NoopRenderer end, _env("RemoteSpy.include.node_modules.roact.src.NoopRenderer"))() end)
+return NoopRenderer end, _env("NonomySpy.include.node_modules.roact.src.NoopRenderer"))() end)
 
-_module("Portal", "ModuleScript", "RemoteSpy.include.node_modules.roact.src.Portal", "RemoteSpy.include.node_modules.roact.src", function () return setfenv(function() local Symbol = require(script.Parent.Symbol)
+_module("Portal", "ModuleScript", "NonomySpy.include.node_modules.roact.src.Portal", "NonomySpy.include.node_modules.roact.src", function () return setfenv(function() local Symbol = require(script.Parent.Symbol)
 
 local Portal = Symbol.named("Portal")
 
-return Portal end, _env("RemoteSpy.include.node_modules.roact.src.Portal"))() end)
+return Portal end, _env("NonomySpy.include.node_modules.roact.src.Portal"))() end)
 
-_instance("PropMarkers", "Folder", "RemoteSpy.include.node_modules.roact.src.PropMarkers", "RemoteSpy.include.node_modules.roact.src")
+_instance("PropMarkers", "Folder", "NonomySpy.include.node_modules.roact.src.PropMarkers", "NonomySpy.include.node_modules.roact.src")
 
-_module("Change", "ModuleScript", "RemoteSpy.include.node_modules.roact.src.PropMarkers.Change", "RemoteSpy.include.node_modules.roact.src.PropMarkers", function () return setfenv(function() --[[
+_module("Change", "ModuleScript", "NonomySpy.include.node_modules.roact.src.PropMarkers.Change", "NonomySpy.include.node_modules.roact.src.PropMarkers", function () return setfenv(function() --[[
 	Change is used to generate special prop keys that can be used to connect to
 	GetPropertyChangedSignal.
 
@@ -15834,15 +15834,15 @@ setmetatable(Change, {
 })
 
 return Change
- end, _env("RemoteSpy.include.node_modules.roact.src.PropMarkers.Change"))() end)
+ end, _env("NonomySpy.include.node_modules.roact.src.PropMarkers.Change"))() end)
 
-_module("Children", "ModuleScript", "RemoteSpy.include.node_modules.roact.src.PropMarkers.Children", "RemoteSpy.include.node_modules.roact.src.PropMarkers", function () return setfenv(function() local Symbol = require(script.Parent.Parent.Symbol)
+_module("Children", "ModuleScript", "NonomySpy.include.node_modules.roact.src.PropMarkers.Children", "NonomySpy.include.node_modules.roact.src.PropMarkers", function () return setfenv(function() local Symbol = require(script.Parent.Parent.Symbol)
 
 local Children = Symbol.named("Children")
 
-return Children end, _env("RemoteSpy.include.node_modules.roact.src.PropMarkers.Children"))() end)
+return Children end, _env("NonomySpy.include.node_modules.roact.src.PropMarkers.Children"))() end)
 
-_module("Event", "ModuleScript", "RemoteSpy.include.node_modules.roact.src.PropMarkers.Event", "RemoteSpy.include.node_modules.roact.src.PropMarkers", function () return setfenv(function() --[[
+_module("Event", "ModuleScript", "NonomySpy.include.node_modules.roact.src.PropMarkers.Event", "NonomySpy.include.node_modules.roact.src.PropMarkers", function () return setfenv(function() --[[
 	Index into `Event` to get a prop key for attaching to an event on a Roblox
 	Instance.
 
@@ -15883,15 +15883,15 @@ setmetatable(Event, {
 })
 
 return Event
- end, _env("RemoteSpy.include.node_modules.roact.src.PropMarkers.Event"))() end)
+ end, _env("NonomySpy.include.node_modules.roact.src.PropMarkers.Event"))() end)
 
-_module("Ref", "ModuleScript", "RemoteSpy.include.node_modules.roact.src.PropMarkers.Ref", "RemoteSpy.include.node_modules.roact.src.PropMarkers", function () return setfenv(function() local Symbol = require(script.Parent.Parent.Symbol)
+_module("Ref", "ModuleScript", "NonomySpy.include.node_modules.roact.src.PropMarkers.Ref", "NonomySpy.include.node_modules.roact.src.PropMarkers", function () return setfenv(function() local Symbol = require(script.Parent.Parent.Symbol)
 
 local Ref = Symbol.named("Ref")
 
-return Ref end, _env("RemoteSpy.include.node_modules.roact.src.PropMarkers.Ref"))() end)
+return Ref end, _env("NonomySpy.include.node_modules.roact.src.PropMarkers.Ref"))() end)
 
-_module("PureComponent", "ModuleScript", "RemoteSpy.include.node_modules.roact.src.PureComponent", "RemoteSpy.include.node_modules.roact.src", function () return setfenv(function() --[[
+_module("PureComponent", "ModuleScript", "NonomySpy.include.node_modules.roact.src.PureComponent", "NonomySpy.include.node_modules.roact.src", function () return setfenv(function() --[[
 	A version of Component with a `shouldUpdate` method that forces the
 	resulting component to be pure.
 ]]
@@ -15931,9 +15931,9 @@ function PureComponent:shouldUpdate(newProps, newState)
 	return false
 end
 
-return PureComponent end, _env("RemoteSpy.include.node_modules.roact.src.PureComponent"))() end)
+return PureComponent end, _env("NonomySpy.include.node_modules.roact.src.PureComponent"))() end)
 
-_module("RobloxRenderer", "ModuleScript", "RemoteSpy.include.node_modules.roact.src.RobloxRenderer", "RemoteSpy.include.node_modules.roact.src", function () return setfenv(function() --[[
+_module("RobloxRenderer", "ModuleScript", "NonomySpy.include.node_modules.roact.src.RobloxRenderer", "NonomySpy.include.node_modules.roact.src", function () return setfenv(function() --[[
 	Renderer that deals in terms of Roblox Instances. This is the most
 	well-supported renderer after NoopRenderer and is currently the only
 	renderer that does anything.
@@ -16216,9 +16216,9 @@ function RobloxRenderer.updateHostNode(reconciler, virtualNode, newElement)
 end
 
 return RobloxRenderer
- end, _env("RemoteSpy.include.node_modules.roact.src.RobloxRenderer"))() end)
+ end, _env("NonomySpy.include.node_modules.roact.src.RobloxRenderer"))() end)
 
-_module("SingleEventManager", "ModuleScript", "RemoteSpy.include.node_modules.roact.src.SingleEventManager", "RemoteSpy.include.node_modules.roact.src", function () return setfenv(function() --[[
+_module("SingleEventManager", "ModuleScript", "NonomySpy.include.node_modules.roact.src.SingleEventManager", "NonomySpy.include.node_modules.roact.src", function () return setfenv(function() --[[
 	A manager for a single host virtual node's connected events.
 ]]
 
@@ -16364,9 +16364,9 @@ function SingleEventManager:resume()
 	self._suspendedEventQueue = {}
 end
 
-return SingleEventManager end, _env("RemoteSpy.include.node_modules.roact.src.SingleEventManager"))() end)
+return SingleEventManager end, _env("NonomySpy.include.node_modules.roact.src.SingleEventManager"))() end)
 
-_module("Symbol", "ModuleScript", "RemoteSpy.include.node_modules.roact.src.Symbol", "RemoteSpy.include.node_modules.roact.src", function () return setfenv(function() --[[
+_module("Symbol", "ModuleScript", "NonomySpy.include.node_modules.roact.src.Symbol", "NonomySpy.include.node_modules.roact.src", function () return setfenv(function() --[[
 	A 'Symbol' is an opaque marker type.
 
 	Symbols have the type 'userdata', but when printed to the console, the name
@@ -16395,9 +16395,9 @@ function Symbol.named(name)
 	return self
 end
 
-return Symbol end, _env("RemoteSpy.include.node_modules.roact.src.Symbol"))() end)
+return Symbol end, _env("NonomySpy.include.node_modules.roact.src.Symbol"))() end)
 
-_module("Type", "ModuleScript", "RemoteSpy.include.node_modules.roact.src.Type", "RemoteSpy.include.node_modules.roact.src", function () return setfenv(function() --[[
+_module("Type", "ModuleScript", "NonomySpy.include.node_modules.roact.src.Type", "NonomySpy.include.node_modules.roact.src", function () return setfenv(function() --[[
 	Contains markers for annotating objects with types.
 
 	To set the type of an object, use `Type` as a key and the actual marker as
@@ -16444,9 +16444,9 @@ end
 
 strict(TypeInternal, "Type")
 
-return Type end, _env("RemoteSpy.include.node_modules.roact.src.Type"))() end)
+return Type end, _env("NonomySpy.include.node_modules.roact.src.Type"))() end)
 
-_module("assertDeepEqual", "ModuleScript", "RemoteSpy.include.node_modules.roact.src.assertDeepEqual", "RemoteSpy.include.node_modules.roact.src", function () return setfenv(function() --[[
+_module("assertDeepEqual", "ModuleScript", "NonomySpy.include.node_modules.roact.src.assertDeepEqual", "NonomySpy.include.node_modules.roact.src", function () return setfenv(function() --[[
 	A utility used to assert that two objects are value-equal recursively. It
 	outputs fairly nicely formatted messages to help diagnose why two objects
 	would be different.
@@ -16518,9 +16518,9 @@ local function assertDeepEqual(a, b)
 	end
 end
 
-return assertDeepEqual end, _env("RemoteSpy.include.node_modules.roact.src.assertDeepEqual"))() end)
+return assertDeepEqual end, _env("NonomySpy.include.node_modules.roact.src.assertDeepEqual"))() end)
 
-_module("assign", "ModuleScript", "RemoteSpy.include.node_modules.roact.src.assign", "RemoteSpy.include.node_modules.roact.src", function () return setfenv(function() local None = require(script.Parent.None)
+_module("assign", "ModuleScript", "NonomySpy.include.node_modules.roact.src.assign", "NonomySpy.include.node_modules.roact.src", function () return setfenv(function() local None = require(script.Parent.None)
 
 --[[
 	Merges values from zero or more tables onto a target table. If a value is
@@ -16546,9 +16546,9 @@ local function assign(target, ...)
 	return target
 end
 
-return assign end, _env("RemoteSpy.include.node_modules.roact.src.assign"))() end)
+return assign end, _env("NonomySpy.include.node_modules.roact.src.assign"))() end)
 
-_module("createContext", "ModuleScript", "RemoteSpy.include.node_modules.roact.src.createContext", "RemoteSpy.include.node_modules.roact.src", function () return setfenv(function() local Symbol = require(script.Parent.Symbol)
+_module("createContext", "ModuleScript", "NonomySpy.include.node_modules.roact.src.createContext", "NonomySpy.include.node_modules.roact.src", function () return setfenv(function() local Symbol = require(script.Parent.Symbol)
 local createFragment = require(script.Parent.createFragment)
 local createSignal = require(script.Parent.createSignal)
 local Children = require(script.Parent.PropMarkers.Children)
@@ -16699,9 +16699,9 @@ local function createContext(defaultValue)
 end
 
 return createContext
- end, _env("RemoteSpy.include.node_modules.roact.src.createContext"))() end)
+ end, _env("NonomySpy.include.node_modules.roact.src.createContext"))() end)
 
-_module("createElement", "ModuleScript", "RemoteSpy.include.node_modules.roact.src.createElement", "RemoteSpy.include.node_modules.roact.src", function () return setfenv(function() local Children = require(script.Parent.PropMarkers.Children)
+_module("createElement", "ModuleScript", "NonomySpy.include.node_modules.roact.src.createElement", "NonomySpy.include.node_modules.roact.src", function () return setfenv(function() local Children = require(script.Parent.PropMarkers.Children)
 local ElementKind = require(script.Parent.ElementKind)
 local Logging = require(script.Parent.Logging)
 local Type = require(script.Parent.Type)
@@ -16774,9 +16774,9 @@ local function createElement(component, props, children)
 	return element
 end
 
-return createElement end, _env("RemoteSpy.include.node_modules.roact.src.createElement"))() end)
+return createElement end, _env("NonomySpy.include.node_modules.roact.src.createElement"))() end)
 
-_module("createFragment", "ModuleScript", "RemoteSpy.include.node_modules.roact.src.createFragment", "RemoteSpy.include.node_modules.roact.src", function () return setfenv(function() local ElementKind = require(script.Parent.ElementKind)
+_module("createFragment", "ModuleScript", "NonomySpy.include.node_modules.roact.src.createFragment", "NonomySpy.include.node_modules.roact.src", function () return setfenv(function() local ElementKind = require(script.Parent.ElementKind)
 local Type = require(script.Parent.Type)
 
 local function createFragment(elements)
@@ -16787,9 +16787,9 @@ local function createFragment(elements)
 	}
 end
 
-return createFragment end, _env("RemoteSpy.include.node_modules.roact.src.createFragment"))() end)
+return createFragment end, _env("NonomySpy.include.node_modules.roact.src.createFragment"))() end)
 
-_module("createReconciler", "ModuleScript", "RemoteSpy.include.node_modules.roact.src.createReconciler", "RemoteSpy.include.node_modules.roact.src", function () return setfenv(function() local Type = require(script.Parent.Type)
+_module("createReconciler", "ModuleScript", "NonomySpy.include.node_modules.roact.src.createReconciler", "NonomySpy.include.node_modules.roact.src", function () return setfenv(function() local Type = require(script.Parent.Type)
 local ElementKind = require(script.Parent.ElementKind)
 local ElementUtils = require(script.Parent.ElementUtils)
 local Children = require(script.Parent.PropMarkers.Children)
@@ -17274,9 +17274,9 @@ local function createReconciler(renderer)
 end
 
 return createReconciler
- end, _env("RemoteSpy.include.node_modules.roact.src.createReconciler"))() end)
+ end, _env("NonomySpy.include.node_modules.roact.src.createReconciler"))() end)
 
-_module("createReconcilerCompat", "ModuleScript", "RemoteSpy.include.node_modules.roact.src.createReconcilerCompat", "RemoteSpy.include.node_modules.roact.src", function () return setfenv(function() --[[
+_module("createReconcilerCompat", "ModuleScript", "NonomySpy.include.node_modules.roact.src.createReconcilerCompat", "NonomySpy.include.node_modules.roact.src", function () return setfenv(function() --[[
 	Contains deprecated methods from Reconciler. Broken out so that removing
 	this shim is easy -- just delete this file and remove it from init.
 ]]
@@ -17322,9 +17322,9 @@ local function createReconcilerCompat(reconciler)
 	return compat
 end
 
-return createReconcilerCompat end, _env("RemoteSpy.include.node_modules.roact.src.createReconcilerCompat"))() end)
+return createReconcilerCompat end, _env("NonomySpy.include.node_modules.roact.src.createReconcilerCompat"))() end)
 
-_module("createRef", "ModuleScript", "RemoteSpy.include.node_modules.roact.src.createRef", "RemoteSpy.include.node_modules.roact.src", function () return setfenv(function() --[[
+_module("createRef", "ModuleScript", "NonomySpy.include.node_modules.roact.src.createRef", "NonomySpy.include.node_modules.roact.src", function () return setfenv(function() --[[
 	A ref is nothing more than a binding with a special field 'current'
 	that maps to the getValue method of the binding
 ]]
@@ -17361,9 +17361,9 @@ local function createRef()
 	return ref
 end
 
-return createRef end, _env("RemoteSpy.include.node_modules.roact.src.createRef"))() end)
+return createRef end, _env("NonomySpy.include.node_modules.roact.src.createRef"))() end)
 
-_module("createSignal", "ModuleScript", "RemoteSpy.include.node_modules.roact.src.createSignal", "RemoteSpy.include.node_modules.roact.src", function () return setfenv(function() --[[
+_module("createSignal", "ModuleScript", "NonomySpy.include.node_modules.roact.src.createSignal", "NonomySpy.include.node_modules.roact.src", function () return setfenv(function() --[[
 	This is a simple signal implementation that has a dead-simple API.
 
 		local signal = createSignal()
@@ -17431,9 +17431,9 @@ local function createSignal()
 end
 
 return createSignal
- end, _env("RemoteSpy.include.node_modules.roact.src.createSignal"))() end)
+ end, _env("NonomySpy.include.node_modules.roact.src.createSignal"))() end)
 
-_module("createSpy", "ModuleScript", "RemoteSpy.include.node_modules.roact.src.createSpy", "RemoteSpy.include.node_modules.roact.src", function () return setfenv(function() --[[
+_module("createSpy", "ModuleScript", "NonomySpy.include.node_modules.roact.src.createSpy", "NonomySpy.include.node_modules.roact.src", function () return setfenv(function() --[[
 	A utility used to create a function spy that can be used to robustly test
 	that functions are invoked the correct number of times and with the correct
 	number of arguments.
@@ -17517,9 +17517,9 @@ local function createSpy(inner)
 	return self
 end
 
-return createSpy end, _env("RemoteSpy.include.node_modules.roact.src.createSpy"))() end)
+return createSpy end, _env("NonomySpy.include.node_modules.roact.src.createSpy"))() end)
 
-_module("forwardRef", "ModuleScript", "RemoteSpy.include.node_modules.roact.src.forwardRef", "RemoteSpy.include.node_modules.roact.src", function () return setfenv(function() local assign = require(script.Parent.assign)
+_module("forwardRef", "ModuleScript", "NonomySpy.include.node_modules.roact.src.forwardRef", "NonomySpy.include.node_modules.roact.src", function () return setfenv(function() local assign = require(script.Parent.assign)
 local None = require(script.Parent.None)
 local Ref = require(script.Parent.PropMarkers.Ref)
 
@@ -17546,9 +17546,9 @@ local function forwardRef(render)
 	end
 end
 
-return forwardRef end, _env("RemoteSpy.include.node_modules.roact.src.forwardRef"))() end)
+return forwardRef end, _env("NonomySpy.include.node_modules.roact.src.forwardRef"))() end)
 
-_module("getDefaultInstanceProperty", "ModuleScript", "RemoteSpy.include.node_modules.roact.src.getDefaultInstanceProperty", "RemoteSpy.include.node_modules.roact.src", function () return setfenv(function() --[[
+_module("getDefaultInstanceProperty", "ModuleScript", "NonomySpy.include.node_modules.roact.src.getDefaultInstanceProperty", "NonomySpy.include.node_modules.roact.src", function () return setfenv(function() --[[
 	Attempts to get the default value of a given property on a Roblox instance.
 
 	This is used by the reconciler in cases where a prop was previously set on a
@@ -17601,17 +17601,17 @@ local function getDefaultInstanceProperty(className, propertyName)
 	return ok, defaultValue
 end
 
-return getDefaultInstanceProperty end, _env("RemoteSpy.include.node_modules.roact.src.getDefaultInstanceProperty"))() end)
+return getDefaultInstanceProperty end, _env("NonomySpy.include.node_modules.roact.src.getDefaultInstanceProperty"))() end)
 
-_module("internalAssert", "ModuleScript", "RemoteSpy.include.node_modules.roact.src.internalAssert", "RemoteSpy.include.node_modules.roact.src", function () return setfenv(function() local function internalAssert(condition, message)
+_module("internalAssert", "ModuleScript", "NonomySpy.include.node_modules.roact.src.internalAssert", "NonomySpy.include.node_modules.roact.src", function () return setfenv(function() local function internalAssert(condition, message)
 	if not condition then
 		error(message .. " (This is probably a bug in Roact!)", 3)
 	end
 end
 
-return internalAssert end, _env("RemoteSpy.include.node_modules.roact.src.internalAssert"))() end)
+return internalAssert end, _env("NonomySpy.include.node_modules.roact.src.internalAssert"))() end)
 
-_module("invalidSetStateMessages", "ModuleScript", "RemoteSpy.include.node_modules.roact.src.invalidSetStateMessages", "RemoteSpy.include.node_modules.roact.src", function () return setfenv(function() --[[
+_module("invalidSetStateMessages", "ModuleScript", "NonomySpy.include.node_modules.roact.src.invalidSetStateMessages", "NonomySpy.include.node_modules.roact.src", function () return setfenv(function() --[[
 	These messages are used by Component to help users diagnose when they're
 	calling setState in inappropriate places.
 
@@ -17654,9 +17654,9 @@ This is a bug in Roact.
 It was triggered by the component %q.
 ]]
 
-return invalidSetStateMessages end, _env("RemoteSpy.include.node_modules.roact.src.invalidSetStateMessages"))() end)
+return invalidSetStateMessages end, _env("NonomySpy.include.node_modules.roact.src.invalidSetStateMessages"))() end)
 
-_module("oneChild", "ModuleScript", "RemoteSpy.include.node_modules.roact.src.oneChild", "RemoteSpy.include.node_modules.roact.src", function () return setfenv(function() --[[
+_module("oneChild", "ModuleScript", "NonomySpy.include.node_modules.roact.src.oneChild", "NonomySpy.include.node_modules.roact.src", function () return setfenv(function() --[[
 	Retrieves at most one child from the children passed to a component.
 
 	If passed nil or an empty table, will return nil.
@@ -17683,9 +17683,9 @@ local function oneChild(children)
 	return child
 end
 
-return oneChild end, _env("RemoteSpy.include.node_modules.roact.src.oneChild"))() end)
+return oneChild end, _env("NonomySpy.include.node_modules.roact.src.oneChild"))() end)
 
-_module("strict", "ModuleScript", "RemoteSpy.include.node_modules.roact.src.strict", "RemoteSpy.include.node_modules.roact.src", function () return setfenv(function() local function strict(t, name)
+_module("strict", "ModuleScript", "NonomySpy.include.node_modules.roact.src.strict", "NonomySpy.include.node_modules.roact.src", function () return setfenv(function() local function strict(t, name)
 	name = name or tostring(t)
 
 	return setmetatable(t, {
@@ -17711,11 +17711,11 @@ _module("strict", "ModuleScript", "RemoteSpy.include.node_modules.roact.src.stri
 	})
 end
 
-return strict end, _env("RemoteSpy.include.node_modules.roact.src.strict"))() end)
+return strict end, _env("NonomySpy.include.node_modules.roact.src.strict"))() end)
 
-_instance("roact-hooked", "Folder", "RemoteSpy.include.node_modules.roact-hooked", "RemoteSpy.include.node_modules")
+_instance("roact-hooked", "Folder", "NonomySpy.include.node_modules.roact-hooked", "NonomySpy.include.node_modules")
 
-_module("src", "ModuleScript", "RemoteSpy.include.node_modules.roact-hooked.src", "RemoteSpy.include.node_modules.roact-hooked", function () return setfenv(function() local hoc = require(script.hoc)
+_module("src", "ModuleScript", "NonomySpy.include.node_modules.roact-hooked.src", "NonomySpy.include.node_modules.roact-hooked", function () return setfenv(function() local hoc = require(script.hoc)
 local hooks = require(script.hooks)
 
 return {
@@ -17734,18 +17734,18 @@ return {
 	useRef = hooks.useRef,
 	useState = hooks.useState,
 }
- end, _env("RemoteSpy.include.node_modules.roact-hooked.src"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-hooked.src"))() end)
 
-_module("Roact", "ModuleScript", "RemoteSpy.include.node_modules.roact-hooked.src.Roact", "RemoteSpy.include.node_modules.roact-hooked.src", function () return setfenv(function() if script.Parent.Parent:FindFirstChild("Roact") then
+_module("Roact", "ModuleScript", "NonomySpy.include.node_modules.roact-hooked.src.Roact", "NonomySpy.include.node_modules.roact-hooked.src", function () return setfenv(function() if script.Parent.Parent:FindFirstChild("Roact") then
 	return require(script.Parent.Parent.Roact)
 elseif script:FindFirstAncestor("node_modules") then
 	return require(script:FindFirstAncestor("node_modules").roact.src)
 else
 	error("Could not find Roact or roact in the parent hierarchy.")
 end
- end, _env("RemoteSpy.include.node_modules.roact-hooked.src.Roact"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-hooked.src.Roact"))() end)
 
-_module("hoc", "ModuleScript", "RemoteSpy.include.node_modules.roact-hooked.src.hoc", "RemoteSpy.include.node_modules.roact-hooked.src", function () return setfenv(function() local Roact = require(script.Parent.Roact)
+_module("hoc", "ModuleScript", "NonomySpy.include.node_modules.roact-hooked.src.hoc", "NonomySpy.include.node_modules.roact-hooked.src", function () return setfenv(function() local Roact = require(script.Parent.Roact)
 local hooks = require(script.Parent.hooks)
 local prepareToUseHooks = hooks.prepareToUseHooks
 local finishHooks = hooks.finishHooks
@@ -17791,9 +17791,9 @@ return {
 	withHooks = withHooks,
 	withHooksPure = withHooksPure,
 }
- end, _env("RemoteSpy.include.node_modules.roact-hooked.src.hoc"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-hooked.src.hoc"))() end)
 
-_module("hooks", "ModuleScript", "RemoteSpy.include.node_modules.roact-hooked.src.hooks", "RemoteSpy.include.node_modules.roact-hooked.src", function () return setfenv(function() -- https://github.com/facebook/react/blob/main/packages/react-dom/src/server/ReactPartialRendererHooks.js
+_module("hooks", "ModuleScript", "NonomySpy.include.node_modules.roact-hooked.src.hooks", "NonomySpy.include.node_modules.roact-hooked.src", function () return setfenv(function() -- https://github.com/facebook/react/blob/main/packages/react-dom/src/server/ReactPartialRendererHooks.js
 -- https://github.com/facebook/react/blob/main/packages/react-reconciler/src/ReactFiberHooks.new.js
 
 local Roact = require(script.Parent.Roact)
@@ -18149,11 +18149,11 @@ return {
 	prepareToUseHooks = prepareToUseHooks,
 	finishHooks = finishHooks,
 }
- end, _env("RemoteSpy.include.node_modules.roact-hooked.src.hooks"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-hooked.src.hooks"))() end)
 
-_instance("roact-hooked-plus", "Folder", "RemoteSpy.include.node_modules.roact-hooked-plus", "RemoteSpy.include.node_modules")
+_instance("roact-hooked-plus", "Folder", "NonomySpy.include.node_modules.roact-hooked-plus", "NonomySpy.include.node_modules")
 
-_module("out", "ModuleScript", "RemoteSpy.include.node_modules.roact-hooked-plus.out", "RemoteSpy.include.node_modules.roact-hooked-plus", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("out", "ModuleScript", "NonomySpy.include.node_modules.roact-hooked-plus.out", "NonomySpy.include.node_modules.roact-hooked-plus", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = _G[script]
 local exports = {}
 exports.arrayToMap = TS.import(script, script, "utils", "array-to-map").arrayToMap
@@ -18202,9 +18202,9 @@ exports.useSingleMotor = TS.import(script, script, "use-single-motor").useSingle
 exports.useToggle = TS.import(script, script, "use-toggle").useToggle
 exports.useViewportSize = TS.import(script, script, "use-viewport-size").useViewportSize
 return exports
- end, _env("RemoteSpy.include.node_modules.roact-hooked-plus.out"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-hooked-plus.out"))() end)
 
-_module("flipper", "ModuleScript", "RemoteSpy.include.node_modules.roact-hooked-plus.out.flipper", "RemoteSpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("flipper", "ModuleScript", "NonomySpy.include.node_modules.roact-hooked-plus.out.flipper", "NonomySpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = _G[script]
 local exports = {}
 exports.getBinding = TS.import(script, script, "get-binding").getBinding
@@ -18214,9 +18214,9 @@ exports.useLinear = TS.import(script, script, "use-linear").useLinear
 exports.useMotor = TS.import(script, script, "use-motor").useMotor
 exports.useSpring = TS.import(script, script, "use-spring").useSpring
 return exports
- end, _env("RemoteSpy.include.node_modules.roact-hooked-plus.out.flipper"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-hooked-plus.out.flipper"))() end)
 
-_module("get-binding", "ModuleScript", "RemoteSpy.include.node_modules.roact-hooked-plus.out.flipper.get-binding", "RemoteSpy.include.node_modules.roact-hooked-plus.out.flipper", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("get-binding", "ModuleScript", "NonomySpy.include.node_modules.roact-hooked-plus.out.flipper.get-binding", "NonomySpy.include.node_modules.roact-hooked-plus.out.flipper", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = _G[script]
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
 local isMotor = TS.import(script, TS.getModule(script, "@rbxts", "flipper").src).isMotor
@@ -18240,9 +18240,9 @@ end
 return {
 	getBinding = getBinding,
 }
- end, _env("RemoteSpy.include.node_modules.roact-hooked-plus.out.flipper.get-binding"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-hooked-plus.out.flipper.get-binding"))() end)
 
-_module("use-goal", "ModuleScript", "RemoteSpy.include.node_modules.roact-hooked-plus.out.flipper.use-goal", "RemoteSpy.include.node_modules.roact-hooked-plus.out.flipper", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("use-goal", "ModuleScript", "NonomySpy.include.node_modules.roact-hooked-plus.out.flipper.use-goal", "NonomySpy.include.node_modules.roact-hooked-plus.out.flipper", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = _G[script]
 local getBinding = TS.import(script, script.Parent, "get-binding").getBinding
 local useMotor = TS.import(script, script.Parent, "use-motor").useMotor
@@ -18254,9 +18254,9 @@ end
 return {
 	useGoal = useGoal,
 }
- end, _env("RemoteSpy.include.node_modules.roact-hooked-plus.out.flipper.use-goal"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-hooked-plus.out.flipper.use-goal"))() end)
 
-_module("use-instant", "ModuleScript", "RemoteSpy.include.node_modules.roact-hooked-plus.out.flipper.use-instant", "RemoteSpy.include.node_modules.roact-hooked-plus.out.flipper", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("use-instant", "ModuleScript", "NonomySpy.include.node_modules.roact-hooked-plus.out.flipper.use-instant", "NonomySpy.include.node_modules.roact-hooked-plus.out.flipper", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = _G[script]
 local Instant = TS.import(script, TS.getModule(script, "@rbxts", "flipper").src).Instant
 local useGoal = TS.import(script, script.Parent, "use-goal").useGoal
@@ -18266,9 +18266,9 @@ end
 return {
 	useInstant = useInstant,
 }
- end, _env("RemoteSpy.include.node_modules.roact-hooked-plus.out.flipper.use-instant"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-hooked-plus.out.flipper.use-instant"))() end)
 
-_module("use-linear", "ModuleScript", "RemoteSpy.include.node_modules.roact-hooked-plus.out.flipper.use-linear", "RemoteSpy.include.node_modules.roact-hooked-plus.out.flipper", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("use-linear", "ModuleScript", "NonomySpy.include.node_modules.roact-hooked-plus.out.flipper.use-linear", "NonomySpy.include.node_modules.roact-hooked-plus.out.flipper", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = _G[script]
 local Linear = TS.import(script, TS.getModule(script, "@rbxts", "flipper").src).Linear
 local useGoal = TS.import(script, script.Parent, "use-goal").useGoal
@@ -18278,9 +18278,9 @@ end
 return {
 	useLinear = useLinear,
 }
- end, _env("RemoteSpy.include.node_modules.roact-hooked-plus.out.flipper.use-linear"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-hooked-plus.out.flipper.use-linear"))() end)
 
-_module("use-motor", "ModuleScript", "RemoteSpy.include.node_modules.roact-hooked-plus.out.flipper.use-motor", "RemoteSpy.include.node_modules.roact-hooked-plus.out.flipper", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("use-motor", "ModuleScript", "NonomySpy.include.node_modules.roact-hooked-plus.out.flipper.use-motor", "NonomySpy.include.node_modules.roact-hooked-plus.out.flipper", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = _G[script]
 local _flipper = TS.import(script, TS.getModule(script, "@rbxts", "flipper").src)
 local GroupMotor = _flipper.GroupMotor
@@ -18303,9 +18303,9 @@ end
 return {
 	useMotor = useMotor,
 }
- end, _env("RemoteSpy.include.node_modules.roact-hooked-plus.out.flipper.use-motor"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-hooked-plus.out.flipper.use-motor"))() end)
 
-_module("use-spring", "ModuleScript", "RemoteSpy.include.node_modules.roact-hooked-plus.out.flipper.use-spring", "RemoteSpy.include.node_modules.roact-hooked-plus.out.flipper", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("use-spring", "ModuleScript", "NonomySpy.include.node_modules.roact-hooked-plus.out.flipper.use-spring", "NonomySpy.include.node_modules.roact-hooked-plus.out.flipper", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = _G[script]
 local Spring = TS.import(script, TS.getModule(script, "@rbxts", "flipper").src).Spring
 local useGoal = TS.import(script, script.Parent, "use-goal").useGoal
@@ -18315,9 +18315,9 @@ end
 return {
 	useSpring = useSpring,
 }
- end, _env("RemoteSpy.include.node_modules.roact-hooked-plus.out.flipper.use-spring"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-hooked-plus.out.flipper.use-spring"))() end)
 
-_module("use-animation", "ModuleScript", "RemoteSpy.include.node_modules.roact-hooked-plus.out.use-animation", "RemoteSpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("use-animation", "ModuleScript", "NonomySpy.include.node_modules.roact-hooked-plus.out.use-animation", "NonomySpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = _G[script]
 local Spring = TS.import(script, TS.getModule(script, "@rbxts", "flipper").src).Spring
 local _flipper = TS.import(script, script.Parent, "flipper")
@@ -18411,9 +18411,9 @@ end
 return {
 	useAnimation = useAnimation,
 }
- end, _env("RemoteSpy.include.node_modules.roact-hooked-plus.out.use-animation"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-hooked-plus.out.use-animation"))() end)
 
-_module("use-click-outside", "ModuleScript", "RemoteSpy.include.node_modules.roact-hooked-plus.out.use-click-outside", "RemoteSpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("use-click-outside", "ModuleScript", "NonomySpy.include.node_modules.roact-hooked-plus.out.use-click-outside", "NonomySpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = _G[script]
 local _roact_hooked = TS.import(script, TS.getModule(script, "@rbxts", "roact-hooked").src)
 local useEffect = _roact_hooked.useEffect
@@ -18471,9 +18471,9 @@ end
 return {
 	useClickOutside = useClickOutside,
 }
- end, _env("RemoteSpy.include.node_modules.roact-hooked-plus.out.use-click-outside"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-hooked-plus.out.use-click-outside"))() end)
 
-_module("use-debounced-value", "ModuleScript", "RemoteSpy.include.node_modules.roact-hooked-plus.out.use-debounced-value", "RemoteSpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("use-debounced-value", "ModuleScript", "NonomySpy.include.node_modules.roact-hooked-plus.out.use-debounced-value", "NonomySpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = _G[script]
 local _roact_hooked = TS.import(script, TS.getModule(script, "@rbxts", "roact-hooked").src)
 local useEffect = _roact_hooked.useEffect
@@ -18522,9 +18522,9 @@ end
 return {
 	useDebouncedValue = useDebouncedValue,
 }
- end, _env("RemoteSpy.include.node_modules.roact-hooked-plus.out.use-debounced-value"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-hooked-plus.out.use-debounced-value"))() end)
 
-_module("use-delayed-effect", "ModuleScript", "RemoteSpy.include.node_modules.roact-hooked-plus.out.use-delayed-effect", "RemoteSpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("use-delayed-effect", "ModuleScript", "NonomySpy.include.node_modules.roact-hooked-plus.out.use-delayed-effect", "NonomySpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = _G[script]
 local _roact_hooked = TS.import(script, TS.getModule(script, "@rbxts", "roact-hooked").src)
 local useEffect = _roact_hooked.useEffect
@@ -18560,9 +18560,9 @@ end
 return {
 	useDelayedEffect = useDelayedEffect,
 }
- end, _env("RemoteSpy.include.node_modules.roact-hooked-plus.out.use-delayed-effect"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-hooked-plus.out.use-delayed-effect"))() end)
 
-_module("use-delayed-value", "ModuleScript", "RemoteSpy.include.node_modules.roact-hooked-plus.out.use-delayed-value", "RemoteSpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("use-delayed-value", "ModuleScript", "NonomySpy.include.node_modules.roact-hooked-plus.out.use-delayed-value", "NonomySpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = _G[script]
 local _roact_hooked = TS.import(script, TS.getModule(script, "@rbxts", "roact-hooked").src)
 local useEffect = _roact_hooked.useEffect
@@ -18611,9 +18611,9 @@ return {
 	clearUpdates = clearUpdates,
 	useDelayedValue = useDelayedValue,
 }
- end, _env("RemoteSpy.include.node_modules.roact-hooked-plus.out.use-delayed-value"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-hooked-plus.out.use-delayed-value"))() end)
 
-_module("use-did-mount", "ModuleScript", "RemoteSpy.include.node_modules.roact-hooked-plus.out.use-did-mount", "RemoteSpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("use-did-mount", "ModuleScript", "NonomySpy.include.node_modules.roact-hooked-plus.out.use-did-mount", "NonomySpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = _G[script]
 local _roact_hooked = TS.import(script, TS.getModule(script, "@rbxts", "roact-hooked").src)
 local useEffect = _roact_hooked.useEffect
@@ -18628,9 +18628,9 @@ end
 return {
 	useDidMount = useDidMount,
 }
- end, _env("RemoteSpy.include.node_modules.roact-hooked-plus.out.use-did-mount"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-hooked-plus.out.use-did-mount"))() end)
 
-_module("use-event", "ModuleScript", "RemoteSpy.include.node_modules.roact-hooked-plus.out.use-event", "RemoteSpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("use-event", "ModuleScript", "NonomySpy.include.node_modules.roact-hooked-plus.out.use-event", "NonomySpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = _G[script]
 local useEffect = TS.import(script, TS.getModule(script, "@rbxts", "roact-hooked").src).useEffect
 local function useEvent(event, callback, deps)
@@ -18647,9 +18647,9 @@ end
 return {
 	useEvent = useEvent,
 }
- end, _env("RemoteSpy.include.node_modules.roact-hooked-plus.out.use-event"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-hooked-plus.out.use-event"))() end)
 
-_module("use-force-update", "ModuleScript", "RemoteSpy.include.node_modules.roact-hooked-plus.out.use-force-update", "RemoteSpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("use-force-update", "ModuleScript", "NonomySpy.include.node_modules.roact-hooked-plus.out.use-force-update", "NonomySpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = _G[script]
 local useReducer = TS.import(script, TS.getModule(script, "@rbxts", "roact-hooked").src).useReducer
 local reducer = function(value)
@@ -18662,9 +18662,9 @@ end
 return {
 	useForceUpdate = useForceUpdate,
 }
- end, _env("RemoteSpy.include.node_modules.roact-hooked-plus.out.use-force-update"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-hooked-plus.out.use-force-update"))() end)
 
-_module("use-group-motor", "ModuleScript", "RemoteSpy.include.node_modules.roact-hooked-plus.out.use-group-motor", "RemoteSpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("use-group-motor", "ModuleScript", "NonomySpy.include.node_modules.roact-hooked-plus.out.use-group-motor", "NonomySpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = _G[script]
 local GroupMotor = TS.import(script, TS.getModule(script, "@rbxts", "flipper").src).GroupMotor
 local _roact_hooked = TS.import(script, TS.getModule(script, "@rbxts", "roact-hooked").src)
@@ -18687,9 +18687,9 @@ end
 return {
 	useGroupMotor = useGroupMotor,
 }
- end, _env("RemoteSpy.include.node_modules.roact-hooked-plus.out.use-group-motor"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-hooked-plus.out.use-group-motor"))() end)
 
-_module("use-hotkeys", "ModuleScript", "RemoteSpy.include.node_modules.roact-hooked-plus.out.use-hotkeys", "RemoteSpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("use-hotkeys", "ModuleScript", "NonomySpy.include.node_modules.roact-hooked-plus.out.use-hotkeys", "NonomySpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = _G[script]
 local useEffect = TS.import(script, TS.getModule(script, "@rbxts", "roact-hooked").src).useEffect
 local UserInputService = TS.import(script, TS.getModule(script, "@rbxts", "services")).UserInputService
@@ -18753,9 +18753,9 @@ end
 return {
 	useHotkeys = useHotkeys,
 }
- end, _env("RemoteSpy.include.node_modules.roact-hooked-plus.out.use-hotkeys"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-hooked-plus.out.use-hotkeys"))() end)
 
-_module("use-idle", "ModuleScript", "RemoteSpy.include.node_modules.roact-hooked-plus.out.use-idle", "RemoteSpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("use-idle", "ModuleScript", "NonomySpy.include.node_modules.roact-hooked-plus.out.use-idle", "NonomySpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = _G[script]
 local _roact_hooked = TS.import(script, TS.getModule(script, "@rbxts", "roact-hooked").src)
 local useCallback = _roact_hooked.useCallback
@@ -18830,9 +18830,9 @@ end
 return {
 	useIdle = useIdle,
 }
- end, _env("RemoteSpy.include.node_modules.roact-hooked-plus.out.use-idle"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-hooked-plus.out.use-idle"))() end)
 
-_module("use-interval", "ModuleScript", "RemoteSpy.include.node_modules.roact-hooked-plus.out.use-interval", "RemoteSpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("use-interval", "ModuleScript", "NonomySpy.include.node_modules.roact-hooked-plus.out.use-interval", "NonomySpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = _G[script]
 local _roact_hooked = TS.import(script, TS.getModule(script, "@rbxts", "roact-hooked").src)
 local useMutable = _roact_hooked.useMutable
@@ -18874,9 +18874,9 @@ end
 return {
 	useInterval = useInterval,
 }
- end, _env("RemoteSpy.include.node_modules.roact-hooked-plus.out.use-interval"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-hooked-plus.out.use-interval"))() end)
 
-_module("use-list-state", "ModuleScript", "RemoteSpy.include.node_modules.roact-hooked-plus.out.use-list-state", "RemoteSpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("use-list-state", "ModuleScript", "NonomySpy.include.node_modules.roact-hooked-plus.out.use-list-state", "NonomySpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = _G[script]
 local useState = TS.import(script, TS.getModule(script, "@rbxts", "roact-hooked").src).useState
 local function slice(array, start, finish)
@@ -19084,9 +19084,9 @@ return {
 	slice = slice,
 	useListState = useListState,
 }
- end, _env("RemoteSpy.include.node_modules.roact-hooked-plus.out.use-list-state"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-hooked-plus.out.use-list-state"))() end)
 
-_module("use-mouse", "ModuleScript", "RemoteSpy.include.node_modules.roact-hooked-plus.out.use-mouse", "RemoteSpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("use-mouse", "ModuleScript", "NonomySpy.include.node_modules.roact-hooked-plus.out.use-mouse", "NonomySpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = _G[script]
 local _roact_hooked = TS.import(script, TS.getModule(script, "@rbxts", "roact-hooked").src)
 local useBinding = _roact_hooked.useBinding
@@ -19114,9 +19114,9 @@ end
 return {
 	useMouse = useMouse,
 }
- end, _env("RemoteSpy.include.node_modules.roact-hooked-plus.out.use-mouse"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-hooked-plus.out.use-mouse"))() end)
 
-_module("use-promise", "ModuleScript", "RemoteSpy.include.node_modules.roact-hooked-plus.out.use-promise", "RemoteSpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("use-promise", "ModuleScript", "NonomySpy.include.node_modules.roact-hooked-plus.out.use-promise", "NonomySpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = _G[script]
 local _roact_hooked = TS.import(script, TS.getModule(script, "@rbxts", "roact-hooked").src)
 local useEffect = _roact_hooked.useEffect
@@ -19200,9 +19200,9 @@ end
 return {
 	usePromise = usePromise,
 }
- end, _env("RemoteSpy.include.node_modules.roact-hooked-plus.out.use-promise"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-hooked-plus.out.use-promise"))() end)
 
-_module("use-sequence-callback", "ModuleScript", "RemoteSpy.include.node_modules.roact-hooked-plus.out.use-sequence-callback", "RemoteSpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("use-sequence-callback", "ModuleScript", "NonomySpy.include.node_modules.roact-hooked-plus.out.use-sequence-callback", "NonomySpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = _G[script]
 local _roact_hooked = TS.import(script, TS.getModule(script, "@rbxts", "roact-hooked").src)
 local useEffect = _roact_hooked.useEffect
@@ -19251,9 +19251,9 @@ end
 return {
 	useSequenceCallback = useSequenceCallback,
 }
- end, _env("RemoteSpy.include.node_modules.roact-hooked-plus.out.use-sequence-callback"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-hooked-plus.out.use-sequence-callback"))() end)
 
-_module("use-sequence", "ModuleScript", "RemoteSpy.include.node_modules.roact-hooked-plus.out.use-sequence", "RemoteSpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("use-sequence", "ModuleScript", "NonomySpy.include.node_modules.roact-hooked-plus.out.use-sequence", "NonomySpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = _G[script]
 local _roact_hooked = TS.import(script, TS.getModule(script, "@rbxts", "roact-hooked").src)
 local useEffect = _roact_hooked.useEffect
@@ -19302,9 +19302,9 @@ end
 return {
 	useSequence = useSequence,
 }
- end, _env("RemoteSpy.include.node_modules.roact-hooked-plus.out.use-sequence"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-hooked-plus.out.use-sequence"))() end)
 
-_module("use-set-state", "ModuleScript", "RemoteSpy.include.node_modules.roact-hooked-plus.out.use-set-state", "RemoteSpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("use-set-state", "ModuleScript", "NonomySpy.include.node_modules.roact-hooked-plus.out.use-set-state", "NonomySpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = _G[script]
 local useState = TS.import(script, TS.getModule(script, "@rbxts", "roact-hooked").src).useState
 local resolve = TS.import(script, script.Parent, "utils", "resolve").resolve
@@ -19331,9 +19331,9 @@ end
 return {
 	useSetState = useSetState,
 }
- end, _env("RemoteSpy.include.node_modules.roact-hooked-plus.out.use-set-state"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-hooked-plus.out.use-set-state"))() end)
 
-_module("use-single-motor", "ModuleScript", "RemoteSpy.include.node_modules.roact-hooked-plus.out.use-single-motor", "RemoteSpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("use-single-motor", "ModuleScript", "NonomySpy.include.node_modules.roact-hooked-plus.out.use-single-motor", "NonomySpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = _G[script]
 local SingleMotor = TS.import(script, TS.getModule(script, "@rbxts", "flipper").src).SingleMotor
 local _roact_hooked = TS.import(script, TS.getModule(script, "@rbxts", "roact-hooked").src)
@@ -19356,9 +19356,9 @@ end
 return {
 	useSingleMotor = useSingleMotor,
 }
- end, _env("RemoteSpy.include.node_modules.roact-hooked-plus.out.use-single-motor"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-hooked-plus.out.use-single-motor"))() end)
 
-_module("use-toggle", "ModuleScript", "RemoteSpy.include.node_modules.roact-hooked-plus.out.use-toggle", "RemoteSpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("use-toggle", "ModuleScript", "NonomySpy.include.node_modules.roact-hooked-plus.out.use-toggle", "NonomySpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = _G[script]
 local useState = TS.import(script, TS.getModule(script, "@rbxts", "roact-hooked").src).useState
 --[[
@@ -19395,9 +19395,9 @@ return {
 	useToggle = useToggle,
 	useBooleanToggle = useBooleanToggle,
 }
- end, _env("RemoteSpy.include.node_modules.roact-hooked-plus.out.use-toggle"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-hooked-plus.out.use-toggle"))() end)
 
-_module("use-viewport-size", "ModuleScript", "RemoteSpy.include.node_modules.roact-hooked-plus.out.use-viewport-size", "RemoteSpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("use-viewport-size", "ModuleScript", "NonomySpy.include.node_modules.roact-hooked-plus.out.use-viewport-size", "NonomySpy.include.node_modules.roact-hooked-plus.out", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = _G[script]
 local _roact_hooked = TS.import(script, TS.getModule(script, "@rbxts", "roact-hooked").src)
 local useBinding = _roact_hooked.useBinding
@@ -19444,11 +19444,11 @@ end
 return {
 	useViewportSize = useViewportSize,
 }
- end, _env("RemoteSpy.include.node_modules.roact-hooked-plus.out.use-viewport-size"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-hooked-plus.out.use-viewport-size"))() end)
 
-_instance("utils", "Folder", "RemoteSpy.include.node_modules.roact-hooked-plus.out.utils", "RemoteSpy.include.node_modules.roact-hooked-plus.out")
+_instance("utils", "Folder", "NonomySpy.include.node_modules.roact-hooked-plus.out.utils", "NonomySpy.include.node_modules.roact-hooked-plus.out")
 
-_module("array-to-map", "ModuleScript", "RemoteSpy.include.node_modules.roact-hooked-plus.out.utils.array-to-map", "RemoteSpy.include.node_modules.roact-hooked-plus.out.utils", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("array-to-map", "ModuleScript", "NonomySpy.include.node_modules.roact-hooked-plus.out.utils.array-to-map", "NonomySpy.include.node_modules.roact-hooked-plus.out.utils", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local function arrayToMap(array, callback)
 	local map = {}
 	local _arg0 = function(value, index)
@@ -19465,9 +19465,9 @@ end
 return {
 	arrayToMap = arrayToMap,
 }
- end, _env("RemoteSpy.include.node_modules.roact-hooked-plus.out.utils.array-to-map"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-hooked-plus.out.utils.array-to-map"))() end)
 
-_module("binding-utils", "ModuleScript", "RemoteSpy.include.node_modules.roact-hooked-plus.out.utils.binding-utils", "RemoteSpy.include.node_modules.roact-hooked-plus.out.utils", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("binding-utils", "ModuleScript", "NonomySpy.include.node_modules.roact-hooked-plus.out.utils.binding-utils", "NonomySpy.include.node_modules.roact-hooked-plus.out.utils", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = _G[script]
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
 local function isBinding(value)
@@ -19500,9 +19500,9 @@ return {
 	mapBinding = mapBinding,
 	getBindingValue = getBindingValue,
 }
- end, _env("RemoteSpy.include.node_modules.roact-hooked-plus.out.utils.binding-utils"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-hooked-plus.out.utils.binding-utils"))() end)
 
-_module("resolve", "ModuleScript", "RemoteSpy.include.node_modules.roact-hooked-plus.out.utils.resolve", "RemoteSpy.include.node_modules.roact-hooked-plus.out.utils", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("resolve", "ModuleScript", "NonomySpy.include.node_modules.roact-hooked-plus.out.utils.resolve", "NonomySpy.include.node_modules.roact-hooked-plus.out.utils", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local function resolve(fn, ...)
 	local args = { ... }
 	if type(fn) == "function" then
@@ -19514,9 +19514,9 @@ end
 return {
 	resolve = resolve,
 }
- end, _env("RemoteSpy.include.node_modules.roact-hooked-plus.out.utils.resolve"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-hooked-plus.out.utils.resolve"))() end)
 
-_module("set-interval", "ModuleScript", "RemoteSpy.include.node_modules.roact-hooked-plus.out.utils.set-interval", "RemoteSpy.include.node_modules.roact-hooked-plus.out.utils", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("set-interval", "ModuleScript", "NonomySpy.include.node_modules.roact-hooked-plus.out.utils.set-interval", "NonomySpy.include.node_modules.roact-hooked-plus.out.utils", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = _G[script]
 local RunService = TS.import(script, TS.getModule(script, "@rbxts", "services")).RunService
 local Interval
@@ -19567,9 +19567,9 @@ return {
 	clearInterval = clearInterval,
 	Interval = Interval,
 }
- end, _env("RemoteSpy.include.node_modules.roact-hooked-plus.out.utils.set-interval"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-hooked-plus.out.utils.set-interval"))() end)
 
-_module("set-timeout", "ModuleScript", "RemoteSpy.include.node_modules.roact-hooked-plus.out.utils.set-timeout", "RemoteSpy.include.node_modules.roact-hooked-plus.out.utils", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
+_module("set-timeout", "ModuleScript", "NonomySpy.include.node_modules.roact-hooked-plus.out.utils.set-timeout", "NonomySpy.include.node_modules.roact-hooked-plus.out.utils", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local Timeout
 do
 	Timeout = setmetatable({}, {
@@ -19607,11 +19607,11 @@ return {
 	clearTimeout = clearTimeout,
 	Timeout = Timeout,
 }
- end, _env("RemoteSpy.include.node_modules.roact-hooked-plus.out.utils.set-timeout"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-hooked-plus.out.utils.set-timeout"))() end)
 
-_instance("roact-rodux-hooked", "Folder", "RemoteSpy.include.node_modules.roact-rodux-hooked", "RemoteSpy.include.node_modules")
+_instance("roact-rodux-hooked", "Folder", "NonomySpy.include.node_modules.roact-rodux-hooked", "NonomySpy.include.node_modules")
 
-_module("src", "ModuleScript", "RemoteSpy.include.node_modules.roact-rodux-hooked.src", "RemoteSpy.include.node_modules.roact-rodux-hooked", function () return setfenv(function() local RoactRoduxContext = require(script.components.Context)
+_module("src", "ModuleScript", "NonomySpy.include.node_modules.roact-rodux-hooked.src", "NonomySpy.include.node_modules.roact-rodux-hooked", function () return setfenv(function() local RoactRoduxContext = require(script.components.Context)
 local StoreProvider = require(script.components.StoreProvider)
 
 local useDispatch = require(script.hooks.useDispatch)
@@ -19628,36 +19628,36 @@ return {
 	StoreProvider = StoreProvider,
 	RoactRoduxContext = RoactRoduxContext,
 }
- end, _env("RemoteSpy.include.node_modules.roact-rodux-hooked.src"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-rodux-hooked.src"))() end)
 
-_module("Roact", "ModuleScript", "RemoteSpy.include.node_modules.roact-rodux-hooked.src.Roact", "RemoteSpy.include.node_modules.roact-rodux-hooked.src", function () return setfenv(function() if script:FindFirstAncestor("node_modules") then
+_module("Roact", "ModuleScript", "NonomySpy.include.node_modules.roact-rodux-hooked.src.Roact", "NonomySpy.include.node_modules.roact-rodux-hooked.src", function () return setfenv(function() if script:FindFirstAncestor("node_modules") then
 	return require(script:FindFirstAncestor("node_modules").roact.src)
 elseif script.Parent.Parent:FindFirstChild("Roact") then
 	return require(script.Parent.Parent.Roact)
 else
 	error("Could not find Roact or @rbxts/roact in the parent hierarchy.")
 end
- end, _env("RemoteSpy.include.node_modules.roact-rodux-hooked.src.Roact"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-rodux-hooked.src.Roact"))() end)
 
-_module("RoactHooked", "ModuleScript", "RemoteSpy.include.node_modules.roact-rodux-hooked.src.RoactHooked", "RemoteSpy.include.node_modules.roact-rodux-hooked.src", function () return setfenv(function() if script:FindFirstAncestor("node_modules") then
+_module("RoactHooked", "ModuleScript", "NonomySpy.include.node_modules.roact-rodux-hooked.src.RoactHooked", "NonomySpy.include.node_modules.roact-rodux-hooked.src", function () return setfenv(function() if script:FindFirstAncestor("node_modules") then
 	return require(script:FindFirstAncestor("node_modules")["roact-hooked"].src)
 elseif script.Parent.Parent:FindFirstChild("roact-hooked") then
 	return require(script.Parent.Parent["roact-hooked"])
 else
 	error("Could not find @rbxts/roact-hooked in the parent hierarchy.")
 end
- end, _env("RemoteSpy.include.node_modules.roact-rodux-hooked.src.RoactHooked"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-rodux-hooked.src.RoactHooked"))() end)
 
-_instance("components", "Folder", "RemoteSpy.include.node_modules.roact-rodux-hooked.src.components", "RemoteSpy.include.node_modules.roact-rodux-hooked.src")
+_instance("components", "Folder", "NonomySpy.include.node_modules.roact-rodux-hooked.src.components", "NonomySpy.include.node_modules.roact-rodux-hooked.src")
 
-_module("Context", "ModuleScript", "RemoteSpy.include.node_modules.roact-rodux-hooked.src.components.Context", "RemoteSpy.include.node_modules.roact-rodux-hooked.src.components", function () return setfenv(function() local Roact = require(script.Parent.Parent.Roact)
+_module("Context", "ModuleScript", "NonomySpy.include.node_modules.roact-rodux-hooked.src.components.Context", "NonomySpy.include.node_modules.roact-rodux-hooked.src.components", function () return setfenv(function() local Roact = require(script.Parent.Parent.Roact)
 
 local RoactRoduxContext = Roact.createContext()
 
 return RoactRoduxContext
- end, _env("RemoteSpy.include.node_modules.roact-rodux-hooked.src.components.Context"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-rodux-hooked.src.components.Context"))() end)
 
-_module("StoreProvider", "ModuleScript", "RemoteSpy.include.node_modules.roact-rodux-hooked.src.components.StoreProvider", "RemoteSpy.include.node_modules.roact-rodux-hooked.src.components", function () return setfenv(function() local Roact = require(script.Parent.Parent.Roact)
+_module("StoreProvider", "ModuleScript", "NonomySpy.include.node_modules.roact-rodux-hooked.src.components.StoreProvider", "NonomySpy.include.node_modules.roact-rodux-hooked.src.components", function () return setfenv(function() local Roact = require(script.Parent.Parent.Roact)
 local RoactRoduxContext = require(script.Parent.Context)
 
 local function StoreProvider(props)
@@ -19669,11 +19669,11 @@ local function StoreProvider(props)
 end
 
 return StoreProvider
- end, _env("RemoteSpy.include.node_modules.roact-rodux-hooked.src.components.StoreProvider"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-rodux-hooked.src.components.StoreProvider"))() end)
 
-_instance("hooks", "Folder", "RemoteSpy.include.node_modules.roact-rodux-hooked.src.hooks", "RemoteSpy.include.node_modules.roact-rodux-hooked.src")
+_instance("hooks", "Folder", "NonomySpy.include.node_modules.roact-rodux-hooked.src.hooks", "NonomySpy.include.node_modules.roact-rodux-hooked.src")
 
-_module("useDispatch", "ModuleScript", "RemoteSpy.include.node_modules.roact-rodux-hooked.src.hooks.useDispatch", "RemoteSpy.include.node_modules.roact-rodux-hooked.src.hooks", function () return setfenv(function() local Hooks = require(script.Parent.Parent.RoactHooked)
+_module("useDispatch", "ModuleScript", "NonomySpy.include.node_modules.roact-rodux-hooked.src.hooks.useDispatch", "NonomySpy.include.node_modules.roact-rodux-hooked.src.hooks", function () return setfenv(function() local Hooks = require(script.Parent.Parent.RoactHooked)
 local useStore = require(script.Parent.useStore)
 
 local function useDispatch()
@@ -19687,9 +19687,9 @@ local function useDispatch()
 end
 
 return useDispatch
- end, _env("RemoteSpy.include.node_modules.roact-rodux-hooked.src.hooks.useDispatch"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-rodux-hooked.src.hooks.useDispatch"))() end)
 
-_module("useSelector", "ModuleScript", "RemoteSpy.include.node_modules.roact-rodux-hooked.src.hooks.useSelector", "RemoteSpy.include.node_modules.roact-rodux-hooked.src.hooks", function () return setfenv(function() -- https://github.com/reduxjs/react-redux/blob/7.x/src/hooks/useSelector.js
+_module("useSelector", "ModuleScript", "NonomySpy.include.node_modules.roact-rodux-hooked.src.hooks.useSelector", "NonomySpy.include.node_modules.roact-rodux-hooked.src.hooks", function () return setfenv(function() -- https://github.com/reduxjs/react-redux/blob/7.x/src/hooks/useSelector.js
 
 local Hooks = require(script.Parent.Parent.RoactHooked)
 local useStore = require(script.Parent.useStore)
@@ -19805,9 +19805,9 @@ local function useSelector(selector, isEqual)
 end
 
 return useSelector
- end, _env("RemoteSpy.include.node_modules.roact-rodux-hooked.src.hooks.useSelector"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-rodux-hooked.src.hooks.useSelector"))() end)
 
-_module("useStore", "ModuleScript", "RemoteSpy.include.node_modules.roact-rodux-hooked.src.hooks.useStore", "RemoteSpy.include.node_modules.roact-rodux-hooked.src.hooks", function () return setfenv(function() local Hooks = require(script.Parent.Parent.RoactHooked)
+_module("useStore", "ModuleScript", "NonomySpy.include.node_modules.roact-rodux-hooked.src.hooks.useStore", "NonomySpy.include.node_modules.roact-rodux-hooked.src.hooks", function () return setfenv(function() local Hooks = require(script.Parent.Parent.RoactHooked)
 local RoactRoduxContext = require(script.Parent.Parent.components.Context)
 
 local function useStore()
@@ -19815,11 +19815,11 @@ local function useStore()
 end
 
 return useStore
- end, _env("RemoteSpy.include.node_modules.roact-rodux-hooked.src.hooks.useStore"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-rodux-hooked.src.hooks.useStore"))() end)
 
-_instance("utils", "Folder", "RemoteSpy.include.node_modules.roact-rodux-hooked.src.utils", "RemoteSpy.include.node_modules.roact-rodux-hooked.src")
+_instance("utils", "Folder", "NonomySpy.include.node_modules.roact-rodux-hooked.src.utils", "NonomySpy.include.node_modules.roact-rodux-hooked.src")
 
-_module("shallowEqual", "ModuleScript", "RemoteSpy.include.node_modules.roact-rodux-hooked.src.utils.shallowEqual", "RemoteSpy.include.node_modules.roact-rodux-hooked.src.utils", function () return setfenv(function() local function shallowEqual(left, right)
+_module("shallowEqual", "ModuleScript", "NonomySpy.include.node_modules.roact-rodux-hooked.src.utils.shallowEqual", "NonomySpy.include.node_modules.roact-rodux-hooked.src.utils", function () return setfenv(function() local function shallowEqual(left, right)
 	if left == right then
 		return true
 	end
@@ -19842,11 +19842,11 @@ _module("shallowEqual", "ModuleScript", "RemoteSpy.include.node_modules.roact-ro
 end
 
 return shallowEqual
- end, _env("RemoteSpy.include.node_modules.roact-rodux-hooked.src.utils.shallowEqual"))() end)
+ end, _env("NonomySpy.include.node_modules.roact-rodux-hooked.src.utils.shallowEqual"))() end)
 
-_instance("rodux", "Folder", "RemoteSpy.include.node_modules.rodux", "RemoteSpy.include.node_modules")
+_instance("rodux", "Folder", "NonomySpy.include.node_modules.rodux", "NonomySpy.include.node_modules")
 
-_module("src", "ModuleScript", "RemoteSpy.include.node_modules.rodux.src", "RemoteSpy.include.node_modules.rodux", function () return setfenv(function() local Store = require(script.Store)
+_module("src", "ModuleScript", "NonomySpy.include.node_modules.rodux.src", "NonomySpy.include.node_modules.rodux", function () return setfenv(function() local Store = require(script.Store)
 local createReducer = require(script.createReducer)
 local combineReducers = require(script.combineReducers)
 local makeActionCreator = require(script.makeActionCreator)
@@ -19861,9 +19861,9 @@ return {
 	loggerMiddleware = loggerMiddleware.middleware,
 	thunkMiddleware = thunkMiddleware,
 }
- end, _env("RemoteSpy.include.node_modules.rodux.src"))() end)
+ end, _env("NonomySpy.include.node_modules.rodux.src"))() end)
 
-_module("NoYield", "ModuleScript", "RemoteSpy.include.node_modules.rodux.src.NoYield", "RemoteSpy.include.node_modules.rodux.src", function () return setfenv(function() --!nocheck
+_module("NoYield", "ModuleScript", "NonomySpy.include.node_modules.rodux.src.NoYield", "NonomySpy.include.node_modules.rodux.src", function () return setfenv(function() --!nocheck
 
 --[[
 	Calls a function and throws an error if it attempts to yield.
@@ -19894,9 +19894,9 @@ local function NoYield(callback, ...)
 end
 
 return NoYield
- end, _env("RemoteSpy.include.node_modules.rodux.src.NoYield"))() end)
+ end, _env("NonomySpy.include.node_modules.rodux.src.NoYield"))() end)
 
-_module("Signal", "ModuleScript", "RemoteSpy.include.node_modules.rodux.src.Signal", "RemoteSpy.include.node_modules.rodux.src", function () return setfenv(function() --[[
+_module("Signal", "ModuleScript", "NonomySpy.include.node_modules.rodux.src.Signal", "NonomySpy.include.node_modules.rodux.src", function () return setfenv(function() --[[
 	A limited, simple implementation of a Signal.
 
 	Handlers are fired in order, and (dis)connections are properly handled when
@@ -19999,9 +19999,9 @@ function Signal:fire(...)
 	end
 end
 
-return Signal end, _env("RemoteSpy.include.node_modules.rodux.src.Signal"))() end)
+return Signal end, _env("NonomySpy.include.node_modules.rodux.src.Signal"))() end)
 
-_module("Store", "ModuleScript", "RemoteSpy.include.node_modules.rodux.src.Store", "RemoteSpy.include.node_modules.rodux.src", function () return setfenv(function() local RunService = game:GetService("RunService")
+_module("Store", "ModuleScript", "NonomySpy.include.node_modules.rodux.src.Store", "NonomySpy.include.node_modules.rodux.src", function () return setfenv(function() local RunService = game:GetService("RunService")
 
 local Signal = require(script.Parent.Signal)
 local NoYield = require(script.Parent.NoYield)
@@ -20218,9 +20218,9 @@ function Store:flush()
 end
 
 return Store
- end, _env("RemoteSpy.include.node_modules.rodux.src.Store"))() end)
+ end, _env("NonomySpy.include.node_modules.rodux.src.Store"))() end)
 
-_module("combineReducers", "ModuleScript", "RemoteSpy.include.node_modules.rodux.src.combineReducers", "RemoteSpy.include.node_modules.rodux.src", function () return setfenv(function() --[[
+_module("combineReducers", "ModuleScript", "NonomySpy.include.node_modules.rodux.src.combineReducers", "NonomySpy.include.node_modules.rodux.src", function () return setfenv(function() --[[
 	Create a composite reducer from a map of keys and sub-reducers.
 ]]
 local function combineReducers(map)
@@ -20242,9 +20242,9 @@ local function combineReducers(map)
 end
 
 return combineReducers
- end, _env("RemoteSpy.include.node_modules.rodux.src.combineReducers"))() end)
+ end, _env("NonomySpy.include.node_modules.rodux.src.combineReducers"))() end)
 
-_module("createReducer", "ModuleScript", "RemoteSpy.include.node_modules.rodux.src.createReducer", "RemoteSpy.include.node_modules.rodux.src", function () return setfenv(function() return function(initialState, handlers)
+_module("createReducer", "ModuleScript", "NonomySpy.include.node_modules.rodux.src.createReducer", "NonomySpy.include.node_modules.rodux.src", function () return setfenv(function() return function(initialState, handlers)
 	return function(state, action)
 		if state == nil then
 			state = initialState
@@ -20259,9 +20259,9 @@ _module("createReducer", "ModuleScript", "RemoteSpy.include.node_modules.rodux.s
 		return state
 	end
 end
- end, _env("RemoteSpy.include.node_modules.rodux.src.createReducer"))() end)
+ end, _env("NonomySpy.include.node_modules.rodux.src.createReducer"))() end)
 
-_module("loggerMiddleware", "ModuleScript", "RemoteSpy.include.node_modules.rodux.src.loggerMiddleware", "RemoteSpy.include.node_modules.rodux.src", function () return setfenv(function() -- We want to be able to override outputFunction in tests, so the shape of this
+_module("loggerMiddleware", "ModuleScript", "NonomySpy.include.node_modules.rodux.src.loggerMiddleware", "NonomySpy.include.node_modules.rodux.src", function () return setfenv(function() -- We want to be able to override outputFunction in tests, so the shape of this
 -- module is kind of unconventional.
 --
 -- We fix it this weird shape in init.lua.
@@ -20284,9 +20284,9 @@ function loggerMiddleware.middleware(nextDispatch, store)
 end
 
 return loggerMiddleware
- end, _env("RemoteSpy.include.node_modules.rodux.src.loggerMiddleware"))() end)
+ end, _env("NonomySpy.include.node_modules.rodux.src.loggerMiddleware"))() end)
 
-_module("makeActionCreator", "ModuleScript", "RemoteSpy.include.node_modules.rodux.src.makeActionCreator", "RemoteSpy.include.node_modules.rodux.src", function () return setfenv(function() --[[
+_module("makeActionCreator", "ModuleScript", "NonomySpy.include.node_modules.rodux.src.makeActionCreator", "NonomySpy.include.node_modules.rodux.src", function () return setfenv(function() --[[
 	A helper function to define a Rodux action creator with an associated name.
 ]]
 local function makeActionCreator(name, fn)
@@ -20310,9 +20310,9 @@ local function makeActionCreator(name, fn)
 end
 
 return makeActionCreator
- end, _env("RemoteSpy.include.node_modules.rodux.src.makeActionCreator"))() end)
+ end, _env("NonomySpy.include.node_modules.rodux.src.makeActionCreator"))() end)
 
-_module("prettyPrint", "ModuleScript", "RemoteSpy.include.node_modules.rodux.src.prettyPrint", "RemoteSpy.include.node_modules.rodux.src", function () return setfenv(function() local indent = "    "
+_module("prettyPrint", "ModuleScript", "NonomySpy.include.node_modules.rodux.src.prettyPrint", "NonomySpy.include.node_modules.rodux.src", function () return setfenv(function() local indent = "    "
 
 local function prettyPrint(value, indentLevel)
 	indentLevel = indentLevel or 0
@@ -20345,9 +20345,9 @@ local function prettyPrint(value, indentLevel)
 	return table.concat(output, "")
 end
 
-return prettyPrint end, _env("RemoteSpy.include.node_modules.rodux.src.prettyPrint"))() end)
+return prettyPrint end, _env("NonomySpy.include.node_modules.rodux.src.prettyPrint"))() end)
 
-_module("thunkMiddleware", "ModuleScript", "RemoteSpy.include.node_modules.rodux.src.thunkMiddleware", "RemoteSpy.include.node_modules.rodux.src", function () return setfenv(function() --[[
+_module("thunkMiddleware", "ModuleScript", "NonomySpy.include.node_modules.rodux.src.thunkMiddleware", "NonomySpy.include.node_modules.rodux.src", function () return setfenv(function() --[[
 	A middleware that allows for functions to be dispatched.
 	Functions will receive a single argument, the store itself.
 	This middleware consumes the function; middleware further down the chain
@@ -20381,11 +20381,11 @@ local function thunkMiddleware(nextDispatch, store)
 end
 
 return thunkMiddleware
- end, _env("RemoteSpy.include.node_modules.rodux.src.thunkMiddleware"))() end)
+ end, _env("NonomySpy.include.node_modules.rodux.src.thunkMiddleware"))() end)
 
-_instance("roselect", "Folder", "RemoteSpy.include.node_modules.roselect", "RemoteSpy.include.node_modules")
+_instance("roselect", "Folder", "NonomySpy.include.node_modules.roselect", "NonomySpy.include.node_modules")
 
-_module("src", "ModuleScript", "RemoteSpy.include.node_modules.roselect.src", "RemoteSpy.include.node_modules.roselect", function () return setfenv(function() local function defaultEqualityCheck(a, b)
+_module("src", "ModuleScript", "NonomySpy.include.node_modules.roselect.src", "NonomySpy.include.node_modules.roselect", function () return setfenv(function() local function defaultEqualityCheck(a, b)
 	return a == b
 end
 
@@ -20546,21 +20546,21 @@ return {
 	createSelectorCreator = createSelectorCreator,
 	createSelector = createSelector,
 	createStructuredSelector = createStructuredSelector,
-} end, _env("RemoteSpy.include.node_modules.roselect.src"))() end)
+} end, _env("NonomySpy.include.node_modules.roselect.src"))() end)
 
-_module("services", "ModuleScript", "RemoteSpy.include.node_modules.services", "RemoteSpy.include.node_modules", function () return setfenv(function() return setmetatable({}, {
+_module("services", "ModuleScript", "NonomySpy.include.node_modules.services", "NonomySpy.include.node_modules", function () return setfenv(function() return setmetatable({}, {
 	__index = function(self, serviceName)
 		local service = game:GetService(serviceName)
 		self[serviceName] = service
 		return service
 	end,
 })
- end, _env("RemoteSpy.include.node_modules.services"))() end)
+ end, _env("NonomySpy.include.node_modules.services"))() end)
 
-_instance("types", "Folder", "RemoteSpy.include.node_modules.types", "RemoteSpy.include.node_modules")
+_instance("types", "Folder", "NonomySpy.include.node_modules.types", "NonomySpy.include.node_modules")
 
-_instance("include", "Folder", "RemoteSpy.include.node_modules.types.include", "RemoteSpy.include.node_modules.types")
+_instance("include", "Folder", "NonomySpy.include.node_modules.types.include", "NonomySpy.include.node_modules.types")
 
-_instance("generated", "Folder", "RemoteSpy.include.node_modules.types.include.generated", "RemoteSpy.include.node_modules.types.include")
+_instance("generated", "Folder", "NonomySpy.include.node_modules.types.include.generated", "NonomySpy.include.node_modules.types.include")
 
 start()

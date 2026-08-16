@@ -1,5 +1,5 @@
 {
-	"name": "RemoteSpy Test Place",
+	"name": "Nonomy Spy Test Place",
 	"tree": {
 		"$className": "DataModel",
 
@@ -9,7 +9,7 @@
 			"StarterPlayerScripts": {
 				"$className": "StarterPlayerScripts",
 
-				"RemoteSpy": {
+				"NonomySpy": {
 					"$path": "out",
 					"include": {
 						"$path": "include",

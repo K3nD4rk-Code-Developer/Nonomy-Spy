@@ -29,7 +29,7 @@ function MainWindow() {
 
 				<Window.TitleBar
 					onClose={() => dispatch(activateAction("close"))}
-					caption={`<font color="#FFFFFF">Wavified Spy</font>    <font color="#B2B2B2">${PKG_VERSION}</font>`}
+					caption={`<font color="#FFFFFF">Nonomy Spy</font>    <font color="#B2B2B2">${PKG_VERSION}</font>`}
 					captionTransparency={0.1}
 					icon="rbxassetid://133291240952158"
 				/>

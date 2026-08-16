@@ -271,7 +271,7 @@ local function generateActorHookCode(channelId)
 	return [[
 		local channelId = ]] .. channelId .. [[
 
-		local commChannel = game:GetService("ReplicatedStorage"):FindFirstChild("__WAVIFIED_ACTOR_COMM_" .. channelId)
+		local commChannel = game:GetService("ReplicatedStorage"):FindFirstChild("__NONOMY_ACTOR_COMM_" .. channelId)
 		if not commChannel then return end
 
 		local refs = {}
@@ -344,7 +344,7 @@ local function initActorHooks()
 
 	-- Create communication channel in ReplicatedStorage
 	actorCommChannel = Instance.new("BindableEvent")
-	actorCommChannel.Name = "__WAVIFIED_ACTOR_COMM_" .. channelId
+	actorCommChannel.Name = "__NONOMY_ACTOR_COMM_" .. channelId
 	actorCommChannel.Parent = game:GetService("ReplicatedStorage")
 
 	-- Listen for actor hook data
@@ -419,6 +419,6 @@ end
 task.defer(function()
 	local success = initActorHooks()
 	if success then
-		print("[Wavified-Spy] Actor hooks initialized successfully")
+		print("[Nonomy-Spy] Actor hooks initialized successfully")
 	end
 end)

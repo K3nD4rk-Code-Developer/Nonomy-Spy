@@ -3,7 +3,7 @@ import { PathNotation } from "reducers/remote-log";
 declare const readfile: ((path: string) => string) | undefined;
 declare const writefile: ((path: string, content: string) => void) | undefined;
 
-const SETTINGS_FILE = "wavified_spy_settings.json";
+const SETTINGS_FILE = "nonomy_spy_settings.json";
 
 export interface PersistedSettings {
 	noActors?: boolean;

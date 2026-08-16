@@ -17,7 +17,7 @@ export function notify(message: string, lifetime: number = 3, isError: boolean =
 	// Fallback to StarterGui notifications
 	const StarterGui = game.GetService("StarterGui");
 	StarterGui.SetCore("SendNotification", {
-		Title: isError ? "Error" : "Wavified Spy",
+		Title: isError ? "Error" : "Nonomy Spy",
 		Text: message,
 		Duration: lifetime,
 	});
