@@ -8431,9 +8431,6 @@ end
 -- Initialize actor hooks
 task.defer(function()
 	local success = initActorHooks()
-	if success then
-		print("[Nonomy-Spy] Actor hooks initialized successfully")
-	end
 end) end, _env("NonomySpy.receiver"))() end)
 
 _module("reducers", "ModuleScript", "NonomySpy.reducers", "NonomySpy", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
