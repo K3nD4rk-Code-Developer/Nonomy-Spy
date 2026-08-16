@@ -5,6 +5,7 @@ import { useSidePanelContext } from "../use-side-panel-context";
 import { useRootSelector } from "hooks/use-root-store";
 import { selectInspectionResultSelected } from "reducers/remote-log";
 import { withHooksPure } from "@rbxts/roact-hooked";
+import { InterFontSemi, InterFontMedium } from "constants";
 
 function InspectionUpvalues() {
 	const { middleSize, middlePosition, middleHidden, setMiddleHidden } = useSidePanelContext();
@@ -55,7 +56,7 @@ function InspectionUpvalues() {
 										AutomaticSize="Y"
 										Size={new UDim2(1, -16, 0, 0)}
 										Text={tostring(key)}
-										Font="GothamBold"
+										FontFace={InterFontSemi}
 										TextColor3={new Color3(0.7, 0.9, 1)}
 										TextSize={10}
 										TextXAlignment="Left"
@@ -66,7 +67,7 @@ function InspectionUpvalues() {
 										AutomaticSize="Y"
 										Size={new UDim2(1, -16, 0, 0)}
 										Text={`${typeOf(value)}: ${tostring(value).sub(1, 150)}`}
-										Font="Gotham"
+										FontFace={InterFontMedium}
 										TextColor3={new Color3(0.8, 0.8, 0.8)}
 										TextSize={9}
 										TextXAlignment="Left"
@@ -92,7 +93,7 @@ function InspectionUpvalues() {
 						Position={new UDim2(0.5, 0, 0.5, 0)}
 						Size={new UDim2(1, -20, 1, 0)}
 						Text={!selectedResult ? "Select a function to view upvalues" : "No upvalues found"}
-						Font="Gotham"
+						FontFace={InterFontMedium}
 						TextColor3={new Color3(0.5, 0.5, 0.5)}
 						TextSize={12}
 						TextWrapped={true}

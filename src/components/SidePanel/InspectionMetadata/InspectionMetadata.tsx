@@ -6,6 +6,7 @@ import { useRootSelector } from "hooks/use-root-store";
 import { selectInspectionResultSelected } from "reducers/remote-log";
 import { withHooksPure } from "@rbxts/roact-hooked";
 import { formatEscapes } from "utils/format-escapes";
+import { InterFontSemi, InterFontMedium } from "constants";
 
 function InspectionMetadata() {
 	const { upperSize, upperHidden, setUpperHidden } = useSidePanelContext();
@@ -50,7 +51,7 @@ function InspectionMetadata() {
 							AutomaticSize="Y"
 							Size={new UDim2(1, -16, 0, 0)}
 							Text="Basic Information"
-							Font="GothamBold"
+							FontFace={InterFontSemi}
 							TextColor3={new Color3(0.9, 0.9, 1)}
 							TextSize={11}
 							TextXAlignment="Left"
@@ -61,7 +62,7 @@ function InspectionMetadata() {
 							AutomaticSize="Y"
 							Size={new UDim2(1, -16, 0, 0)}
 							Text={`Type: ${selectedResult.type}`}
-							Font="Gotham"
+							FontFace={InterFontMedium}
 							TextColor3={new Color3(0.8, 0.8, 0.8)}
 							TextSize={10}
 							TextXAlignment="Left"
@@ -74,7 +75,7 @@ function InspectionMetadata() {
 								AutomaticSize="Y"
 								Size={new UDim2(1, -16, 0, 0)}
 								Text={`Path: ${formatEscapes(selectedResult.value)}`}
-								Font="Gotham"
+								FontFace={InterFontMedium}
 								TextColor3={new Color3(0.75, 0.75, 0.75)}
 								TextSize={9}
 								TextXAlignment="Left"
@@ -101,7 +102,7 @@ function InspectionMetadata() {
 								AutomaticSize="Y"
 								Size={new UDim2(1, -16, 0, 0)}
 								Text="Function Details"
-								Font="GothamBold"
+								FontFace={InterFontSemi}
 								TextColor3={new Color3(0.9, 0.9, 1)}
 								TextSize={11}
 								TextXAlignment="Left"
@@ -112,7 +113,7 @@ function InspectionMetadata() {
 								AutomaticSize="Y"
 								Size={new UDim2(1, -16, 0, 0)}
 								Text={`Source: ${formatEscapes(selectedResult.rawInfo.short_src ?? selectedResult.rawInfo.source ?? "unknown")}`}
-								Font="Gotham"
+								FontFace={InterFontMedium}
 								TextColor3={new Color3(0.75, 0.75, 0.75)}
 								TextSize={9}
 								TextXAlignment="Left"
@@ -124,7 +125,7 @@ function InspectionMetadata() {
 								AutomaticSize="Y"
 								Size={new UDim2(1, -16, 0, 0)}
 								Text={`Type: ${selectedResult.rawInfo.what ?? "Lua"} | Upvalues: ${selectedResult.rawInfo.nups ?? 0}`}
-								Font="Gotham"
+								FontFace={InterFontMedium}
 								TextColor3={new Color3(0.8, 0.8, 0.8)}
 								TextSize={10}
 								TextXAlignment="Left"
@@ -136,7 +137,7 @@ function InspectionMetadata() {
 									AutomaticSize="Y"
 									Size={new UDim2(1, -16, 0, 0)}
 									Text={`Lines: ${selectedResult.rawInfo.linedefined} - ${selectedResult.rawInfo.lastlinedefined ?? "?"}`}
-									Font="Gotham"
+									FontFace={InterFontMedium}
 									TextColor3={new Color3(0.8, 0.8, 0.8)}
 									TextSize={10}
 									TextXAlignment="Left"
@@ -163,7 +164,7 @@ function InspectionMetadata() {
 								AutomaticSize="Y"
 								Size={new UDim2(1, -16, 0, 0)}
 								Text="Script Hierarchy"
-								Font="GothamBold"
+								FontFace={InterFontSemi}
 								TextColor3={new Color3(0.9, 0.9, 1)}
 								TextSize={11}
 								TextXAlignment="Left"
@@ -174,7 +175,7 @@ function InspectionMetadata() {
 								AutomaticSize="Y"
 								Size={new UDim2(1, -16, 0, 0)}
 								Text={`Class: ${selectedResult.rawScript.ClassName}`}
-								Font="Gotham"
+								FontFace={InterFontMedium}
 								TextColor3={new Color3(0.8, 0.8, 0.9)}
 								TextSize={10}
 								TextXAlignment="Left"
@@ -187,7 +188,7 @@ function InspectionMetadata() {
 								Text={`Parent: ${selectedResult.rawScript.Parent?.Name ?? "nil"}${
 									selectedResult.rawScript.Parent ? ` (${selectedResult.rawScript.Parent.ClassName})` : ""
 								}`}
-								Font="Gotham"
+								FontFace={InterFontMedium}
 								TextColor3={new Color3(0.75, 0.75, 0.75)}
 								TextSize={9}
 								TextXAlignment="Left"
@@ -209,7 +210,7 @@ function InspectionMetadata() {
 						Position={new UDim2(0.5, 0, 0.5, 0)}
 						Size={new UDim2(1, -20, 1, 0)}
 						Text="Select an inspection result to view metadata"
-						Font="Gotham"
+						FontFace={InterFontMedium}
 						TextColor3={new Color3(0.5, 0.5, 0.5)}
 						TextSize={12}
 						TextWrapped={true}

@@ -8,6 +8,7 @@ import { multiply } from "utils/number-util";
 import { stringifyFunctionSignature } from "utils/function-util";
 import { useGroupMotor } from "@rbxts/roact-hooked-plus";
 import { withHooksPure } from "@rbxts/roact-hooked";
+import { InterFontSemi, InterFontMedium } from "constants";
 
 interface Props {
 	signal: Signal;
@@ -69,7 +70,7 @@ function RowHeader({ signal, open, onClick }: Props) {
 			{/* Direction indicator */}
 			<textlabel
 				Text={signal.direction === "incoming" ? "↓ IN" : "↑ OUT"}
-				Font="GothamBold"
+				FontFace={InterFontSemi}
 				TextColor3={signal.direction === "incoming" ? new Color3(0.4, 0.8, 1) : new Color3(1, 0.8, 0.4)}
 				TextTransparency={rowButton.foreground}
 				TextSize={10}
@@ -85,7 +86,7 @@ function RowHeader({ signal, open, onClick }: Props) {
 				Text={`${
 					signal.caller ? formatEscapes(signal.caller.Name) : "No script"
 				} • ${signal.direction === "outgoing" && signal.callback ? stringifyFunctionSignature(signal.callback) : signal.direction === "incoming" ? "OnClientEvent" : "Unknown"}`}
-				Font="Gotham"
+				FontFace={InterFontMedium}
 				TextColor3={new Color3(1, 1, 1)}
 				TextTransparency={rowButton.foreground}
 				TextSize={13}
@@ -101,7 +102,7 @@ function RowHeader({ signal, open, onClick }: Props) {
 			{/* Source path */}
 			<textlabel
 				Text={signal.caller ? formatEscapes(getInstancePath(signal.caller)) : signal.direction === "incoming" ? "Server → Client" : "Not called from a script"}
-				Font="Gotham"
+				FontFace={InterFontMedium}
 				TextColor3={new Color3(1, 1, 1)}
 				TextTransparency={rowButton.foreground.map((t) => multiply(t, 0.2))}
 				TextSize={11}

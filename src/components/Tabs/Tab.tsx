@@ -20,6 +20,7 @@ import { useBinding, useEffect, useMemo, useState, withHooksPure } from "@rbxts/
 import { useDraggableTab } from "./use-draggable-tab";
 import { useRootDispatch, useRootSelector, useRootStore } from "hooks/use-root-store";
 import { useSingleMotor, useSpring } from "@rbxts/roact-hooked-plus";
+import { InterFontMedium } from "constants";
 
 interface Props {
 	tab: TabGroupColumn;
@@ -121,7 +122,7 @@ function Tab({ tab, canvasPosition }: Props) {
 				{/* Caption */}
 				<textlabel
 					Text={formatEscapes(tab.caption)}
-					Font="Gotham"
+					FontFace={InterFontMedium}
 					TextColor3={new Color3(1, 1, 1)}
 					TextTransparency={foreground}
 					TextSize={11}

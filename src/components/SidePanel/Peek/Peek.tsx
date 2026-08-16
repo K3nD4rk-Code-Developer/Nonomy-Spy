@@ -7,6 +7,7 @@ import { useRootSelector } from "hooks/use-root-store";
 import { withHooksPure } from "@rbxts/roact-hooked";
 import { genScript } from "utils/gen-script";
 import { highlightLua } from "utils/syntax-highlight";
+import { InterFontMedium } from "constants";
 
 function Peek() {
 	const { middleHidden, setMiddleHidden, middleSize, middlePosition } = useSidePanelContext();
@@ -81,7 +82,7 @@ function Peek() {
 						Position={new UDim2(0.5, 0, 0.5, 0)}
 						Size={new UDim2(1, -20, 1, 0)}
 						Text="Select a signal to peek at the generated script"
-						Font="Gotham"
+						FontFace={InterFontMedium}
 						TextColor3={new Color3(0.5, 0.5, 0.5)}
 						TextSize={12}
 						TextWrapped={true}

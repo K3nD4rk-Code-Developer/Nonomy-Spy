@@ -8,6 +8,7 @@ import { selectSignalSelected } from "reducers/remote-log";
 import { useRootSelector } from "hooks/use-root-store";
 import { withHooksPure } from "@rbxts/roact-hooked";
 import { formatEscapes } from "utils/format-escapes";
+import { InterFontSemi, InterFontMedium } from "constants";
 
 interface TracebackFrameProps {
 	fn: Callback;
@@ -55,7 +56,7 @@ function TracebackFrame({ fn, index, isRemoteCaller }: TracebackFrameProps) {
 				AutomaticSize="Y"
 				Size={new UDim2(1, -16, 0, 0)}
 				Text={isRemoteCaller ? `→ ${signature} ←` : signature}
-				Font="Gotham"
+				FontFace={InterFontMedium}
 				TextColor3={new Color3(1, 1, 1)}
 				TextSize={11}
 				TextXAlignment="Left"
@@ -68,7 +69,7 @@ function TracebackFrame({ fn, index, isRemoteCaller }: TracebackFrameProps) {
 				AutomaticSize="Y"
 				Size={new UDim2(1, -16, 0, 0)}
 				Text={formatEscapes(description.source)}
-				Font="Gotham"
+				FontFace={InterFontMedium}
 				TextColor3={new Color3(0.7, 0.7, 0.7)}
 				TextSize={9}
 				TextXAlignment="Left"
@@ -126,7 +127,7 @@ function Traceback() {
 							AutomaticSize="Y"
 							Size={new UDim2(1, -16, 0, 0)}
 							Text={`Event Type: ${getRemoteTypeName(signal.remote)}`}
-							Font="GothamBold"
+							FontFace={InterFontSemi}
 							TextColor3={new Color3(0.9, 0.9, 1)}
 							TextSize={11}
 							TextXAlignment="Left"
@@ -137,7 +138,7 @@ function Traceback() {
 							AutomaticSize="Y"
 							Size={new UDim2(1, -16, 0, 0)}
 							Text={`Remote: ${formatEscapes(signal.name)}`}
-							Font="Gotham"
+							FontFace={InterFontMedium}
 							TextColor3={new Color3(0.8, 0.8, 0.9)}
 							TextSize={10}
 							TextXAlignment="Left"
@@ -150,7 +151,7 @@ function Traceback() {
 								AutomaticSize="Y"
 								Size={new UDim2(1, -16, 0, 0)}
 								Text="Called from Actor"
-								Font="Gotham"
+								FontFace={InterFontMedium}
 								TextColor3={new Color3(1, 0.8, 0.3)}
 								TextSize={9}
 								TextXAlignment="Left"
@@ -190,7 +191,7 @@ function Traceback() {
 						Position={new UDim2(0.5, 0, 0.5, 0)}
 						Size={new UDim2(1, -20, 1, 0)}
 						Text="Select a signal and click Traceback to view details"
-						Font="Gotham"
+						FontFace={InterFontMedium}
 						TextColor3={new Color3(0.5, 0.5, 0.5)}
 						TextSize={12}
 						TextWrapped={true}

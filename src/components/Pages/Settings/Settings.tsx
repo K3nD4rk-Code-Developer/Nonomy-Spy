@@ -27,6 +27,7 @@ import {
 import { PathNotation } from "reducers/remote-log/model";
 import { selectToggleKey } from "reducers/ui";
 import { setToggleKey } from "reducers/ui";
+import { InterFontSemi, InterFontMedium } from "constants";
 
 function Settings() {
 	const dispatch = useRootDispatch();
@@ -116,7 +117,7 @@ function Settings() {
 				<textlabel
 					Text="Settings"
 					TextSize={24}
-					Font="GothamBold"
+					FontFace={InterFontSemi}
 					TextColor3={new Color3(1, 1, 1)}
 					Size={new UDim2(1, 0, 0, 30)}
 					BackgroundTransparency={1}
@@ -143,7 +144,7 @@ function Settings() {
 						<textlabel
 							Text="Ignore Actor Remotes"
 							TextSize={16}
-							Font="GothamBold"
+							FontFace={InterFontSemi}
 							TextColor3={new Color3(1, 1, 1)}
 							Size={new UDim2(1, 0, 0, 20)}
 							BackgroundTransparency={1}
@@ -154,7 +155,7 @@ function Settings() {
 						<textlabel
 							Text="When enabled, remote calls from scripts running inside Actors will be ignored and not logged"
 							TextSize={12}
-							Font="Gotham"
+							FontFace={InterFontMedium}
 							TextColor3={new Color3(0.7, 0.7, 0.7)}
 							Size={new UDim2(1, 0, 0, 36)}
 							BackgroundTransparency={1}
@@ -204,7 +205,7 @@ function Settings() {
 						<textlabel
 							Text="Ignore Executor Calls"
 							TextSize={16}
-							Font="GothamBold"
+							FontFace={InterFontSemi}
 							TextColor3={new Color3(1, 1, 1)}
 							Size={new UDim2(1, 0, 0, 20)}
 							BackgroundTransparency={1}
@@ -215,7 +216,7 @@ function Settings() {
 						<textlabel
 							Text="When enabled, remote calls from executor scripts (nil caller) will be ignored and not logged"
 							TextSize={12}
-							Font="Gotham"
+							FontFace={InterFontMedium}
 							TextColor3={new Color3(0.7, 0.7, 0.7)}
 							Size={new UDim2(1, 0, 0, 36)}
 							BackgroundTransparency={1}
@@ -265,7 +266,7 @@ function Settings() {
 						<textlabel
 							Text="UI Toggle Keybind"
 							TextSize={16}
-							Font="GothamBold"
+							FontFace={InterFontSemi}
 							TextColor3={new Color3(1, 1, 1)}
 							Size={new UDim2(1, 0, 0, 20)}
 							BackgroundTransparency={1}
@@ -276,7 +277,7 @@ function Settings() {
 						<textlabel
 							Text="Press any key to set as the UI toggle keybind"
 							TextSize={12}
-							Font="Gotham"
+							FontFace={InterFontMedium}
 							TextColor3={new Color3(0.7, 0.7, 0.7)}
 							Size={new UDim2(1, 0, 0, 32)}
 							BackgroundTransparency={1}
@@ -304,7 +305,7 @@ function Settings() {
 							<textlabel
 								Text={`Current: ${toggleKey.Name}`}
 								TextSize={14}
-								Font="Gotham"
+								FontFace={InterFontMedium}
 								TextColor3={new Color3(1, 1, 1)}
 								Size={new UDim2(1, 0, 1, 0)}
 								BackgroundTransparency={1}
@@ -324,7 +325,7 @@ function Settings() {
 							<textlabel
 								Text={isListeningForKey ? "Press a key..." : "Change Keybind"}
 								TextSize={14}
-								Font="GothamBold"
+								FontFace={InterFontSemi}
 								TextColor3={new Color3(1, 1, 1)}
 								Size={new UDim2(1, 0, 1, 0)}
 								BackgroundTransparency={1}
@@ -339,7 +340,7 @@ function Settings() {
 				<textlabel
 					Text="Filter Options"
 					TextSize={18}
-					Font="GothamBold"
+					FontFace={InterFontSemi}
 					TextColor3={new Color3(1, 1, 1)}
 					Size={new UDim2(1, 0, 0, 24)}
 					BackgroundTransparency={1}
@@ -366,7 +367,7 @@ function Settings() {
 						<textlabel
 							Text="Show RemoteEvents"
 							TextSize={16}
-							Font="GothamBold"
+							FontFace={InterFontSemi}
 							TextColor3={new Color3(1, 1, 1)}
 							Size={new UDim2(1, 0, 0, 20)}
 							BackgroundTransparency={1}
@@ -377,7 +378,7 @@ function Settings() {
 						<textlabel
 							Text="When enabled, RemoteEvent calls will be logged and displayed"
 							TextSize={12}
-							Font="Gotham"
+							FontFace={InterFontMedium}
 							TextColor3={new Color3(0.7, 0.7, 0.7)}
 							Size={new UDim2(1, 0, 0, 36)}
 							BackgroundTransparency={1}
@@ -427,7 +428,7 @@ function Settings() {
 						<textlabel
 							Text="Show RemoteFunctions"
 							TextSize={16}
-							Font="GothamBold"
+							FontFace={InterFontSemi}
 							TextColor3={new Color3(1, 1, 1)}
 							Size={new UDim2(1, 0, 0, 20)}
 							BackgroundTransparency={1}
@@ -438,7 +439,7 @@ function Settings() {
 						<textlabel
 							Text="When enabled, RemoteFunction calls will be logged and displayed"
 							TextSize={12}
-							Font="Gotham"
+							FontFace={InterFontMedium}
 							TextColor3={new Color3(0.7, 0.7, 0.7)}
 							Size={new UDim2(1, 0, 0, 36)}
 							BackgroundTransparency={1}
@@ -488,7 +489,7 @@ function Settings() {
 						<textlabel
 							Text="Show BindableEvents"
 							TextSize={16}
-							Font="GothamBold"
+							FontFace={InterFontSemi}
 							TextColor3={new Color3(1, 1, 1)}
 							Size={new UDim2(1, 0, 0, 20)}
 							BackgroundTransparency={1}
@@ -499,7 +500,7 @@ function Settings() {
 						<textlabel
 							Text="When enabled, BindableEvent calls will be logged and displayed"
 							TextSize={12}
-							Font="Gotham"
+							FontFace={InterFontMedium}
 							TextColor3={new Color3(0.7, 0.7, 0.7)}
 							Size={new UDim2(1, 0, 0, 36)}
 							BackgroundTransparency={1}
@@ -549,7 +550,7 @@ function Settings() {
 						<textlabel
 							Text="Show BindableFunctions"
 							TextSize={16}
-							Font="GothamBold"
+							FontFace={InterFontSemi}
 							TextColor3={new Color3(1, 1, 1)}
 							Size={new UDim2(1, 0, 0, 20)}
 							BackgroundTransparency={1}
@@ -560,7 +561,7 @@ function Settings() {
 						<textlabel
 							Text="When enabled, BindableFunction calls will be logged and displayed"
 							TextSize={12}
-							Font="Gotham"
+							FontFace={InterFontMedium}
 							TextColor3={new Color3(0.7, 0.7, 0.7)}
 							Size={new UDim2(1, 0, 0, 36)}
 							BackgroundTransparency={1}
@@ -610,7 +611,7 @@ function Settings() {
 						<textlabel
 							Text="Path Notation Style"
 							TextSize={16}
-							Font="GothamBold"
+							FontFace={InterFontSemi}
 							TextColor3={new Color3(1, 1, 1)}
 							Size={new UDim2(1, 0, 0, 20)}
 							BackgroundTransparency={1}
@@ -621,7 +622,7 @@ function Settings() {
 						<textlabel
 							Text="Choose how to access instances in generated scripts (dots, WaitForChild, or FindFirstChild)"
 							TextSize={12}
-							Font="Gotham"
+							FontFace={InterFontMedium}
 							TextColor3={new Color3(0.7, 0.7, 0.7)}
 							Size={new UDim2(1, 0, 0, 32)}
 							BackgroundTransparency={1}
@@ -649,7 +650,7 @@ function Settings() {
 							<textlabel
 								Text="Dot (.)"
 								TextSize={14}
-								Font="GothamBold"
+								FontFace={InterFontSemi}
 								TextColor3={new Color3(1, 1, 1)}
 								Size={new UDim2(1, 0, 1, 0)}
 								BackgroundTransparency={1}
@@ -668,7 +669,7 @@ function Settings() {
 							<textlabel
 								Text="WaitForChild"
 								TextSize={14}
-								Font="GothamBold"
+								FontFace={InterFontSemi}
 								TextColor3={new Color3(1, 1, 1)}
 								Size={new UDim2(1, 0, 1, 0)}
 								BackgroundTransparency={1}
@@ -687,7 +688,7 @@ function Settings() {
 							<textlabel
 								Text="FindFirstChild"
 								TextSize={14}
-								Font="GothamBold"
+								FontFace={InterFontSemi}
 								TextColor3={new Color3(1, 1, 1)}
 								Size={new UDim2(1, 0, 1, 0)}
 								BackgroundTransparency={1}
@@ -702,7 +703,7 @@ function Settings() {
 				<textlabel
 					Text="Inspection Tools"
 					TextSize={18}
-					Font="GothamBold"
+					FontFace={InterFontSemi}
 					TextColor3={new Color3(1, 1, 1)}
 					Size={new UDim2(1, 0, 0, 24)}
 					BackgroundTransparency={1}
@@ -729,7 +730,7 @@ function Settings() {
 						<textlabel
 							Text="Maximum Inspection Results"
 							TextSize={16}
-							Font="GothamBold"
+							FontFace={InterFontSemi}
 							TextColor3={new Color3(1, 1, 1)}
 							Size={new UDim2(1, 0, 0, 20)}
 							BackgroundTransparency={1}
@@ -740,7 +741,7 @@ function Settings() {
 						<textlabel
 							Text="Set the maximum number of results to display when scanning (higher values may cause lag)"
 							TextSize={12}
-							Font="Gotham"
+							FontFace={InterFontMedium}
 							TextColor3={new Color3(0.7, 0.7, 0.7)}
 							Size={new UDim2(1, 0, 0, 32)}
 							BackgroundTransparency={1}
@@ -768,7 +769,7 @@ function Settings() {
 							<textlabel
 								Text={`Current: ${maxInspectionResults}`}
 								TextSize={14}
-								Font="Gotham"
+								FontFace={InterFontMedium}
 								TextColor3={new Color3(1, 1, 1)}
 								Size={new UDim2(1, 0, 1, 0)}
 								BackgroundTransparency={1}
@@ -783,7 +784,7 @@ function Settings() {
 							PlaceholderText="Enter number..."
 							Text={maxResultsInput}
 							TextSize={14}
-							Font="Gotham"
+							FontFace={InterFontMedium}
 							TextColor3={new Color3(1, 1, 1)}
 							BackgroundColor3={new Color3(0.15, 0.15, 0.15)}
 							BorderSizePixel={0}
@@ -815,7 +816,7 @@ function Settings() {
 							<textlabel
 								Text="Apply"
 								TextSize={14}
-								Font="GothamBold"
+								FontFace={InterFontSemi}
 								TextColor3={new Color3(1, 1, 1)}
 								Size={new UDim2(1, 0, 1, 0)}
 								BackgroundTransparency={1}

@@ -1,4 +1,5 @@
 import Roact from "@rbxts/roact";
+import { InterFontMedium } from "constants";
 
 interface Props {
 	text: string;
@@ -10,7 +11,7 @@ export default function RowDoubleCaption({ text, hint, description }: Props) {
 	return (
 		<textlabel
 			Text={text}
-			Font="Gotham"
+			FontFace={InterFontMedium}
 			TextColor3={new Color3(1, 1, 1)}
 			TextSize={11}
 			AutomaticSize="Y"
@@ -22,7 +23,7 @@ export default function RowDoubleCaption({ text, hint, description }: Props) {
 			{/* Hint */}
 			<textlabel
 				Text={hint}
-				Font="Gotham"
+				FontFace={InterFontMedium}
 				TextColor3={new Color3(1, 1, 1)}
 				TextSize={11}
 				TextTransparency={0.5}
@@ -39,7 +40,7 @@ export default function RowDoubleCaption({ text, hint, description }: Props) {
 			{/* Description */}
 			<textlabel
 				Text={description}
-				Font="Gotham"
+				FontFace={InterFontMedium}
 				TextColor3={new Color3(1, 1, 1)}
 				TextSize={11}
 				TextTransparency={0.3}

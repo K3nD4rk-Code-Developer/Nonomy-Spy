@@ -9,6 +9,7 @@ import { multiply } from "utils/number-util";
 import { useCallback, useMemo, useMutable, withHooksPure } from "@rbxts/roact-hooked";
 import { useGroupMotor, useSpring } from "@rbxts/roact-hooked-plus";
 import { useRootSelector, useRootStore } from "hooks/use-root-store";
+import { InterFontSemi, InterFontMedium } from "constants";
 
 interface Props {
 	id: string;
@@ -85,7 +86,7 @@ function Row({ onClick, id, order, selected, multiSelected }: Props) {
 			{/* Order number - outside the box, static (no animation) */}
 			<textlabel
 				Text={`${order + 1}.`}
-				Font="GothamBold"
+				FontFace={InterFontSemi}
 				TextColor3={new Color3(1, 1, 1)}
 				TextTransparency={0.4}
 				TextSize={15}
@@ -165,7 +166,7 @@ function Row({ onClick, id, order, selected, multiSelected }: Props) {
 				Text={formatEscapes(
 					outgoing && outgoing.size() > 0 ? `${remoteObject.Name} • ${outgoing.size()}` : remoteObject.Name,
 				)}
-				Font="Gotham"
+				FontFace={InterFontMedium}
 				TextColor3={new Color3(1, 1, 1)}
 				TextTransparency={foregroundTransparency}
 				TextSize={13}
@@ -189,7 +190,7 @@ function Row({ onClick, id, order, selected, multiSelected }: Props) {
 			{/* Path */}
 			<textlabel
 				Text={formatEscapes(getInstancePath(remoteObject))}
-				Font="Gotham"
+				FontFace={InterFontMedium}
 				TextColor3={new Color3(1, 1, 1)}
 				TextTransparency={foregroundTransparency.map((t) => multiply(t, 0.2))}
 				TextSize={11}

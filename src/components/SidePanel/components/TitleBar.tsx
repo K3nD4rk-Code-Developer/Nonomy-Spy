@@ -3,6 +3,7 @@ import Roact from "@rbxts/roact";
 import { Instant, Spring } from "@rbxts/flipper";
 import { useGroupMotor } from "@rbxts/roact-hooked-plus";
 import { withHooksPure } from "@rbxts/roact-hooked";
+import { InterFontSemi } from "constants";
 
 interface Props {
 	caption: string;
@@ -25,7 +26,7 @@ function TitleBar({ caption, hidden, toggleHidden }: Props) {
 			<textlabel
 				Text={caption}
 				TextColor3={new Color3(1, 1, 1)}
-				Font="GothamBold"
+				FontFace={InterFontSemi}
 				TextSize={11}
 				TextXAlignment="Left"
 				TextYAlignment="Top"

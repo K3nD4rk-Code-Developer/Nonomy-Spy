@@ -34,7 +34,7 @@ export default function AcrylicPaint() {
 			</frame>
 
 			<imagelabel
-				Image="rbxassetid://98449888558787"
+				Image="rbxassetid://75160920077568"
 				ImageTransparency={0.7}
 				ImageColor3={new Color3(0.13, 0.13, 0.13)}
 				ScaleType="Stretch"

@@ -1,5 +1,6 @@
 import { TabGroupColumn, TabType } from "./model";
 import { TextService } from "@rbxts/services";
+import { InterFontMedium } from "constants";
 
 export const MAX_TAB_CAPTION_WIDTH = 150;
 
@@ -8,7 +9,13 @@ export function createTabColumn(id: string, caption: string, tabType: TabType, c
 }
 
 export function getTabCaptionWidth(tab: TabGroupColumn) {
-	const textSize = TextService.GetTextSize(tab.caption, 11, "Gotham", new Vector2(300, 0));
+	const params = new Instance("GetTextBoundsParams");
+	params.Text = tab.caption;
+	params.Size = 11;
+	params.Font = InterFontMedium;
+	params.Width = 300;
+
+	const textSize = TextService.GetTextBoundsAsync(params);
 	return math.min(textSize.X, MAX_TAB_CAPTION_WIDTH);
 }
 

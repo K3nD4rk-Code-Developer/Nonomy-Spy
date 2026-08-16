@@ -2,7 +2,7 @@ import Button from "components/Button";
 import Container from "components/Container";
 import Roact from "@rbxts/roact";
 import { Instant, Spring } from "@rbxts/flipper";
-import { TOPBAR_OFFSET } from "constants";
+import { InterFontMedium, TOPBAR_OFFSET } from "constants";
 import { UserInputService, HttpService } from "@rbxts/services";
 import { WindowAssets } from "./assets";
 import { useBinding, useEffect, useState, withHooksPure } from "@rbxts/roact-hooked";
@@ -89,7 +89,7 @@ function WindowTitleBar({
 				Text={caption}
 				TextColor3={captionColor}
 				TextTransparency={captionTransparency}
-				Font="Gotham"
+				FontFace={InterFontMedium}
 				TextSize={11}
 				TextXAlignment="Left"
 				TextYAlignment="Center"

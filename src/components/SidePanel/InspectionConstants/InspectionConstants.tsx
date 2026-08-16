@@ -5,6 +5,7 @@ import { useSidePanelContext } from "../use-side-panel-context";
 import { useRootSelector } from "hooks/use-root-store";
 import { selectInspectionResultSelected } from "reducers/remote-log";
 import { withHooksPure } from "@rbxts/roact-hooked";
+import { InterFontSemi, InterFontMedium } from "constants";
 
 // Declare decompile function
 declare const decompile: ((script: LuaSourceContainer) => string) | undefined;
@@ -62,7 +63,7 @@ function InspectionConstants() {
 											AutomaticSize="Y"
 											Size={new UDim2(1, -16, 0, 0)}
 											Text={`[${i + 1}] ${typeOf(value)}`}
-											Font="GothamBold"
+											FontFace={InterFontSemi}
 											TextColor3={new Color3(0.9, 0.7, 1)}
 											TextSize={10}
 											TextXAlignment="Left"
@@ -144,7 +145,7 @@ function InspectionConstants() {
 						Position={new UDim2(0.5, 0, 0.5, 0)}
 						Size={new UDim2(1, -20, 1, 0)}
 						Text="Select a result to view details"
-						Font="Gotham"
+						FontFace={InterFontMedium}
 						TextColor3={new Color3(0.5, 0.5, 0.5)}
 						TextSize={12}
 						TextWrapped={true}

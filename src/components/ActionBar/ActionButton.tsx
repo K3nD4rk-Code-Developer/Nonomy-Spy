@@ -6,6 +6,7 @@ import { TextService } from "@rbxts/services";
 import { useGroupMotor } from "@rbxts/roact-hooked-plus";
 import { useMemo, withHooksPure } from "@rbxts/roact-hooked";
 import { useRootDispatch, useRootSelector } from "hooks/use-root-store";
+import { InterFontMedium } from "constants";
 
 const MARGIN = 10;
 const BUTTON_DEFAULT = [new Spring(1, { frequency: 6 }), new Spring(0, { frequency: 6 })];
@@ -31,9 +32,15 @@ function ActionButton({ id, icon, caption, layoutOrder }: Props) {
 	const displayCaption = actionState.caption ?? caption;
 
 	const textSize = useMemo(() => {
-		return displayCaption !== undefined
-			? TextService.GetTextSize(displayCaption, 11, "Gotham", new Vector2(150, 36))
-			: new Vector2();
+		if (displayCaption === undefined) return new Vector2();
+
+		const params = new Instance("GetTextBoundsParams");
+		params.Text = displayCaption;
+		params.Size = 11;
+		params.Font = InterFontMedium;
+		params.Width = 150;
+
+		return TextService.GetTextBoundsAsync(params);
 	}, [displayCaption]);
 
 	return (
@@ -72,7 +79,7 @@ function ActionButton({ id, icon, caption, layoutOrder }: Props) {
 			{displayCaption !== undefined && (
 				<textlabel
 					Text={displayCaption}
-					Font="Gotham"
+					FontFace={InterFontMedium}
 					TextColor3={new Color3(1, 1, 1)}
 					TextTransparency={foregroundTransparency}
 					TextSize={11}

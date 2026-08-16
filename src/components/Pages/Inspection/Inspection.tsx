@@ -8,6 +8,7 @@ import { InspectionResult } from "reducers/remote-log/model";
 import { setInspectionResultSelected } from "reducers/remote-log/actions";
 import { useSingleMotor } from "@rbxts/roact-hooked-plus";
 import { Spring, Instant } from "@rbxts/flipper";
+import { InterFontSemi, InterFontMedium } from "constants";
 
 // Declare exploit environment functions
 declare const getgc: (() => unknown[]) | undefined;
@@ -82,7 +83,7 @@ const ScannerButton = withHooksPure(({ scanner, isSelected, onClick }: ScannerBu
 				<textlabel
 					Text={scanner.name}
 					TextSize={13}
-					Font="GothamBold"
+					FontFace={InterFontSemi}
 					TextColor3={new Color3(1, 1, 1)}
 					Size={new UDim2(1, 0, 0, 16)}
 					BackgroundTransparency={1}
@@ -94,7 +95,7 @@ const ScannerButton = withHooksPure(({ scanner, isSelected, onClick }: ScannerBu
 				<textlabel
 					Text={scanner.desc}
 					TextSize={10}
-					Font="Gotham"
+					FontFace={InterFontMedium}
 					TextColor3={new Color3(0.7, 0.7, 0.7)}
 					Size={new UDim2(1, 0, 0, 13)}
 					BackgroundTransparency={1}
@@ -149,7 +150,7 @@ const ResultItem = withHooksPure(({ result, isSelected, onClick }: ResultItemPro
 			<textlabel
 				Text={result.name}
 				TextSize={14}
-				Font="GothamBold"
+				FontFace={InterFontSemi}
 				TextColor3={new Color3(1, 1, 1)}
 				Size={new UDim2(1, 0, 0, 17)}
 				BackgroundTransparency={1}
@@ -161,7 +162,7 @@ const ResultItem = withHooksPure(({ result, isSelected, onClick }: ResultItemPro
 			<textlabel
 				Text={`${result.type} • ${result.value ?? "no path"}`}
 				TextSize={11}
-				Font="Gotham"
+				FontFace={InterFontMedium}
 				TextColor3={new Color3(0.7, 0.75, 0.8)}
 				Size={new UDim2(1, 0, 0, 14)}
 				BackgroundTransparency={1}
@@ -405,7 +406,7 @@ function Inspection() {
 					<textlabel
 						Text="Runtime Inspection"
 						TextSize={26}
-						Font="GothamBold"
+						FontFace={InterFontSemi}
 						TextColor3={new Color3(1, 1, 1)}
 						Size={new UDim2(1, 0, 0, 32)}
 						BackgroundTransparency={1}
@@ -416,7 +417,7 @@ function Inspection() {
 					<textlabel
 						Text="Select a scanner to begin analyzing runtime data"
 						TextSize={13}
-						Font="Gotham"
+						FontFace={InterFontMedium}
 						TextColor3={new Color3(0.6, 0.6, 0.6)}
 						Size={new UDim2(1, 0, 0, 32)}
 						BackgroundTransparency={1}
@@ -462,7 +463,7 @@ function Inspection() {
 								<textlabel
 									Text={`Results: ${filteredResults.size()}/${scanResults.size()}`}
 									TextSize={16}
-									Font="GothamBold"
+									FontFace={InterFontSemi}
 									TextColor3={new Color3(1, 1, 1)}
 									Size={new UDim2(0.5, 0, 0, 24)}
 									TextXAlignment="Left"
@@ -473,7 +474,7 @@ function Inspection() {
 								<textlabel
 									Text={`Max: ${maxResults}`}
 									TextSize={11}
-									Font="Gotham"
+									FontFace={InterFontMedium}
 									TextColor3={new Color3(0.5, 0.5, 0.5)}
 									Size={new UDim2(0.5, 0, 0, 24)}
 									BackgroundTransparency={1}
@@ -488,7 +489,7 @@ function Inspection() {
 								Text={searchQuery}
 								BackgroundTransparency={0.6}
 								TextSize={13}
-								Font="Gotham"
+								FontFace={InterFontMedium}
 								TextColor3={new Color3(1, 1, 1)}
 								BackgroundColor3={new Color3(0.08, 0.08, 0.08)}
 								BorderSizePixel={0}
@@ -511,7 +512,7 @@ function Inspection() {
 								<textlabel
 									Text="Scanning garbage collector..."
 									TextSize={15}
-									Font="GothamBold"
+									FontFace={InterFontSemi}
 									TextColor3={new Color3(0.5, 0.7, 1)}
 									Size={new UDim2(1, 0, 1, 0)}
 									BackgroundTransparency={1}
@@ -531,7 +532,7 @@ function Inspection() {
 								<textlabel
 									Text="No Results"
 									TextSize={17}
-									Font="GothamBold"
+									FontFace={InterFontSemi}
 									TextColor3={new Color3(0.8, 0.4, 0.4)}
 									Size={new UDim2(1, 0, 0, 22)}
 									BackgroundTransparency={1}
@@ -541,7 +542,7 @@ function Inspection() {
 								<textlabel
 									Text="Try a different scanner or search term"
 									TextSize={12}
-									Font="Gotham"
+									FontFace={InterFontMedium}
 									TextColor3={new Color3(0.5, 0.5, 0.5)}
 									Size={new UDim2(1, 0, 0, 16)}
 									BackgroundTransparency={1}

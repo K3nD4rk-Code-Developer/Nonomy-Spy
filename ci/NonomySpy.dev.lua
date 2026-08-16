@@ -371,7 +371,7 @@ local function AcrylicPaint()
 			}),
 		}),
 		Roact.createElement("ImageLabel", {
-			Image = "rbxassetid://98449888558787",
+			Image = "rbxassetid://75160920077568",
 			ImageTransparency = 0.7,
 			ImageColor3 = Color3.new(0.13, 0.13, 0.13),
 			ScaleType = "Stretch",
@@ -1284,6 +1284,7 @@ local withHooksPure = _roact_hooked.withHooksPure
 local _use_root_store = TS.import(script, script.Parent.Parent.Parent, "hooks", "use-root-store")
 local useRootDispatch = _use_root_store.useRootDispatch
 local useRootSelector = _use_root_store.useRootSelector
+local InterFontMedium = TS.import(script, script.Parent.Parent.Parent, "constants").InterFontMedium
 local MARGIN = 10
 local BUTTON_DEFAULT = { Spring.new(1, {
 	frequency = 6,
@@ -1320,7 +1321,15 @@ local function ActionButton(_param)
 	end
 	local displayCaption = _condition
 	local textSize = useMemo(function()
-		return if displayCaption ~= nil then TextService:GetTextSize(displayCaption, 11, "Gotham", Vector2.new(150, 36)) else Vector2.new()
+		if displayCaption == nil then
+			return Vector2.new()
+		end
+		local params = Instance.new("GetTextBoundsParams")
+		params.Text = displayCaption
+		params.Size = 11
+		params.Font = InterFontMedium
+		params.Width = 150
+		return TextService:GetTextBoundsAsync(params)
 	end, { displayCaption })
 	local _attributes = {
 		layoutOrder = layoutOrder,
@@ -1358,7 +1367,7 @@ local function ActionButton(_param)
 	_length = #_children
 	local _child_1 = displayCaption ~= nil and (Roact.createElement("TextLabel", {
 		Text = displayCaption,
-		Font = "Gotham",
+		FontFace = InterFontMedium,
 		TextColor3 = Color3.new(1, 1, 1),
 		TextTransparency = foregroundTransparency,
 		TextSize = 11,
@@ -1762,7 +1771,7 @@ local function MainWindow()
 				end,
 				caption = '<font color="#FFFFFF">Nonomy Spy</font>    <font color="#B2B2B2">' .. ("1.0.0 Alpha" .. "</font>"),
 				captionTransparency = 0.1,
-				icon = "rbxassetid://133291240952158",
+				icon = "rbxassetid://102689601118089",
 			}),
 			Roact.createElement(Window.Resize, {
 				minSize = Vector2.new(650, 450),
@@ -1951,6 +1960,9 @@ local useSpring = _roact_hooked_plus.useSpring
 local _use_root_store = TS.import(script, script.Parent.Parent.Parent.Parent, "hooks", "use-root-store")
 local useRootSelector = _use_root_store.useRootSelector
 local useRootStore = _use_root_store.useRootStore
+local _constants = TS.import(script, script.Parent.Parent.Parent.Parent, "constants")
+local InterFontSemi = _constants.InterFontSemi
+local InterFontMedium = _constants.InterFontMedium
 local ROW_DEFAULT = { Spring.new(1, {
 	frequency = 6,
 }), Spring.new(0, {
@@ -2042,7 +2054,7 @@ local function Row(_param)
 	local _children = {
 		Roact.createElement("TextLabel", {
 			Text = tostring(order + 1) .. ".",
-			Font = "GothamBold",
+			FontFace = InterFontSemi,
 			TextColor3 = Color3.new(1, 1, 1),
 			TextTransparency = 0.4,
 			TextSize = 15,
@@ -2113,7 +2125,7 @@ local function Row(_param)
 	})
 	_children[_length + 2] = Roact.createElement("TextLabel", {
 		Text = formatEscapes(if outgoing and #outgoing > 0 then remoteObject.Name .. (" • " .. tostring(#outgoing)) else remoteObject.Name),
-		Font = "Gotham",
+		FontFace = InterFontMedium,
 		TextColor3 = Color3.new(1, 1, 1),
 		TextTransparency = foregroundTransparency,
 		TextSize = 13,
@@ -2129,7 +2141,7 @@ local function Row(_param)
 	})
 	_children[_length + 3] = Roact.createElement("TextLabel", {
 		Text = formatEscapes(getInstancePath(remoteObject)),
-		Font = "Gotham",
+		FontFace = InterFontMedium,
 		TextColor3 = Color3.new(1, 1, 1),
 		TextTransparency = foregroundTransparency:map(function(t)
 			return multiply(t, 0.2)
@@ -2188,6 +2200,9 @@ local useSingleMotor = TS.import(script, TS.getModule(script, "@rbxts", "roact-h
 local _flipper = TS.import(script, TS.getModule(script, "@rbxts", "flipper").src)
 local Spring = _flipper.Spring
 local Instant = _flipper.Instant
+local _constants = TS.import(script, script.Parent.Parent.Parent.Parent, "constants")
+local InterFontSemi = _constants.InterFontSemi
+local InterFontMedium = _constants.InterFontMedium
 local ScannerType
 do
 	local _inverse = {}
@@ -2277,7 +2292,7 @@ local ScannerButton = withHooksPure(function(_param)
 			Roact.createElement("TextLabel", {
 				Text = scanner.name,
 				TextSize = 13,
-				Font = "GothamBold",
+				FontFace = InterFontSemi,
 				TextColor3 = Color3.new(1, 1, 1),
 				Size = UDim2.new(1, 0, 0, 16),
 				BackgroundTransparency = 1,
@@ -2288,7 +2303,7 @@ local ScannerButton = withHooksPure(function(_param)
 			Roact.createElement("TextLabel", {
 				Text = scanner.desc,
 				TextSize = 10,
-				Font = "Gotham",
+				FontFace = InterFontMedium,
 				TextColor3 = Color3.new(0.7, 0.7, 0.7),
 				Size = UDim2.new(1, 0, 0, 13),
 				BackgroundTransparency = 1,
@@ -2366,7 +2381,7 @@ local ResultItem = withHooksPure(function(_param)
 		Roact.createElement("TextLabel", {
 			Text = result.name,
 			TextSize = 14,
-			Font = "GothamBold",
+			FontFace = InterFontSemi,
 			TextColor3 = Color3.new(1, 1, 1),
 			Size = UDim2.new(1, 0, 0, 17),
 			BackgroundTransparency = 1,
@@ -2384,7 +2399,7 @@ local ResultItem = withHooksPure(function(_param)
 	end
 	_attributes_1.Text = _exp .. (" • " .. _condition)
 	_attributes_1.TextSize = 11
-	_attributes_1.Font = "Gotham"
+	_attributes_1.FontFace = InterFontMedium
 	_attributes_1.TextColor3 = Color3.new(0.7, 0.75, 0.8)
 	_attributes_1.Size = UDim2.new(1, 0, 0, 14)
 	_attributes_1.BackgroundTransparency = 1
@@ -2639,11 +2654,11 @@ local function Inspection()
 										_upvalues = _upvalues(func)
 									end
 									local upvalues = _upvalues
-									local _constants = getconstants
-									if _constants ~= nil then
-										_constants = _constants(func)
+									local _constants_1 = getconstants
+									if _constants_1 ~= nil then
+										_constants_1 = _constants_1(func)
 									end
-									local constants = _constants
+									local constants = _constants_1
 									local _object = {
 										id = "closure_" .. tostring(count),
 									}
@@ -2789,7 +2804,7 @@ local function Inspection()
 			Roact.createElement("TextLabel", {
 				Text = "Runtime Inspection",
 				TextSize = 26,
-				Font = "GothamBold",
+				FontFace = InterFontSemi,
 				TextColor3 = Color3.new(1, 1, 1),
 				Size = UDim2.new(1, 0, 0, 32),
 				BackgroundTransparency = 1,
@@ -2799,7 +2814,7 @@ local function Inspection()
 			Roact.createElement("TextLabel", {
 				Text = "Select a scanner to begin analyzing runtime data",
 				TextSize = 13,
-				Font = "Gotham",
+				FontFace = InterFontMedium,
 				TextColor3 = Color3.new(0.6, 0.6, 0.6),
 				Size = UDim2.new(1, 0, 0, 32),
 				BackgroundTransparency = 1,
@@ -2857,7 +2872,7 @@ local function Inspection()
 				Roact.createElement("TextLabel", {
 					Text = "Scanning garbage collector...",
 					TextSize = 15,
-					Font = "GothamBold",
+					FontFace = InterFontSemi,
 					TextColor3 = Color3.new(0.5, 0.7, 1),
 					Size = UDim2.new(1, 0, 1, 0),
 					BackgroundTransparency = 1,
@@ -2885,7 +2900,7 @@ local function Inspection()
 					Roact.createElement("TextLabel", {
 						Text = "No Results",
 						TextSize = 17,
-						Font = "GothamBold",
+						FontFace = InterFontSemi,
 						TextColor3 = Color3.new(0.8, 0.4, 0.4),
 						Size = UDim2.new(1, 0, 0, 22),
 						BackgroundTransparency = 1,
@@ -2895,7 +2910,7 @@ local function Inspection()
 					Roact.createElement("TextLabel", {
 						Text = "Try a different scanner or search term",
 						TextSize = 12,
-						Font = "Gotham",
+						FontFace = InterFontMedium,
 						TextColor3 = Color3.new(0.5, 0.5, 0.5),
 						Size = UDim2.new(1, 0, 0, 16),
 						BackgroundTransparency = 1,
@@ -2987,7 +3002,7 @@ local function Inspection()
 					Roact.createElement("TextLabel", {
 						Text = "Results: " .. (tostring(#filteredResults) .. ("/" .. tostring(#scanResults))),
 						TextSize = 16,
-						Font = "GothamBold",
+						FontFace = InterFontSemi,
 						TextColor3 = Color3.new(1, 1, 1),
 						Size = UDim2.new(0.5, 0, 0, 24),
 						TextXAlignment = "Left",
@@ -2997,7 +3012,7 @@ local function Inspection()
 					Roact.createElement("TextLabel", {
 						Text = "Max: " .. tostring(maxResults),
 						TextSize = 11,
-						Font = "Gotham",
+						FontFace = InterFontMedium,
 						TextColor3 = Color3.new(0.5, 0.5, 0.5),
 						Size = UDim2.new(0.5, 0, 0, 24),
 						BackgroundTransparency = 1,
@@ -3011,7 +3026,7 @@ local function Inspection()
 					Text = searchQuery,
 					BackgroundTransparency = 0.6,
 					TextSize = 13,
-					Font = "Gotham",
+					FontFace = InterFontMedium,
 					TextColor3 = Color3.new(1, 1, 1),
 					BackgroundColor3 = Color3.new(0.08, 0.08, 0.08),
 					BorderSizePixel = 0,
@@ -3079,6 +3094,7 @@ local withHooksPure = _roact_hooked.withHooksPure
 local _use_root_store = TS.import(script, script.Parent.Parent.Parent.Parent, "hooks", "use-root-store")
 local useRootDispatch = _use_root_store.useRootDispatch
 local useRootSelector = _use_root_store.useRootSelector
+local InterFontMedium = TS.import(script, script.Parent.Parent.Parent.Parent, "constants").InterFontMedium
 local deleteSprings = {
 	default = { Spring.new(0.94, {
 		frequency = 6,
@@ -3148,7 +3164,7 @@ local function Header(_param)
 		}, {
 			Roact.createElement("TextLabel", {
 				Text = "Delete history",
-				Font = "Gotham",
+				FontFace = InterFontMedium,
 				TextColor3 = Color3.new(1, 1, 1),
 				TextTransparency = deleteButton.foreground,
 				TextSize = 11,
@@ -3170,7 +3186,7 @@ local function Header(_param)
 		}),
 		Roact.createElement("TextLabel", {
 			Text = if remoteObject then formatEscapes(remoteObject.Name) else "Unknown",
-			Font = "Gotham",
+			FontFace = InterFontMedium,
 			TextColor3 = Color3.new(1, 1, 1),
 			TextSize = 13,
 			TextXAlignment = "Left",
@@ -3185,7 +3201,7 @@ local function Header(_param)
 		}),
 		Roact.createElement("TextLabel", {
 			Text = if remoteObject then formatEscapes(getInstancePath(remoteObject)) else "Unknown",
-			Font = "Gotham",
+			FontFace = InterFontMedium,
 			TextColor3 = Color3.new(1, 1, 1),
 			TextTransparency = 0.2,
 			TextSize = 11,
@@ -3601,6 +3617,7 @@ return {
 _module("RowCaption", "ModuleScript", "NonomySpy.components.Pages.Logger.Row.RowCaption", "NonomySpy.components.Pages.Logger.Row", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.Parent.Parent.include.RuntimeLib)
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
+local InterFontMedium = TS.import(script, script.Parent.Parent.Parent.Parent.Parent, "constants").InterFontMedium
 local function RowCaption(_param)
 	local text = _param.text
 	local description = _param.description
@@ -3608,7 +3625,7 @@ local function RowCaption(_param)
 	local richText = _param.richText
 	return Roact.createElement("TextLabel", {
 		Text = text,
-		Font = "Gotham",
+		FontFace = InterFontMedium,
 		TextColor3 = Color3.new(1, 1, 1),
 		TextSize = 11,
 		AutomaticSize = "Y",
@@ -3620,7 +3637,7 @@ local function RowCaption(_param)
 		Roact.createElement("TextLabel", {
 			RichText = richText,
 			Text = description,
-			Font = "Gotham",
+			FontFace = InterFontMedium,
 			TextColor3 = Color3.new(1, 1, 1),
 			TextSize = 11,
 			TextTransparency = 0.3,
@@ -3649,13 +3666,14 @@ return {
 _module("RowDoubleCaption", "ModuleScript", "NonomySpy.components.Pages.Logger.Row.RowDoubleCaption", "NonomySpy.components.Pages.Logger.Row", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.Parent.Parent.include.RuntimeLib)
 local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
+local InterFontMedium = TS.import(script, script.Parent.Parent.Parent.Parent.Parent, "constants").InterFontMedium
 local function RowDoubleCaption(_param)
 	local text = _param.text
 	local hint = _param.hint
 	local description = _param.description
 	return Roact.createElement("TextLabel", {
 		Text = text,
-		Font = "Gotham",
+		FontFace = InterFontMedium,
 		TextColor3 = Color3.new(1, 1, 1),
 		TextSize = 11,
 		AutomaticSize = "Y",
@@ -3666,7 +3684,7 @@ local function RowDoubleCaption(_param)
 	}, {
 		Roact.createElement("TextLabel", {
 			Text = hint,
-			Font = "Gotham",
+			FontFace = InterFontMedium,
 			TextColor3 = Color3.new(1, 1, 1),
 			TextSize = 11,
 			TextTransparency = 0.5,
@@ -3683,7 +3701,7 @@ local function RowDoubleCaption(_param)
 		}),
 		Roact.createElement("TextLabel", {
 			Text = description,
-			Font = "Gotham",
+			FontFace = InterFontMedium,
 			TextColor3 = Color3.new(1, 1, 1),
 			TextSize = 11,
 			TextTransparency = 0.3,
@@ -3721,6 +3739,9 @@ local multiply = TS.import(script, script.Parent.Parent.Parent.Parent.Parent, "u
 local stringifyFunctionSignature = TS.import(script, script.Parent.Parent.Parent.Parent.Parent, "utils", "function-util").stringifyFunctionSignature
 local useGroupMotor = TS.import(script, TS.getModule(script, "@rbxts", "roact-hooked-plus").out).useGroupMotor
 local withHooksPure = TS.import(script, TS.getModule(script, "@rbxts", "roact-hooked").src).withHooksPure
+local _constants = TS.import(script, script.Parent.Parent.Parent.Parent.Parent, "constants")
+local InterFontSemi = _constants.InterFontSemi
+local InterFontMedium = _constants.InterFontMedium
 local rowSprings = {
 	default = { Spring.new(0.97, {
 		frequency = 6,
@@ -3789,7 +3810,7 @@ local function RowHeader(_param)
 		}),
 		Roact.createElement("TextLabel", {
 			Text = if signal.direction == "incoming" then "↓ IN" else "↑ OUT",
-			Font = "GothamBold",
+			FontFace = InterFontSemi,
 			TextColor3 = if signal.direction == "incoming" then Color3.new(0.4, 0.8, 1) else Color3.new(1, 0.8, 0.4),
 			TextTransparency = rowButton.foreground,
 			TextSize = 10,
@@ -3801,7 +3822,7 @@ local function RowHeader(_param)
 		}),
 		Roact.createElement("TextLabel", {
 			Text = (if signal.caller then formatEscapes(signal.caller.Name) else "No script") .. (" • " .. (if signal.direction == "outgoing" and signal.callback then stringifyFunctionSignature(signal.callback) elseif signal.direction == "incoming" then "OnClientEvent" else "Unknown")),
-			Font = "Gotham",
+			FontFace = InterFontMedium,
 			TextColor3 = Color3.new(1, 1, 1),
 			TextTransparency = rowButton.foreground,
 			TextSize = 13,
@@ -3817,7 +3838,7 @@ local function RowHeader(_param)
 		}),
 		Roact.createElement("TextLabel", {
 			Text = if signal.caller then formatEscapes(getInstancePath(signal.caller)) elseif signal.direction == "incoming" then "Server → Client" else "Not called from a script",
-			Font = "Gotham",
+			FontFace = InterFontMedium,
 			TextColor3 = Color3.new(1, 1, 1),
 			TextTransparency = rowButton.foreground:map(function(t)
 				return multiply(t, 0.2)
@@ -4186,6 +4207,9 @@ local setMaxInspectionResults = _remote_log_1.setMaxInspectionResults
 local PathNotation = TS.import(script, script.Parent.Parent.Parent.Parent, "reducers", "remote-log", "model").PathNotation
 local selectToggleKey = TS.import(script, script.Parent.Parent.Parent.Parent, "reducers", "ui").selectToggleKey
 local setToggleKey = TS.import(script, script.Parent.Parent.Parent.Parent, "reducers", "ui").setToggleKey
+local _constants = TS.import(script, script.Parent.Parent.Parent.Parent, "constants")
+local InterFontSemi = _constants.InterFontSemi
+local InterFontMedium = _constants.InterFontMedium
 local function Settings()
 	local dispatch = useRootDispatch()
 	local noActors = useRootSelector(selectNoActors)
@@ -4263,7 +4287,7 @@ local function Settings()
 			Roact.createElement("TextLabel", {
 				Text = "Settings",
 				TextSize = 24,
-				Font = "GothamBold",
+				FontFace = InterFontSemi,
 				TextColor3 = Color3.new(1, 1, 1),
 				Size = UDim2.new(1, 0, 0, 30),
 				BackgroundTransparency = 1,
@@ -4291,7 +4315,7 @@ local function Settings()
 					Roact.createElement("TextLabel", {
 						Text = "Ignore Actor Remotes",
 						TextSize = 16,
-						Font = "GothamBold",
+						FontFace = InterFontSemi,
 						TextColor3 = Color3.new(1, 1, 1),
 						Size = UDim2.new(1, 0, 0, 20),
 						BackgroundTransparency = 1,
@@ -4301,7 +4325,7 @@ local function Settings()
 					Roact.createElement("TextLabel", {
 						Text = "When enabled, remote calls from scripts running inside Actors will be ignored and not logged",
 						TextSize = 12,
-						Font = "Gotham",
+						FontFace = InterFontMedium,
 						TextColor3 = Color3.new(0.7, 0.7, 0.7),
 						Size = UDim2.new(1, 0, 0, 36),
 						BackgroundTransparency = 1,
@@ -4351,7 +4375,7 @@ local function Settings()
 					Roact.createElement("TextLabel", {
 						Text = "Ignore Executor Calls",
 						TextSize = 16,
-						Font = "GothamBold",
+						FontFace = InterFontSemi,
 						TextColor3 = Color3.new(1, 1, 1),
 						Size = UDim2.new(1, 0, 0, 20),
 						BackgroundTransparency = 1,
@@ -4361,7 +4385,7 @@ local function Settings()
 					Roact.createElement("TextLabel", {
 						Text = "When enabled, remote calls from executor scripts (nil caller) will be ignored and not logged",
 						TextSize = 12,
-						Font = "Gotham",
+						FontFace = InterFontMedium,
 						TextColor3 = Color3.new(0.7, 0.7, 0.7),
 						Size = UDim2.new(1, 0, 0, 36),
 						BackgroundTransparency = 1,
@@ -4411,7 +4435,7 @@ local function Settings()
 					Roact.createElement("TextLabel", {
 						Text = "UI Toggle Keybind",
 						TextSize = 16,
-						Font = "GothamBold",
+						FontFace = InterFontSemi,
 						TextColor3 = Color3.new(1, 1, 1),
 						Size = UDim2.new(1, 0, 0, 20),
 						BackgroundTransparency = 1,
@@ -4421,7 +4445,7 @@ local function Settings()
 					Roact.createElement("TextLabel", {
 						Text = "Press any key to set as the UI toggle keybind",
 						TextSize = 12,
-						Font = "Gotham",
+						FontFace = InterFontMedium,
 						TextColor3 = Color3.new(0.7, 0.7, 0.7),
 						Size = UDim2.new(1, 0, 0, 32),
 						BackgroundTransparency = 1,
@@ -4450,7 +4474,7 @@ local function Settings()
 						Roact.createElement("TextLabel", {
 							Text = "Current: " .. toggleKey.Name,
 							TextSize = 14,
-							Font = "Gotham",
+							FontFace = InterFontMedium,
 							TextColor3 = Color3.new(1, 1, 1),
 							Size = UDim2.new(1, 0, 1, 0),
 							BackgroundTransparency = 1,
@@ -4468,7 +4492,7 @@ local function Settings()
 						Roact.createElement("TextLabel", {
 							Text = if isListeningForKey then "Press a key..." else "Change Keybind",
 							TextSize = 14,
-							Font = "GothamBold",
+							FontFace = InterFontSemi,
 							TextColor3 = Color3.new(1, 1, 1),
 							Size = UDim2.new(1, 0, 1, 0),
 							BackgroundTransparency = 1,
@@ -4481,7 +4505,7 @@ local function Settings()
 			Roact.createElement("TextLabel", {
 				Text = "Filter Options",
 				TextSize = 18,
-				Font = "GothamBold",
+				FontFace = InterFontSemi,
 				TextColor3 = Color3.new(1, 1, 1),
 				Size = UDim2.new(1, 0, 0, 24),
 				BackgroundTransparency = 1,
@@ -4509,7 +4533,7 @@ local function Settings()
 					Roact.createElement("TextLabel", {
 						Text = "Show RemoteEvents",
 						TextSize = 16,
-						Font = "GothamBold",
+						FontFace = InterFontSemi,
 						TextColor3 = Color3.new(1, 1, 1),
 						Size = UDim2.new(1, 0, 0, 20),
 						BackgroundTransparency = 1,
@@ -4519,7 +4543,7 @@ local function Settings()
 					Roact.createElement("TextLabel", {
 						Text = "When enabled, RemoteEvent calls will be logged and displayed",
 						TextSize = 12,
-						Font = "Gotham",
+						FontFace = InterFontMedium,
 						TextColor3 = Color3.new(0.7, 0.7, 0.7),
 						Size = UDim2.new(1, 0, 0, 36),
 						BackgroundTransparency = 1,
@@ -4569,7 +4593,7 @@ local function Settings()
 					Roact.createElement("TextLabel", {
 						Text = "Show RemoteFunctions",
 						TextSize = 16,
-						Font = "GothamBold",
+						FontFace = InterFontSemi,
 						TextColor3 = Color3.new(1, 1, 1),
 						Size = UDim2.new(1, 0, 0, 20),
 						BackgroundTransparency = 1,
@@ -4579,7 +4603,7 @@ local function Settings()
 					Roact.createElement("TextLabel", {
 						Text = "When enabled, RemoteFunction calls will be logged and displayed",
 						TextSize = 12,
-						Font = "Gotham",
+						FontFace = InterFontMedium,
 						TextColor3 = Color3.new(0.7, 0.7, 0.7),
 						Size = UDim2.new(1, 0, 0, 36),
 						BackgroundTransparency = 1,
@@ -4629,7 +4653,7 @@ local function Settings()
 					Roact.createElement("TextLabel", {
 						Text = "Show BindableEvents",
 						TextSize = 16,
-						Font = "GothamBold",
+						FontFace = InterFontSemi,
 						TextColor3 = Color3.new(1, 1, 1),
 						Size = UDim2.new(1, 0, 0, 20),
 						BackgroundTransparency = 1,
@@ -4639,7 +4663,7 @@ local function Settings()
 					Roact.createElement("TextLabel", {
 						Text = "When enabled, BindableEvent calls will be logged and displayed",
 						TextSize = 12,
-						Font = "Gotham",
+						FontFace = InterFontMedium,
 						TextColor3 = Color3.new(0.7, 0.7, 0.7),
 						Size = UDim2.new(1, 0, 0, 36),
 						BackgroundTransparency = 1,
@@ -4689,7 +4713,7 @@ local function Settings()
 					Roact.createElement("TextLabel", {
 						Text = "Show BindableFunctions",
 						TextSize = 16,
-						Font = "GothamBold",
+						FontFace = InterFontSemi,
 						TextColor3 = Color3.new(1, 1, 1),
 						Size = UDim2.new(1, 0, 0, 20),
 						BackgroundTransparency = 1,
@@ -4699,7 +4723,7 @@ local function Settings()
 					Roact.createElement("TextLabel", {
 						Text = "When enabled, BindableFunction calls will be logged and displayed",
 						TextSize = 12,
-						Font = "Gotham",
+						FontFace = InterFontMedium,
 						TextColor3 = Color3.new(0.7, 0.7, 0.7),
 						Size = UDim2.new(1, 0, 0, 36),
 						BackgroundTransparency = 1,
@@ -4749,7 +4773,7 @@ local function Settings()
 					Roact.createElement("TextLabel", {
 						Text = "Path Notation Style",
 						TextSize = 16,
-						Font = "GothamBold",
+						FontFace = InterFontSemi,
 						TextColor3 = Color3.new(1, 1, 1),
 						Size = UDim2.new(1, 0, 0, 20),
 						BackgroundTransparency = 1,
@@ -4759,7 +4783,7 @@ local function Settings()
 					Roact.createElement("TextLabel", {
 						Text = "Choose how to access instances in generated scripts (dots, WaitForChild, or FindFirstChild)",
 						TextSize = 12,
-						Font = "Gotham",
+						FontFace = InterFontMedium,
 						TextColor3 = Color3.new(0.7, 0.7, 0.7),
 						Size = UDim2.new(1, 0, 0, 32),
 						BackgroundTransparency = 1,
@@ -4789,7 +4813,7 @@ local function Settings()
 						Roact.createElement("TextLabel", {
 							Text = "Dot (.)",
 							TextSize = 14,
-							Font = "GothamBold",
+							FontFace = InterFontSemi,
 							TextColor3 = Color3.new(1, 1, 1),
 							Size = UDim2.new(1, 0, 1, 0),
 							BackgroundTransparency = 1,
@@ -4809,7 +4833,7 @@ local function Settings()
 						Roact.createElement("TextLabel", {
 							Text = "WaitForChild",
 							TextSize = 14,
-							Font = "GothamBold",
+							FontFace = InterFontSemi,
 							TextColor3 = Color3.new(1, 1, 1),
 							Size = UDim2.new(1, 0, 1, 0),
 							BackgroundTransparency = 1,
@@ -4829,7 +4853,7 @@ local function Settings()
 						Roact.createElement("TextLabel", {
 							Text = "FindFirstChild",
 							TextSize = 14,
-							Font = "GothamBold",
+							FontFace = InterFontSemi,
 							TextColor3 = Color3.new(1, 1, 1),
 							Size = UDim2.new(1, 0, 1, 0),
 							BackgroundTransparency = 1,
@@ -4842,7 +4866,7 @@ local function Settings()
 			Roact.createElement("TextLabel", {
 				Text = "Inspection Tools",
 				TextSize = 18,
-				Font = "GothamBold",
+				FontFace = InterFontSemi,
 				TextColor3 = Color3.new(1, 1, 1),
 				Size = UDim2.new(1, 0, 0, 24),
 				BackgroundTransparency = 1,
@@ -4870,7 +4894,7 @@ local function Settings()
 					Roact.createElement("TextLabel", {
 						Text = "Maximum Inspection Results",
 						TextSize = 16,
-						Font = "GothamBold",
+						FontFace = InterFontSemi,
 						TextColor3 = Color3.new(1, 1, 1),
 						Size = UDim2.new(1, 0, 0, 20),
 						BackgroundTransparency = 1,
@@ -4880,7 +4904,7 @@ local function Settings()
 					Roact.createElement("TextLabel", {
 						Text = "Set the maximum number of results to display when scanning (higher values may cause lag)",
 						TextSize = 12,
-						Font = "Gotham",
+						FontFace = InterFontMedium,
 						TextColor3 = Color3.new(0.7, 0.7, 0.7),
 						Size = UDim2.new(1, 0, 0, 32),
 						BackgroundTransparency = 1,
@@ -4909,7 +4933,7 @@ local function Settings()
 						Roact.createElement("TextLabel", {
 							Text = "Current: " .. tostring(maxInspectionResults),
 							TextSize = 14,
-							Font = "Gotham",
+							FontFace = InterFontMedium,
 							TextColor3 = Color3.new(1, 1, 1),
 							Size = UDim2.new(1, 0, 1, 0),
 							BackgroundTransparency = 1,
@@ -4922,7 +4946,7 @@ local function Settings()
 						PlaceholderText = "Enter number...",
 						Text = maxResultsInput,
 						TextSize = 14,
-						Font = "Gotham",
+						FontFace = InterFontMedium,
 						TextColor3 = Color3.new(1, 1, 1),
 						BackgroundColor3 = Color3.new(0.15, 0.15, 0.15),
 						BorderSizePixel = 0,
@@ -4957,7 +4981,7 @@ local function Settings()
 						Roact.createElement("TextLabel", {
 							Text = "Apply",
 							TextSize = 14,
-							Font = "GothamBold",
+							FontFace = InterFontSemi,
 							TextColor3 = Color3.new(1, 1, 1),
 							Size = UDim2.new(1, 0, 1, 0),
 							BackgroundTransparency = 1,
@@ -5249,6 +5273,7 @@ local selectSignalSelected = TS.import(script, script.Parent.Parent.Parent.Paren
 local useRootSelector = TS.import(script, script.Parent.Parent.Parent.Parent, "hooks", "use-root-store").useRootSelector
 local withHooksPure = TS.import(script, TS.getModule(script, "@rbxts", "roact-hooked").src).withHooksPure
 local formatEscapes = TS.import(script, script.Parent.Parent.Parent.Parent, "utils", "format-escapes").formatEscapes
+local InterFontMedium = TS.import(script, script.Parent.Parent.Parent.Parent, "constants").InterFontMedium
 local function FunctionNode(_param)
 	local fn = _param.fn
 	local index = _param.index
@@ -5283,7 +5308,7 @@ local function FunctionNode(_param)
 			AutomaticSize = "Y",
 			Size = UDim2.new(1, -16, 0, 0),
 			Text = (if isRemoteCaller then "└─ " else "├─ ") .. ("Level " .. (tostring(level) .. (if isRemoteCaller then " (Remote Caller)" else ""))),
-			Font = "Gotham",
+			FontFace = InterFontMedium,
 			TextColor3 = Color3.new(0.6, 0.6, 0.6),
 			TextSize = 10,
 			TextXAlignment = "Left",
@@ -5293,7 +5318,7 @@ local function FunctionNode(_param)
 			AutomaticSize = "Y",
 			Size = UDim2.new(1, -16, 0, 0),
 			Text = if isRemoteCaller then "→ " .. (signature .. " ←") else signature,
-			Font = "Gotham",
+			FontFace = InterFontMedium,
 			TextColor3 = Color3.new(1, 1, 1),
 			TextSize = 11,
 			TextXAlignment = "Left",
@@ -5304,7 +5329,7 @@ local function FunctionNode(_param)
 			AutomaticSize = "Y",
 			Size = UDim2.new(1, -16, 0, 0),
 			Text = formatEscapes(description.source),
-			Font = "Gotham",
+			FontFace = InterFontMedium,
 			TextColor3 = Color3.new(0.75, 0.75, 0.75),
 			TextSize = 9,
 			TextXAlignment = "Left",
@@ -5324,7 +5349,7 @@ local function FunctionNode(_param)
 			AutomaticSize = "Y",
 			Size = UDim2.new(1, -16, 0, 0),
 			Text = "Calls Remote: " .. formatEscapes(remoteName),
-			Font = "Gotham",
+			FontFace = InterFontMedium,
 			TextColor3 = Color3.new(0.3, 0.7, 0.3),
 			TextSize = 10,
 			TextXAlignment = "Left",
@@ -5335,7 +5360,7 @@ local function FunctionNode(_param)
 			AutomaticSize = "Y",
 			Size = UDim2.new(1, -16, 0, 0),
 			Text = "Path: " .. formatEscapes(remotePath),
-			Font = "Gotham",
+			FontFace = InterFontMedium,
 			TextColor3 = Color3.new(0.3, 0.7, 0.3),
 			TextSize = 9,
 			TextXAlignment = "Left",
@@ -5415,7 +5440,7 @@ local function FunctionTree()
 				Position = UDim2.new(0.5, 0, 0.5, 0),
 				Size = UDim2.new(1, -20, 1, 0),
 				Text = if signal and signal.direction == "incoming" then "Function tree not available for incoming signals" else "Select a signal to view function tree",
-				Font = "Gotham",
+				FontFace = InterFontMedium,
 				TextColor3 = Color3.new(0.5, 0.5, 0.5),
 				TextSize = 12,
 				TextWrapped = true,
@@ -5462,6 +5487,9 @@ local useSidePanelContext = TS.import(script, script.Parent.Parent, "use-side-pa
 local useRootSelector = TS.import(script, script.Parent.Parent.Parent.Parent, "hooks", "use-root-store").useRootSelector
 local selectInspectionResultSelected = TS.import(script, script.Parent.Parent.Parent.Parent, "reducers", "remote-log").selectInspectionResultSelected
 local withHooksPure = TS.import(script, TS.getModule(script, "@rbxts", "roact-hooked").src).withHooksPure
+local _constants = TS.import(script, script.Parent.Parent.Parent.Parent, "constants")
+local InterFontSemi = _constants.InterFontSemi
+local InterFontMedium = _constants.InterFontMedium
 local function InspectionConstants()
 	local _binding = useSidePanelContext()
 	local lowerSize = _binding.lowerSize
@@ -5565,7 +5593,7 @@ local function InspectionConstants()
 								AutomaticSize = "Y",
 								Size = UDim2.new(1, -16, 0, 0),
 								Text = "[" .. (tostring(i + 1) .. ("] " .. typeof(value))),
-								Font = "GothamBold",
+								FontFace = InterFontSemi,
 								TextColor3 = Color3.new(0.9, 0.7, 1),
 								TextSize = 10,
 								TextXAlignment = "Left",
@@ -5672,7 +5700,7 @@ local function InspectionConstants()
 				Position = UDim2.new(0.5, 0, 0.5, 0),
 				Size = UDim2.new(1, -20, 1, 0),
 				Text = "Select a result to view details",
-				Font = "Gotham",
+				FontFace = InterFontMedium,
 				TextColor3 = Color3.new(0.5, 0.5, 0.5),
 				TextSize = 12,
 				TextWrapped = true,
@@ -5721,6 +5749,9 @@ local useRootSelector = TS.import(script, script.Parent.Parent.Parent.Parent, "h
 local selectInspectionResultSelected = TS.import(script, script.Parent.Parent.Parent.Parent, "reducers", "remote-log").selectInspectionResultSelected
 local withHooksPure = TS.import(script, TS.getModule(script, "@rbxts", "roact-hooked").src).withHooksPure
 local formatEscapes = TS.import(script, script.Parent.Parent.Parent.Parent, "utils", "format-escapes").formatEscapes
+local _constants = TS.import(script, script.Parent.Parent.Parent.Parent, "constants")
+local InterFontSemi = _constants.InterFontSemi
+local InterFontMedium = _constants.InterFontMedium
 local function InspectionMetadata()
 	local _binding = useSidePanelContext()
 	local upperSize = _binding.upperSize
@@ -5778,7 +5809,7 @@ local function InspectionMetadata()
 				AutomaticSize = "Y",
 				Size = UDim2.new(1, -16, 0, 0),
 				Text = "Basic Information",
-				Font = "GothamBold",
+				FontFace = InterFontSemi,
 				TextColor3 = Color3.new(0.9, 0.9, 1),
 				TextSize = 11,
 				TextXAlignment = "Left",
@@ -5788,7 +5819,7 @@ local function InspectionMetadata()
 				AutomaticSize = "Y",
 				Size = UDim2.new(1, -16, 0, 0),
 				Text = "Type: " .. selectedResult.type,
-				Font = "Gotham",
+				FontFace = InterFontMedium,
 				TextColor3 = Color3.new(0.8, 0.8, 0.8),
 				TextSize = 10,
 				TextXAlignment = "Left",
@@ -5801,7 +5832,7 @@ local function InspectionMetadata()
 			AutomaticSize = "Y",
 			Size = UDim2.new(1, -16, 0, 0),
 			Text = "Path: " .. formatEscapes(selectedResult.value),
-			Font = "Gotham",
+			FontFace = InterFontMedium,
 			TextColor3 = Color3.new(0.75, 0.75, 0.75),
 			TextSize = 9,
 			TextXAlignment = "Left",
@@ -5838,7 +5869,7 @@ local function InspectionMetadata()
 					AutomaticSize = "Y",
 					Size = UDim2.new(1, -16, 0, 0),
 					Text = "Function Details",
-					Font = "GothamBold",
+					FontFace = InterFontSemi,
 					TextColor3 = Color3.new(0.9, 0.9, 1),
 					TextSize = 11,
 					TextXAlignment = "Left",
@@ -5858,7 +5889,7 @@ local function InspectionMetadata()
 				end
 			end
 			_attributes_3.Text = "Source: " .. formatEscapes(_condition_1)
-			_attributes_3.Font = "Gotham"
+			_attributes_3.FontFace = InterFontMedium
 			_attributes_3.TextColor3 = Color3.new(0.75, 0.75, 0.75)
 			_attributes_3.TextSize = 9
 			_attributes_3.TextXAlignment = "Left"
@@ -5878,7 +5909,7 @@ local function InspectionMetadata()
 				_condition_3 = 0
 			end
 			_attributes_4.Text = "Type: " .. (_condition_2 .. (" | Upvalues: " .. tostring(_condition_3)))
-			_attributes_4.Font = "Gotham"
+			_attributes_4.FontFace = InterFontMedium
 			_attributes_4.TextColor3 = Color3.new(0.8, 0.8, 0.8)
 			_attributes_4.TextSize = 10
 			_attributes_4.TextXAlignment = "Left"
@@ -5896,7 +5927,7 @@ local function InspectionMetadata()
 					_condition_5 = "?"
 				end
 				_attributes_5.Text = "Lines: " .. (tostring(_exp) .. (" - " .. tostring(_condition_5)))
-				_attributes_5.Font = "Gotham"
+				_attributes_5.FontFace = InterFontMedium
 				_attributes_5.TextColor3 = Color3.new(0.8, 0.8, 0.8)
 				_attributes_5.TextSize = 10
 				_attributes_5.TextXAlignment = "Left"
@@ -5938,7 +5969,7 @@ local function InspectionMetadata()
 					AutomaticSize = "Y",
 					Size = UDim2.new(1, -16, 0, 0),
 					Text = "Script Hierarchy",
-					Font = "GothamBold",
+					FontFace = InterFontSemi,
 					TextColor3 = Color3.new(0.9, 0.9, 1),
 					TextSize = 11,
 					TextXAlignment = "Left",
@@ -5948,7 +5979,7 @@ local function InspectionMetadata()
 					AutomaticSize = "Y",
 					Size = UDim2.new(1, -16, 0, 0),
 					Text = "Class: " .. selectedResult.rawScript.ClassName,
-					Font = "Gotham",
+					FontFace = InterFontMedium,
 					TextColor3 = Color3.new(0.8, 0.8, 0.9),
 					TextSize = 10,
 					TextXAlignment = "Left",
@@ -5969,7 +6000,7 @@ local function InspectionMetadata()
 				_condition_2 = "nil"
 			end
 			_attributes_3.Text = "Parent: " .. (_condition_2 .. (if selectedResult.rawScript.Parent then " (" .. (selectedResult.rawScript.Parent.ClassName .. ")") else ""))
-			_attributes_3.Font = "Gotham"
+			_attributes_3.FontFace = InterFontMedium
 			_attributes_3.TextColor3 = Color3.new(0.75, 0.75, 0.75)
 			_attributes_3.TextSize = 9
 			_attributes_3.TextXAlignment = "Left"
@@ -5994,7 +6025,7 @@ local function InspectionMetadata()
 				Position = UDim2.new(0.5, 0, 0.5, 0),
 				Size = UDim2.new(1, -20, 1, 0),
 				Text = "Select an inspection result to view metadata",
-				Font = "Gotham",
+				FontFace = InterFontMedium,
 				TextColor3 = Color3.new(0.5, 0.5, 0.5),
 				TextSize = 12,
 				TextWrapped = true,
@@ -6041,6 +6072,9 @@ local useSidePanelContext = TS.import(script, script.Parent.Parent, "use-side-pa
 local useRootSelector = TS.import(script, script.Parent.Parent.Parent.Parent, "hooks", "use-root-store").useRootSelector
 local selectInspectionResultSelected = TS.import(script, script.Parent.Parent.Parent.Parent, "reducers", "remote-log").selectInspectionResultSelected
 local withHooksPure = TS.import(script, TS.getModule(script, "@rbxts", "roact-hooked").src).withHooksPure
+local _constants = TS.import(script, script.Parent.Parent.Parent.Parent, "constants")
+local InterFontSemi = _constants.InterFontSemi
+local InterFontMedium = _constants.InterFontMedium
 local function InspectionUpvalues()
 	local _binding = useSidePanelContext()
 	local middleSize = _binding.middleSize
@@ -6132,7 +6166,7 @@ local function InspectionUpvalues()
 							AutomaticSize = "Y",
 							Size = UDim2.new(1, -16, 0, 0),
 							Text = tostring(key),
-							Font = "GothamBold",
+							FontFace = InterFontSemi,
 							TextColor3 = Color3.new(0.7, 0.9, 1),
 							TextSize = 10,
 							TextXAlignment = "Left",
@@ -6142,7 +6176,7 @@ local function InspectionUpvalues()
 							AutomaticSize = "Y",
 							Size = UDim2.new(1, -16, 0, 0),
 							Text = typeof(value) .. (": " .. string.sub(tostring(value), 1, 150)),
-							Font = "Gotham",
+							FontFace = InterFontMedium,
 							TextColor3 = Color3.new(0.8, 0.8, 0.8),
 							TextSize = 9,
 							TextXAlignment = "Left",
@@ -6174,7 +6208,7 @@ local function InspectionUpvalues()
 				Position = UDim2.new(0.5, 0, 0.5, 0),
 				Size = UDim2.new(1, -20, 1, 0),
 				Text = if not selectedResult then "Select a function to view upvalues" else "No upvalues found",
-				Font = "Gotham",
+				FontFace = InterFontMedium,
 				TextColor3 = Color3.new(0.5, 0.5, 0.5),
 				TextSize = 12,
 				TextWrapped = true,
@@ -6226,6 +6260,7 @@ local useRootSelector = TS.import(script, script.Parent.Parent.Parent.Parent, "h
 local withHooksPure = TS.import(script, TS.getModule(script, "@rbxts", "roact-hooked").src).withHooksPure
 local genScript = TS.import(script, script.Parent.Parent.Parent.Parent, "utils", "gen-script").genScript
 local highlightLua = TS.import(script, script.Parent.Parent.Parent.Parent, "utils", "syntax-highlight").highlightLua
+local InterFontMedium = TS.import(script, script.Parent.Parent.Parent.Parent, "constants").InterFontMedium
 local function Peek()
 	local _binding = useSidePanelContext()
 	local middleHidden = _binding.middleHidden
@@ -6313,7 +6348,7 @@ local function Peek()
 				Position = UDim2.new(0.5, 0, 0.5, 0),
 				Size = UDim2.new(1, -20, 1, 0),
 				Text = "Select a signal to peek at the generated script",
-				Font = "Gotham",
+				FontFace = InterFontMedium,
 				TextColor3 = Color3.new(0.5, 0.5, 0.5),
 				TextSize = 12,
 				TextWrapped = true,
@@ -6484,6 +6519,9 @@ local selectSignalSelected = TS.import(script, script.Parent.Parent.Parent.Paren
 local useRootSelector = TS.import(script, script.Parent.Parent.Parent.Parent, "hooks", "use-root-store").useRootSelector
 local withHooksPure = TS.import(script, TS.getModule(script, "@rbxts", "roact-hooked").src).withHooksPure
 local formatEscapes = TS.import(script, script.Parent.Parent.Parent.Parent, "utils", "format-escapes").formatEscapes
+local _constants = TS.import(script, script.Parent.Parent.Parent.Parent, "constants")
+local InterFontSemi = _constants.InterFontSemi
+local InterFontMedium = _constants.InterFontMedium
 local function getRemoteTypeName(remote)
 	if remote:IsA("RemoteEvent") then
 		return "RemoteEvent (FireServer)"
@@ -6525,7 +6563,7 @@ local function TracebackFrame(_param)
 			AutomaticSize = "Y",
 			Size = UDim2.new(1, -16, 0, 0),
 			Text = if isRemoteCaller then "→ " .. (signature .. " ←") else signature,
-			Font = "Gotham",
+			FontFace = InterFontMedium,
 			TextColor3 = Color3.new(1, 1, 1),
 			TextSize = 11,
 			TextXAlignment = "Left",
@@ -6536,7 +6574,7 @@ local function TracebackFrame(_param)
 			AutomaticSize = "Y",
 			Size = UDim2.new(1, -16, 0, 0),
 			Text = formatEscapes(description.source),
-			Font = "Gotham",
+			FontFace = InterFontMedium,
 			TextColor3 = Color3.new(0.7, 0.7, 0.7),
 			TextSize = 9,
 			TextXAlignment = "Left",
@@ -6591,7 +6629,7 @@ local function Traceback()
 				AutomaticSize = "Y",
 				Size = UDim2.new(1, -16, 0, 0),
 				Text = "Event Type: " .. getRemoteTypeName(signal.remote),
-				Font = "GothamBold",
+				FontFace = InterFontSemi,
 				TextColor3 = Color3.new(0.9, 0.9, 1),
 				TextSize = 11,
 				TextXAlignment = "Left",
@@ -6601,7 +6639,7 @@ local function Traceback()
 				AutomaticSize = "Y",
 				Size = UDim2.new(1, -16, 0, 0),
 				Text = "Remote: " .. formatEscapes(signal.name),
-				Font = "Gotham",
+				FontFace = InterFontMedium,
 				TextColor3 = Color3.new(0.8, 0.8, 0.9),
 				TextSize = 10,
 				TextXAlignment = "Left",
@@ -6614,7 +6652,7 @@ local function Traceback()
 			AutomaticSize = "Y",
 			Size = UDim2.new(1, -16, 0, 0),
 			Text = "Called from Actor",
-			Font = "Gotham",
+			FontFace = InterFontMedium,
 			TextColor3 = Color3.new(1, 0.8, 0.3),
 			TextSize = 9,
 			TextXAlignment = "Left",
@@ -6666,7 +6704,7 @@ local function Traceback()
 				Position = UDim2.new(0.5, 0, 0.5, 0),
 				Size = UDim2.new(1, -20, 1, 0),
 				Text = "Select a signal and click Traceback to view details",
-				Font = "Gotham",
+				FontFace = InterFontMedium,
 				TextColor3 = Color3.new(0.5, 0.5, 0.5),
 				TextSize = 12,
 				TextWrapped = true,
@@ -6709,6 +6747,7 @@ local Instant = _flipper.Instant
 local Spring = _flipper.Spring
 local useGroupMotor = TS.import(script, TS.getModule(script, "@rbxts", "roact-hooked-plus").out).useGroupMotor
 local withHooksPure = TS.import(script, TS.getModule(script, "@rbxts", "roact-hooked").src).withHooksPure
+local InterFontSemi = TS.import(script, script.Parent.Parent.Parent.Parent, "constants").InterFontSemi
 local CHEVRON_DEFAULT = { Spring.new(1, {
 	frequency = 6,
 }), Spring.new(0, {
@@ -6737,7 +6776,7 @@ local function TitleBar(_param)
 		Roact.createElement("TextLabel", {
 			Text = caption,
 			TextColor3 = Color3.new(1, 1, 1),
-			Font = "GothamBold",
+			FontFace = InterFontSemi,
 			TextSize = 11,
 			TextXAlignment = "Left",
 			TextYAlignment = "Top",
@@ -6831,6 +6870,7 @@ local useRootSelector = _use_root_store.useRootSelector
 local _roact_hooked_plus = TS.import(script, TS.getModule(script, "@rbxts", "roact-hooked-plus").out)
 local useSingleMotor = _roact_hooked_plus.useSingleMotor
 local useSpring = _roact_hooked_plus.useSpring
+local InterFontMedium = TS.import(script, script.Parent.Parent.Parent, "constants").InterFontMedium
 local FOREGROUND_ACTIVE = Instant.new(0)
 local FOREGROUND_DEFAULT = Spring.new(0.4, {
 	frequency = 6,
@@ -6949,7 +6989,7 @@ local function Tab(_param)
 	local _length_1 = #_children_1
 	local _attributes_1 = {
 		Text = formatEscapes(tab.caption),
-		Font = "Gotham",
+		FontFace = InterFontMedium,
 		TextColor3 = Color3.new(1, 1, 1),
 		TextTransparency = foreground,
 		TextSize = 11,
@@ -7552,7 +7592,9 @@ local Roact = TS.import(script, TS.getModule(script, "@rbxts", "roact").src)
 local _flipper = TS.import(script, TS.getModule(script, "@rbxts", "flipper").src)
 local Instant = _flipper.Instant
 local Spring = _flipper.Spring
-local TOPBAR_OFFSET = TS.import(script, script.Parent.Parent.Parent, "constants").TOPBAR_OFFSET
+local _constants = TS.import(script, script.Parent.Parent.Parent, "constants")
+local InterFontMedium = _constants.InterFontMedium
+local TOPBAR_OFFSET = _constants.TOPBAR_OFFSET
 local UserInputService = TS.import(script, TS.getModule(script, "@rbxts", "services")).UserInputService
 local WindowAssets = TS.import(script, script.Parent, "assets").WindowAssets
 local _roact_hooked = TS.import(script, TS.getModule(script, "@rbxts", "roact-hooked").src)
@@ -7654,7 +7696,7 @@ local function WindowTitleBar(_param)
 			Text = caption,
 			TextColor3 = captionColor,
 			TextTransparency = captionTransparency,
-			Font = "Gotham",
+			FontFace = InterFontMedium,
 			TextSize = 11,
 			TextXAlignment = "Left",
 			TextYAlignment = "Center",
@@ -7909,6 +7951,9 @@ local IS_LOADED = "__NONOMYSPY_IS_LOADED__"
 local IS_ELEVATED = loadstring ~= nil
 local HAS_FILE_ACCESS = readfile ~= nil
 local IS_ACRYLIC_ENABLED = true
+local INTER_FONT_ASSET = "rbxassetid://12187365364"
+local InterFontSemi = Font.new(INTER_FONT_ASSET, Enum.FontWeight.SemiBold, Enum.FontStyle.Normal)
+local InterFontMedium = Font.new(INTER_FONT_ASSET, Enum.FontWeight.Medium, Enum.FontStyle.Normal)
 return {
 	DISPLAY_ORDER = DISPLAY_ORDER,
 	SIDE_PANEL_WIDTH = SIDE_PANEL_WIDTH,
@@ -7917,6 +7962,8 @@ return {
 	IS_ELEVATED = IS_ELEVATED,
 	HAS_FILE_ACCESS = HAS_FILE_ACCESS,
 	IS_ACRYLIC_ENABLED = IS_ACRYLIC_ENABLED,
+	InterFontSemi = InterFontSemi,
+	InterFontMedium = InterFontMedium,
 }
  end, _env("NonomySpy.constants"))() end)
 
@@ -10272,6 +10319,7 @@ return {
 _module("utils", "ModuleScript", "NonomySpy.reducers.tab-group.utils", "NonomySpy.reducers.tab-group", function () return setfenv(function() -- Compiled with roblox-ts v1.3.3
 local TS = require(script.Parent.Parent.Parent.include.RuntimeLib)
 local TextService = TS.import(script, TS.getModule(script, "@rbxts", "services")).TextService
+local InterFontMedium = TS.import(script, script.Parent.Parent.Parent, "constants").InterFontMedium
 local MAX_TAB_CAPTION_WIDTH = 150
 local function createTabColumn(id, caption, tabType, canClose, scriptContent)
 	if canClose == nil then
@@ -10286,7 +10334,12 @@ local function createTabColumn(id, caption, tabType, canClose, scriptContent)
 	}
 end
 local function getTabCaptionWidth(tab)
-	local textSize = TextService:GetTextSize(tab.caption, 11, "Gotham", Vector2.new(300, 0))
+	local params = Instance.new("GetTextBoundsParams")
+	params.Text = tab.caption
+	params.Size = 11
+	params.Font = InterFontMedium
+	params.Width = 300
+	local textSize = TextService:GetTextBoundsAsync(params)
 	return math.min(textSize.X, MAX_TAB_CAPTION_WIDTH)
 end
 local function getTabWidth(tab)

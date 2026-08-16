@@ -1,4 +1,5 @@
 import Roact from "@rbxts/roact";
+import { InterFontMedium } from "constants";
 
 interface Props {
 	text: string;
@@ -11,7 +12,7 @@ export default function RowCaption({ text, description, wrapped, richText }: Pro
 	return (
 		<textlabel
 			Text={text}
-			Font="Gotham"
+			FontFace={InterFontMedium}
 			TextColor3={new Color3(1, 1, 1)}
 			TextSize={11}
 			AutomaticSize="Y"
@@ -23,7 +24,7 @@ export default function RowCaption({ text, description, wrapped, richText }: Pro
 			<textlabel
 				RichText={richText}
 				Text={description}
-				Font="Gotham"
+				FontFace={InterFontMedium}
 				TextColor3={new Color3(1, 1, 1)}
 				TextSize={11}
 				TextTransparency={0.3}

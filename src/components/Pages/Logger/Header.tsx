@@ -9,6 +9,7 @@ import { makeSelectRemoteLogObject, makeSelectRemoteLogType } from "reducers/rem
 import { useGroupMotor } from "@rbxts/roact-hooked-plus";
 import { useMemo, withHooksPure } from "@rbxts/roact-hooked";
 import { useRootDispatch, useRootSelector } from "hooks/use-root-store";
+import { InterFontMedium } from "constants";
 
 interface Props {
 	id: string;
@@ -70,7 +71,7 @@ function Header({ id }: Props) {
 			>
 				<textlabel
 					Text="Delete history"
-					Font="Gotham"
+					FontFace={InterFontMedium}
 					TextColor3={new Color3(1, 1, 1)}
 					TextTransparency={deleteButton.foreground}
 					TextSize={11}
@@ -104,7 +105,7 @@ function Header({ id }: Props) {
 			{/* Name */}
 			<textlabel
 				Text={remoteObject ? formatEscapes(remoteObject.Name) : "Unknown"}
-				Font="Gotham"
+				FontFace={InterFontMedium}
 				TextColor3={new Color3(1, 1, 1)}
 				TextSize={13}
 				TextXAlignment="Left"
@@ -119,7 +120,7 @@ function Header({ id }: Props) {
 			{/* Path */}
 			<textlabel
 				Text={remoteObject ? formatEscapes(getInstancePath(remoteObject)) : "Unknown"}
-				Font="Gotham"
+				FontFace={InterFontMedium}
 				TextColor3={new Color3(1, 1, 1)}
 				TextTransparency={0.2}
 				TextSize={11}

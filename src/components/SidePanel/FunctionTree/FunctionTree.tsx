@@ -8,6 +8,7 @@ import { getInstancePath } from "utils/instance-util";
 import { useRootSelector } from "hooks/use-root-store";
 import { withHooksPure } from "@rbxts/roact-hooked";
 import { formatEscapes } from "utils/format-escapes";
+import { InterFontMedium } from "constants";
 
 interface FunctionNodeProps {
 	fn: Callback;
@@ -46,7 +47,7 @@ function FunctionNode({ fn, index, totalInStack, remotePath, remoteName }: Funct
 				AutomaticSize="Y"
 				Size={new UDim2(1, -16, 0, 0)}
 				Text={`${isRemoteCaller ? "└─ " : "├─ "}Level ${level}${isRemoteCaller ? " (Remote Caller)" : ""}`}
-				Font="Gotham"
+				FontFace={InterFontMedium}
 				TextColor3={new Color3(0.6, 0.6, 0.6)}
 				TextSize={10}
 				TextXAlignment="Left"
@@ -58,7 +59,7 @@ function FunctionNode({ fn, index, totalInStack, remotePath, remoteName }: Funct
 				AutomaticSize="Y"
 				Size={new UDim2(1, -16, 0, 0)}
 				Text={isRemoteCaller ? `→ ${signature} ←` : signature}
-				Font="Gotham"
+				FontFace={InterFontMedium}
 				TextColor3={new Color3(1, 1, 1)}
 				TextSize={11}
 				TextXAlignment="Left"
@@ -71,7 +72,7 @@ function FunctionNode({ fn, index, totalInStack, remotePath, remoteName }: Funct
 				AutomaticSize="Y"
 				Size={new UDim2(1, -16, 0, 0)}
 				Text={formatEscapes(description.source)}
-				Font="Gotham"
+				FontFace={InterFontMedium}
 				TextColor3={new Color3(0.75, 0.75, 0.75)}
 				TextSize={9}
 				TextXAlignment="Left"
@@ -94,7 +95,7 @@ function FunctionNode({ fn, index, totalInStack, remotePath, remoteName }: Funct
 						AutomaticSize="Y"
 						Size={new UDim2(1, -16, 0, 0)}
 						Text={`Calls Remote: ${formatEscapes(remoteName)}`}
-						Font="Gotham"
+						FontFace={InterFontMedium}
 						TextColor3={new Color3(0.3, 0.7, 0.3)}
 						TextSize={10}
 						TextXAlignment="Left"
@@ -106,7 +107,7 @@ function FunctionNode({ fn, index, totalInStack, remotePath, remoteName }: Funct
 						AutomaticSize="Y"
 						Size={new UDim2(1, -16, 0, 0)}
 						Text={`Path: ${formatEscapes(remotePath)}`}
-						Font="Gotham"
+						FontFace={InterFontMedium}
 						TextColor3={new Color3(0.3, 0.7, 0.3)}
 						TextSize={9}
 						TextXAlignment="Left"
@@ -182,7 +183,7 @@ function FunctionTree() {
 						Position={new UDim2(0.5, 0, 0.5, 0)}
 						Size={new UDim2(1, -20, 1, 0)}
 						Text={signal && signal.direction === "incoming" ? "Function tree not available for incoming signals" : "Select a signal to view function tree"}
-						Font="Gotham"
+						FontFace={InterFontMedium}
 						TextColor3={new Color3(0.5, 0.5, 0.5)}
 						TextSize={12}
 						TextWrapped={true}
