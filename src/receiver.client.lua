@@ -415,7 +415,6 @@ local function initActorHooks()
 	return true
 end
 
--- Initialize actor hooks
 task.defer(function()
 	initActorHooks()
 end)

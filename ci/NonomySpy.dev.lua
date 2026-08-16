@@ -8428,7 +8428,6 @@ local function initActorHooks()
 	return true
 end
 
--- Initialize actor hooks
 task.defer(function()
 	local success = initActorHooks()
 end) end, _env("NonomySpy.receiver"))() end)
